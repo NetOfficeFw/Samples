@@ -2,52 +2,26 @@
 using System.Reflection;
 using System.Windows.Forms;
 using Microsoft.Win32;
+using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Extensibility;
 
-using LateBindingApi.Core;
+using Access = NetOffice.AccessApi;
 using Office = NetOffice.OfficeApi;
+using NetOffice.AccessApi.Enums;
 using NetOffice.OfficeApi.Enums;
-using Excel = NetOffice.ExcelApi;
-using NetOffice.ExcelApi.Enums;
 
-namespace COMAddinTaskPaneExampleCS4
+namespace COMAddinRibbonExampleCS4
 {
-    [GuidAttribute("91099EB3-3CD7-4906-BF19-2076EF16DE07"), ProgId("ExcelAddinCS4.TaskPaneAddin"), ComVisible(true)]
-    public class Addin : IDTExtensibility2, Office.ICustomTaskPaneConsumer
+    [GuidAttribute("B45E5A48-9A73-4dc5-A574-F56757C4A145"), ProgId("AccessAddinCS4.RibbonAddin"), ComVisible(true)]
+    public class Addin : IDTExtensibility2, Office.IRibbonExtensibility
     {
-        private static readonly string _addinOfficeRegistryKey  = "Software\\Microsoft\\Office\\Excel\\AddIns\\";
-        private static readonly string _progId                  = "ExcelAddinCS4.TaskPaneAddin";
+        private static readonly string _addinOfficeRegistryKey  = "Software\\Microsoft\\Office\\Access\\AddIns\\";
+        private static readonly string _progId                  = "AccessAddinCS4.RibbonAddin";
         private static readonly string _addinFriendlyName       = "NetOffice Sample Addin in C#";
-        private static readonly string _addinDescription        = "NetOffice Sample Addin with custom Task Pane";
+        private static readonly string _addinDescription        = "NetOffice Sample Addin with custom Ribbon UI";
 
-        private static SampleControl _sampleControl;
-        private static Excel.Application _excelApplication;
-
-        internal static Excel.Application Application { get { return _excelApplication; } }
-
-        #region ICustomTaskPaneConsumer Member
-
-        public void CTPFactoryAvailable(object CTPFactoryInst)
-        {
-            try
-            {
-                Office.ICTPFactory ctpFactory = new NetOffice.OfficeApi.ICTPFactory(_excelApplication, CTPFactoryInst);
-                Office._CustomTaskPane taskPane = ctpFactory.CreateCTP(typeof(Addin).Assembly.GetName().Name + ".SampleControl", "NetOffice Sample Pane(CS4)", Type.Missing);
-                taskPane.DockPosition = MsoCTPDockPosition.msoCTPDockPositionRight;
-                taskPane.Width = 300;
-                taskPane.Visible = true;
-                _sampleControl = taskPane.ContentControl as SampleControl;
-                ctpFactory.Dispose();
-            }
-            catch (Exception exception)
-            {
-                string message = string.Format("An error occured.{0}{0}{1}", Environment.NewLine, exception.Message);
-                MessageBox.Show(message, _progId, MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        #endregion
+        Access.Application _accessApplication;
 
         #region IDTExtensibility2 Members
 
@@ -58,7 +32,7 @@ namespace COMAddinTaskPaneExampleCS4
                 // Initialize NetOffice
                 LateBindingApi.Core.Factory.Initialize();
 
-                _excelApplication = new Excel.Application(null, Application);
+                _accessApplication = new Access.Application(null, Application);
             }
             catch (Exception exception)
             {
@@ -71,8 +45,8 @@ namespace COMAddinTaskPaneExampleCS4
         {
             try
             {
-                if (null != _excelApplication)
-                    _excelApplication.Dispose();
+                if (null != _accessApplication)
+                    _accessApplication.Dispose();
             }
             catch (Exception exception)
             {
@@ -93,6 +67,54 @@ namespace COMAddinTaskPaneExampleCS4
 
         void IDTExtensibility2.OnBeginShutdown(ref Array custom)
         {
+
+        }
+
+        #endregion
+
+        #region IRibbonExtensibility Members
+
+        public string GetCustomUI(string RibbonID)
+        {
+            try
+            {
+                return ReadString("RibbonUI.xml");
+            }
+            catch (Exception throwedException)
+            {
+                string details = string.Format("{1}{1}Details:{1}{1}{0}", throwedException.Message, Environment.NewLine);
+                MessageBox.Show("An error occured in GetCustomUI." + details, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return "";
+            }
+
+        }
+
+        #endregion
+
+        #region Ribbon Gui Trigger
+
+        public void OnAction(Office.IRibbonControl control)
+        {
+            try
+            {
+                switch (control.Id)
+                {
+                    case "customButton1":
+                        MessageBox.Show("This is the first sample button.", _progId);
+                        break;
+                    case "customButton2":
+                        MessageBox.Show("This is the second sample button.", _progId);
+                        break;
+                    default:
+                        MessageBox.Show("Unkown Control Id: " + control.Id, _progId);
+                        break;
+                }
+            }
+            catch (Exception throwedException)
+            {
+                string details = string.Format("{1}{1}Details:{1}{1}{0}", throwedException.Message, Environment.NewLine);
+                MessageBox.Show("An error occured in OnAction." + details, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
 
         }
 
@@ -123,13 +145,14 @@ namespace COMAddinTaskPaneExampleCS4
                     key.SetValue("", "Office .NET Framework Lockback Bypass Key");
                 key.Close();
 
-                // register addin in Excel
+                // add excel addin key
+                Registry.ClassesRoot.CreateSubKey(@"CLSID\{" + type.GUID.ToString().ToUpper() + @"}\Programmable");
                 Registry.CurrentUser.CreateSubKey(_addinOfficeRegistryKey + _progId);
-                RegistryKey regKeyExcel = Registry.CurrentUser.OpenSubKey(_addinOfficeRegistryKey + _progId, true);
-                regKeyExcel.SetValue("LoadBehavior", Convert.ToInt32(3));
-                regKeyExcel.SetValue("FriendlyName", _addinFriendlyName);
-                regKeyExcel.SetValue("Description", _addinDescription);
-                regKeyExcel.Close();
+                RegistryKey rk = Registry.CurrentUser.OpenSubKey(_addinOfficeRegistryKey + _progId, true);
+                rk.SetValue("LoadBehavior", Convert.ToInt32(3));
+                rk.SetValue("FriendlyName", _addinFriendlyName);
+                rk.SetValue("Description", _addinDescription);
+                rk.Close();
             }
             catch (Exception ex)
             {
@@ -143,18 +166,41 @@ namespace COMAddinTaskPaneExampleCS4
         {
             try
             {
-                // unregister addin
                 Registry.ClassesRoot.DeleteSubKey(@"CLSID\{" + type.GUID.ToString().ToUpper() + @"}\Programmable", false);
-
-                // unregister addin in office
                 Registry.CurrentUser.DeleteSubKey(_addinOfficeRegistryKey + _progId, false);
-
             }
             catch (Exception throwedException)
             {
                 string details = string.Format("{1}{1}Details:{1}{1}{0}", throwedException.Message, Environment.NewLine);
                 MessageBox.Show("An error occured." + details, "Unregister " + _progId, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        #endregion
+
+
+        #region Private Helper
+
+        /// <summary>
+        /// reads text from ressource
+        /// </summary>
+        /// <param name="fileName"></param>
+        /// <returns></returns>
+        private static string ReadString(string fileName)
+        {
+            Assembly assembly = typeof(Addin).Assembly;
+            System.IO.Stream ressourceStream = assembly.GetManifestResourceStream(assembly.GetName().Name + "." + fileName);
+            if (ressourceStream == null)
+                throw (new System.IO.IOException("Error accessing resource Stream."));
+
+            System.IO.StreamReader textStreamReader = new System.IO.StreamReader(ressourceStream);
+            if (textStreamReader == null)
+                throw (new System.IO.IOException("Error accessing resource File."));
+
+            string text = textStreamReader.ReadToEnd();
+            ressourceStream.Close();
+            textStreamReader.Close();
+            return text;
         }
 
         #endregion
