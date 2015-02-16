@@ -13,14 +13,19 @@ using NetOffice.OutlookApi.Enums;
 
 namespace OutlookExamplesCS4
 {
-    public partial class Example03 : UserControl, IExample
+    /// <summary>
+    /// Example 3 - Send mail
+    /// </summary>
+    internal partial class Example03 : UserControl, IExample
     {
-        IHost _hostApplication;
+        #region Ctor
 
         public Example03()
         {
             InitializeComponent();
         }
+
+        #endregion
 
         #region IExample Member
 
@@ -32,23 +37,29 @@ namespace OutlookExamplesCS4
 
         public string Caption
         {
-            get { return _hostApplication.LCID == 1033 ? "Example03" : "Beispiel03"; }
+            get { return HostApplication.LCID == 1033 ? "Example03" : "Beispiel03"; }
         }
 
         public string Description
         {
-            get { return _hostApplication.LCID == 1033 ? "Send an E- Mail" : "Eine E-Mail verschicken"; }
+            get { return HostApplication.LCID == 1033 ? "Send an E-Mail" : "Eine E-Mail verschicken"; }
         }
 
         public void Connect(IHost hostApplication)
         {
-            _hostApplication = hostApplication;
+            HostApplication = hostApplication;
         }
 
         public UserControl Panel
         {
             get { return this; }
         }
+
+        #endregion
+
+        #region Properties
+
+        internal IHost HostApplication { get; private set; }
 
         #endregion
 
@@ -72,7 +83,7 @@ namespace OutlookExamplesCS4
             outlookApplication.Quit();
             outlookApplication.Dispose();
 
-            _hostApplication.ShowFinishDialog("Done!", null);
+            HostApplication.ShowFinishDialog("Done!", null);
         }
 
         #endregion
