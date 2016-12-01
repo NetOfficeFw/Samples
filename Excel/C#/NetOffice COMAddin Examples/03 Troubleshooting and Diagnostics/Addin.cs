@@ -15,11 +15,11 @@ namespace Excel03AddinCS4
     /*
        Diagnostics Addin Example
 
-       Remove the DisableRegister attribute to load the addin directly.
+       Remove the DontRegisterAddin attribute to load the addin directly.
     */
 
     [ProgId("Excel03AddinCS4.Connect"), Guid("E0FE2411-4031-4110-A244-3CE8133C3ECD"), Codebase, Timestamp, ForceInitialize]
-    [DisableRegister]
+    [DontRegisterAddin]
     public class Addin : COMAddin
     {
         public Addin()
@@ -49,9 +49,14 @@ namespace Excel03AddinCS4
             Utils.Tray.Menu.AutoClose = false;
             Utils.Tray.Menu.Items.Add<TrayMenuLabelItem>("Addin Diagnostics", true, "TrayMenuHeader.png");
             Utils.Tray.Menu.Items.Add<TrayMenuSeparatorItem>();
-            Utils.Tray.Menu.Items.Add<TrayMenuMonitorItem>(); 
+            Utils.Tray.Menu.Items.Add<TrayMenuMonitorItem>();
+            Utils.Tray.Menu.Items.Add<TrayMenuSeparatorItem>();
+            Utils.Tray.Menu.Items.Add<TrayMenuItem>("Fetch books and sheets");
+            Utils.Tray.Menu.Items.Add<TrayMenuItem>("Dispose all application child proxies");
+            Utils.Tray.Menu.Items.Add<TrayMenuSeparatorItem>();
             Utils.Tray.Menu.Items.Add<TrayMenuAutoCloseItem>("Enable Auto Close Menu");
             Utils.Tray.Menu.Items.Add<TrayMenuCloseItem>("Close Menu");
+            Utils.Tray.Menu.ItemClick += Menu_ItemClick;
 
             // Enable performance trace in Excel and to see all actions there need >= 10 milliseconds
             Factory.Settings.PerformanceTrace["ExcelApi"].IntervalMS = 10;
@@ -65,7 +70,27 @@ namespace Excel03AddinCS4
             bool hasAdminPermissions = Utils.AdminPermissions;
             bool is2007OrHigher = Utils.ApplicationIs2007OrHigher;
         }
-        
+
+        private void Menu_ItemClick(object sender, TrayMenuItemsEventArgs args)
+        {
+            // see what happen in proxy live monitor
+
+            if (args.Item.Text == "Fetch books and sheets")
+            {
+                foreach (Excel.Workbook book in Application.Workbooks)
+                {
+                    foreach (Excel.Worksheet sheet in book.Sheets)
+                    {
+
+                    }
+                }
+            }
+            else if (args.Item.Text == "Dispose all application child proxies")
+            {
+                Application.DisposeChildInstances();
+            }
+        }
+
         /*
             This method is called when something failed in the COMAddin base class
         */

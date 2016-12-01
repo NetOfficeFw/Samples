@@ -12,13 +12,13 @@ namespace Excel02AddinCS4
     /*
         Ribbon & Pane Addin Example
 
-        Remove the DisableRegister attribute to load the addin directly.
+        Remove the DontRegisterAddin attribute to load the addin directly.
     */
-    
+
     [CustomUI("RibbonUI.xml", true)]
     [CustomPane(typeof(SamplePane), "Excel CPU Usage", true, PaneDockPosition.msoCTPDockPositionTop, PaneDockPositionRestrict.msoCTPDockPositionRestrictNoChange, 60, 60)]
     [ProgId("Excel02AddinCS4.Connect"), Guid("BA38FD48-47BD-43de-8177-0D067A01B566"), Codebase]
-    [DisableRegister]
+    [DontRegisterAddin]
     public class Addin : COMAddin
     {
         // Ribbon instance to manipulate ui at runtime 

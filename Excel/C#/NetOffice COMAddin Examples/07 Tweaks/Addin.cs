@@ -7,16 +7,18 @@ using NetOffice.Tools;
 using NetOffice.ExcelApi.Tools;
 using NetOffice.ExcelApi;
 
-    /*
-      Tweaks Addin Example
 
-      Remove the DisableRegister attribute to load the addin directly.
-   */
 
 namespace Excel07AddinCS4
 {
+    /*
+      Tweaks Addin Example
+
+      Remove the DontRegisterAddin attribute to load the addin directly.
+    */
+
     [Tweak, ProgId("Excel07AddinCS4.Connect"), Guid("DF2DA04E-CD24-4F48-B7F2-A7C3C56E877A"), Codebase]
-    [DisableRegister]
+    [DontRegisterAddin]
     public class Addin : COMAddin
     {
         // We set some default- and custom tweaks in the register method.

@@ -16,11 +16,11 @@ namespace Excel06AddinCS4
     /*
       Utils Addin Example
 
-      Remove the DisableRegister attribute to load the addin directly.
+      Remove the DontRegisterAddin attribute to load the addin directly.
    */
 
     [ProgId("Excel06AddinCS4.Connect"), Guid("CC85F97A-F409-4497-B2F2-A9581D4A2ED2"), Codebase, Timestamp]
-    [DisableRegister]
+    [DontRegisterAddin]
     public class Addin : COMAddin
     {
         public Addin()
@@ -52,7 +52,7 @@ namespace Excel06AddinCS4
         {
             // Colors in excel use a double representation
             // NetOffice color utils help to deal with them
-
+            
             if (Application.Workbooks.Count > 0 && Application.Workbooks[1].Worksheets.Count > 0)
             {
                 Excel.Worksheet sheet = Application.Workbooks[1].Worksheets[1] as Excel.Worksheet;
@@ -74,21 +74,22 @@ namespace Excel06AddinCS4
             // add some standard menu items to the tray
             TrayMenuItem item1 = Utils.Tray.Menu.Items.Add<TrayMenuItem>("Item 1");
             TrayMenuProgressItem item2 = Utils.Tray.Menu.Items.Add<TrayMenuProgressItem>("Item 2");
+            item2.Value = 60;
             TrayMenuCheckboxItem item3 = Utils.Tray.Menu.Items.Add<TrayMenuCheckboxItem>("Item 3");
             TrayMenuDropDownListItem item4 = Utils.Tray.Menu.Items.Add<TrayMenuDropDownListItem>("Item 4");
-            item4.Items.Add("SubItem1", "SubItem2", "SubItem3");
+            item4.DataSource.Add("SubItem1", "SubItem2", "SubItem3");
             TrayMenuButtonItem item5 = Utils.Tray.Menu.Items.Add<TrayMenuButtonItem>("Item 5");
         }
 
         private void UseFileUtils()
         {
-            // File utils want help to find the current valid file extensions for a file type
+            // File utils want help to find the current valid file extension for a file type
             
             // A template that contains macros is "xlsm" in modern office applications
             // but its not in older version - FileUtils take care for that
             string currentFileExtension = Utils.File.FileExtension(DocumentFormat.TemplateMacros);
 
-            // Build a valid file path
+            // Build a valid file path for a normal document without macros
             string fullFileName = Utils.File.Combine(@"C:\MyFiles", "Book1", DocumentFormat.Normal);
         }
 

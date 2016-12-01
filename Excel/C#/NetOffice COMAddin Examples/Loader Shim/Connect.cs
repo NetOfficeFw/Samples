@@ -66,25 +66,25 @@ namespace LoaderShim
         private void Connect_OnBeginShutdown(ref Array custom)
         {
             if (null != Current)
-                Current.OnBeginShutdown(ref custom);
+                (Current as IDTExtensibility2).OnBeginShutdown(ref custom);
         }
 
         private void Connect_OnAddInsUpdate(ref Array custom)
         {
             if (null != Current)
-                Current.OnAddInsUpdate(ref custom);
+                (Current as IDTExtensibility2).OnAddInsUpdate(ref custom);
         }
 
         private void Connect_OnStartupComplete(ref Array custom)
         {
             if (null != Current)
-                Current.OnStartupComplete(ref custom);
+                (Current as IDTExtensibility2).OnStartupComplete(ref custom);
         }
 
         private void Connect_OnDisconnection(ext_DisconnectMode removeMode, ref Array custom)
-        {         
+        {
             if (null != Current)
-                Current.OnDisconnection(removeMode, ref custom);
+                (Current as IDTExtensibility2).OnDisconnection(removeMode, ref custom);
         }
 
         private void Connect_OnConnection(object application, ext_ConnectMode connectMode, object addInInst, ref Array custom)
@@ -94,15 +94,14 @@ namespace LoaderShim
                 SelectionForm form = new SelectionForm(Addins);
                 DialogUtils.Result result = Utils.Dialog.ShowDialog(Application.Hwnd, form, true);
                 if (result == DialogUtils.Result.OK)
-                { 
                     Current = Activator.CreateInstance(Addins[form.SelectedName]) as Office.Tools.IOfficeCOMAddin;
-                }
             }
 
             if (null != Current)
-                Current.OnConnection(application, connectMode, addInInst, ref custom);
+            {
+                (Current as IDTExtensibility2).OnConnection(Application.UnderlyingObject, connectMode, addInInst, ref custom);
+            }
         }
-
 
         public void OnLoadRibonUI(Office.IRibbonUI ribbonUI)
         {

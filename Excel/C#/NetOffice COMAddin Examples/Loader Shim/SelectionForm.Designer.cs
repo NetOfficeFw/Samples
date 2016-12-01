@@ -32,10 +32,10 @@
             this.ProceedButton = new System.Windows.Forms.Button();
             this.AbortButton = new System.Windows.Forms.Button();
             this.AddinGrid = new System.Windows.Forms.DataGridView();
+            this.NameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.HintLabel = new System.Windows.Forms.Label();
             this.HeaderPanel = new System.Windows.Forms.Panel();
             this.HeaderLabel = new System.Windows.Forms.Label();
-            this.NameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.AddinGrid)).BeginInit();
             this.HeaderPanel.SuspendLayout();
             this.SuspendLayout();
@@ -85,6 +85,13 @@
             this.AddinGrid.TabIndex = 2;
             this.AddinGrid.DoubleClick += new System.EventHandler(this.AddinGrid_DoubleClick);
             // 
+            // NameColumn
+            // 
+            this.NameColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.NameColumn.DataPropertyName = "Name";
+            this.NameColumn.HeaderText = "";
+            this.NameColumn.Name = "NameColumn";
+            // 
             // HintLabel
             // 
             this.HintLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
@@ -121,13 +128,6 @@
             this.HeaderLabel.TabIndex = 0;
             this.HeaderLabel.Text = "NetOffice Sample Addin Selection";
             // 
-            // NameColumn
-            // 
-            this.NameColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.NameColumn.DataPropertyName = "Name";
-            this.NameColumn.HeaderText = "";
-            this.NameColumn.Name = "NameColumn";
-            // 
             // SelectionForm
             // 
             this.AcceptButton = this.ProceedButton;
@@ -142,6 +142,7 @@
             this.Controls.Add(this.ProceedButton);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(501, 372);
             this.Name = "SelectionForm";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;

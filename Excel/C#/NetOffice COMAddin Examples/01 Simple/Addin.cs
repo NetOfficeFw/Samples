@@ -9,16 +9,16 @@ using Excel = NetOffice.ExcelApi;
 using Office = NetOffice.OfficeApi;
 
 namespace Excel01AddinCS4
-{    
+{
     /*
         Minimum Addin Example
 
-        Remove the DisableRegister attribute to load the addin directly.
+        Remove the DontRegisterAddin attribute to load the addin directly.
     */
 
     [COMAddin("Excel01AddinCS4", "Miminum Addin Example", LoadBehavior.LoadAtStartup)]
     [ProgId("Excel05AddinCS4.Connect"), Guid("BB5D9F5A-267A-462E-9980-C65204969BE3"), Codebase, Timestamp]
-    [DisableRegister]
+    [DontRegisterAddin]
     public class Addin : COMAddin
     {
         public Addin()
