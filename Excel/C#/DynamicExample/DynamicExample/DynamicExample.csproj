@@ -32,8 +32,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="NetOffice">
-      <HintPath>..\..\..\..\..\Assemblies\Any CPU\NetOffice.dll</HintPath>
+    <Reference Include="NetOffice, Version=1.7.4.0, Culture=neutral, PublicKeyToken=d0b2dc7c792d5ca6, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\NetOffice.Core.1.7.4-alpha-32\lib\net40\NetOffice.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="OfficeApi, Version=1.7.4.0, Culture=neutral, PublicKeyToken=d0b2dc7c792d5ca6, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\NetOffice.Core.1.7.4-alpha-32\lib\net40\OfficeApi.dll</HintPath>
       <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
     <Reference Include="System" />
@@ -46,6 +50,10 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="VBIDEApi, Version=1.7.4.0, Culture=neutral, PublicKeyToken=d0b2dc7c792d5ca6, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\NetOffice.Core.1.7.4-alpha-32\lib\net40\VBIDEApi.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Form1.cs">
@@ -69,6 +77,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
