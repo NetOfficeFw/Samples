@@ -1,0 +1,17 @@
+﻿Some annotations to do custom actions in register/unregister.
+There is also an error handler - rethrow the exception here to signalize the runtime something failed.
+Please keep in your mind: these methods must be static. Dont care for the name or the qualifier.
+
+The RegistryLocation attribute determine the addin want be loaded as system addin or the just the current user
+Whithout this attribute means whole system.
+
+
+Some explanation about the arguments in Register/Unregister
+
+Type type								- The addin instance type
+
+RegisterCall registerCall				- Indicates which mode the method is calling (before/after or replace)
+
+InstallScope scope						- Indicates the addin is un-/register per whole system or current user
+
+Office(Un)RegisterKeyState keyState		- Indicates NetOffice has been deleted the registry keys or want be do that after this action

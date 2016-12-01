@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<customUI xmlns="http://schemas.microsoft.com/office/2006/01/customui" onLoad="OnLoadRibonUI">
+  <ribbon>
+    <tabs>
+      <tab id="Excel02AddinCS4" label="NetOffice Addin 02 Example CS4">
+        <group id="ExampleGroup1" label="Example">
+          <button id="AboutButton" label="About" imageMso="AdvertisePublishAs" size="large" onAction="OnClickAboutButton" />
+          <toggleButton id="PaneVisibleToogleButton" label="Show CPU Usage Pane" imageMso="CreateFormBlankForm" size="large" getPressed="OnGetPressedPanelToggle" onAction="OnCheckPanelToggle" />
+        </group>
+      </tab>
+    </tabs>
+  </ribbon>
+</customUI>

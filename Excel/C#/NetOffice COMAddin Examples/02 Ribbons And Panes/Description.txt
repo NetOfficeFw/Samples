@@ -1,0 +1,6 @@
+﻿
+You see the CustomUI attribute. You can specify a path to an embedded xml ressource file with your ribbon schema.
+You can also override the GetCustomUI method from the base class to handle the things at runtime.
+
+The CustomPane attribute allows you to set a task pane very easy.
+You can also override the CTPFactoryAvailable method from the base class to handle the things at runtime.

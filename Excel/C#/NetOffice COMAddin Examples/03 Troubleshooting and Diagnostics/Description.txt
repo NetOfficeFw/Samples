@@ -1,0 +1,10 @@
+﻿The Timestamp attribute creates a DateTime.Now value in excel addin registry key.
+
+You can also create a tray menu with your own elements like button, label, etc
+and some predefined NetOffice elements. In this case we use the tray diagnostics item.
+
+The performance trace want give you informations about how long a call to the Office application
+need to pass. Use IntervalMS = 0 to bypass the minimum notification alert. Use "*" as wildcard - we
+want only see performance traces from Excel in this example.
+
+

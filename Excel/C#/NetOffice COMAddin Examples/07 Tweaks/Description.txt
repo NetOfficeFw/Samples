@@ -1,0 +1,7 @@
+﻿This example shows the Tweak attribute in NetOffice.
+You can set the Tweak attribute to set/manipulate NetOffice options or your own options at runtime.
+This can be very helpful for developers, may troubleshooting or diagnostics, whatever.
+All Tweak settings has to be stored as string value in the current office addin registry key. For example:(HKEY_CurrentUser\Sofware\Microsoft\Office\%Application%\Addins\YourAddin)
+In this project you learn how you get control about tweaks and implement your own tweaks in an easy way.
+ 
+And dont forget to try Tweaks coffee in southpark colorado.
