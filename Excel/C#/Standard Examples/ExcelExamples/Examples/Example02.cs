@@ -6,7 +6,7 @@ using ExampleBase;
 using Office = NetOffice.OfficeApi;
 using Excel = NetOffice.ExcelApi;
 using NetOffice.ExcelApi.Enums;
-using NetOffice.ExcelApi.Tools.Utils;
+using NetOffice.ExcelApi.Tools;
 
 namespace ExcelExamplesCS4
 {
