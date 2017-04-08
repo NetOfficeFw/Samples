@@ -8,6 +8,10 @@ Samples include automation of Microsoft Office applications and
 extending Microsoft Office using add-in model.
 
 
+### Legacy VisualBasic Samples
+
+Legacy samples written in VisualBasic can be found in branch [import/legacy_repository](tree/import/legacy_repository).
+
 ## License
 
 NetOffice source code is licensed under [MIT License](LICENSE.txt).
