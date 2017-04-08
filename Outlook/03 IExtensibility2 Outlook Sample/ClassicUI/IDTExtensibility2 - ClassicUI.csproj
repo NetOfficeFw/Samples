@@ -3,16 +3,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>8.0.30703</ProductVersion>
+    <ProductVersion>9.0.30729</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{A61EB8BC-556D-48F7-8A64-35D8B447D311}</ProjectGuid>
+    <ProjectGuid>{4EF7E632-255A-48D0-8F58-78EE798405A4}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>NetOfficeTools.ExtendedOutlookCS4</RootNamespace>
-    <AssemblyName>NetOfficeTools.ExtendedOutlookCS4</AssemblyName>
+    <RootNamespace>COMAddinClassicExampleCS4</RootNamespace>
+    <AssemblyName>COMAddinClassicExampleCS4</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -31,45 +30,35 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <RegisterForComInterop>false</RegisterForComInterop>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="extensibility, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
     <Reference Include="NetOffice, Version=1.7.3.0, Culture=neutral, PublicKeyToken=297f57b43ae7c1de, processorArchitecture=MSIL">
-      <HintPath>..\..\..\..\packages\NetOffice.Core.1.7.3.0\lib\net40\NetOffice.dll</HintPath>
+      <HintPath>..\..\..\packages\NetOffice.Core.1.7.3.0\lib\net40\NetOffice.dll</HintPath>
       <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
     <Reference Include="OfficeApi, Version=1.7.3.0, Culture=neutral, PublicKeyToken=a39beb0835c43c8e, processorArchitecture=MSIL">
-      <HintPath>..\..\..\..\packages\NetOffice.Core.1.7.3.0\lib\net40\OfficeApi.dll</HintPath>
+      <HintPath>..\..\..\packages\NetOffice.Core.1.7.3.0\lib\net40\OfficeApi.dll</HintPath>
       <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
     <Reference Include="OutlookApi, Version=1.7.3.0, Culture=neutral, PublicKeyToken=b118031aaa1097f3, processorArchitecture=MSIL">
-      <HintPath>..\..\..\..\packages\NetOffice.Outlook.1.7.3.0\lib\net40\OutlookApi.dll</HintPath>
+      <HintPath>..\..\..\packages\NetOffice.Outlook.1.7.3.0\lib\net40\OutlookApi.dll</HintPath>
       <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
     <Reference Include="System" />
-    <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Xml" />
     <Reference Include="VBIDEApi, Version=1.7.3.0, Culture=neutral, PublicKeyToken=931cec8882205047, processorArchitecture=MSIL">
-      <HintPath>..\..\..\..\packages\NetOffice.Core.1.7.3.0\lib\net40\VBIDEApi.dll</HintPath>
+      <HintPath>..\..\..\packages\NetOffice.Core.1.7.3.0\lib\net40\VBIDEApi.dll</HintPath>
       <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Addin.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SamplePane.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="SamplePane.Designer.cs">
-      <DependentUpon>SamplePane.cs</DependentUpon>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="RibbonUI.xml" />
-    <EmbeddedResource Include="SamplePane.resx">
-      <DependentUpon>SamplePane.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
