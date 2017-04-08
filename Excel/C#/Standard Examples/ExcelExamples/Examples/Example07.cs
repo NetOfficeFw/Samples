@@ -7,7 +7,7 @@ using Excel = NetOffice.ExcelApi;
 using VB = NetOffice.VBIDEApi;
 using NetOffice.ExcelApi.Enums;
 using NetOffice.VBIDEApi.Enums;
-using NetOffice.ExcelApi.Tools.Utils;
+using NetOffice.ExcelApi.Tools;
 
 namespace ExcelExamplesCS4
 {

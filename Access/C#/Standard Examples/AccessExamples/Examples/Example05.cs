@@ -16,7 +16,7 @@ using NetOffice.OfficeApi.Enums;
 using DAO = NetOffice.DAOApi;
 using NetOffice.DAOApi.Enums;
 using NetOffice.DAOApi.Constants;
-using NetOffice.AccessApi.Tools.Utils;
+using NetOffice.AccessApi.Tools;
 
 namespace AccessExamplesCS4
 {

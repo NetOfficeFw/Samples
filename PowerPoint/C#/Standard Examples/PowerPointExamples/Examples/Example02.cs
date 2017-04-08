@@ -9,7 +9,7 @@ using NetOffice;
 using PowerPoint = NetOffice.PowerPointApi;
 using NetOffice.PowerPointApi.Enums;
 using NetOffice.OfficeApi.Enums;
-using NetOffice.PowerPointApi.Tools.Utils;
+using NetOffice.PowerPointApi.Tools;
 
 namespace PowerPointExamplesCS4
 {
