@@ -1,6 +1,8 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetOffice Tools - Simple", "Simple\NetOffice Tools - Simple.csproj", "{FED51106-021E-4EF8-8418-3A3CC0FC132C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetOffice Tools - Extended", "Extended\NetOffice Tools - Extended.csproj", "{BFF466A2-1FCF-4E42-A7A4-F75293FFAF4E}"
