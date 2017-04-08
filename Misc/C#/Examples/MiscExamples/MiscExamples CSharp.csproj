@@ -66,19 +66,20 @@
     <Reference Include="ExampleBase">
       <HintPath>..\..\..\..\ExampleBase.dll</HintPath>
     </Reference>
-    <Reference Include="ExcelApi">
-      <HintPath>..\..\..\..\..\Assemblies\Any CPU\ExcelApi.dll</HintPath>
+    <Reference Include="ExcelApi, Version=1.7.3.0, Culture=neutral, PublicKeyToken=9084b9221296229e, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\NetOffice.Excel.1.7.3.0\lib\net40\ExcelApi.dll</HintPath>
       <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
-    <Reference Include="NetOffice">
-      <HintPath>..\..\..\..\..\Assemblies\Any CPU\NetOffice.dll</HintPath>
-    </Reference>
-    <Reference Include="OfficeApi">
-      <HintPath>..\..\..\..\..\Assemblies\Any CPU\OfficeApi.dll</HintPath>
+    <Reference Include="NetOffice, Version=1.7.3.0, Culture=neutral, PublicKeyToken=297f57b43ae7c1de, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\NetOffice.Core.1.7.3.0\lib\net40\NetOffice.dll</HintPath>
       <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
-    <Reference Include="OutlookApi">
-      <HintPath>..\..\..\..\..\Assemblies\Any CPU\OutlookApi.dll</HintPath>
+    <Reference Include="OfficeApi, Version=1.7.3.0, Culture=neutral, PublicKeyToken=a39beb0835c43c8e, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\NetOffice.Core.1.7.3.0\lib\net40\OfficeApi.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="OutlookApi, Version=1.7.3.0, Culture=neutral, PublicKeyToken=b118031aaa1097f3, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\NetOffice.Outlook.1.7.3.0\lib\net40\OutlookApi.dll</HintPath>
       <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
     <Reference Include="System" />
@@ -86,8 +87,12 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
-    <Reference Include="VBIDEApi">
-      <HintPath>..\..\..\..\..\Assemblies\Any CPU\VBIDEApi.dll</HintPath>
+    <Reference Include="VBIDEApi, Version=1.7.3.0, Culture=neutral, PublicKeyToken=931cec8882205047, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\NetOffice.Core.1.7.3.0\lib\net40\VBIDEApi.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="WordApi, Version=1.7.3.0, Culture=neutral, PublicKeyToken=f66d74591aaf8089, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\NetOffice.Word.1.7.3.0\lib\net40\WordApi.dll</HintPath>
       <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
   </ItemGroup>
@@ -121,6 +126,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
