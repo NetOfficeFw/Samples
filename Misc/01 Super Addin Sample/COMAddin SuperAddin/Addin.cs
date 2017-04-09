@@ -1,41 +1,40 @@
 using System;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
-using System.Text;
 using NetOffice.Tools;
+using NetOffice.OfficeApi;
 using NetOffice.OfficeApi.Tools;
-using Office = NetOffice.OfficeApi;
-using NetOffice.OfficeApi.Enums;
 
 namespace NetOfficeTools.SuperAddinCS4
 {
-    [COMAddin("NetOfficeTools Super Addin Sample", "This Addin shows you how i can create a NO Tools based Addin and support multiple office products", 3)]
-    [RegistryLocation(RegistrySaveLocation.CurrentUser), CustomUI("RibbonUI.xml", true)]
-    [Guid("CF0E2618-37D5-4efb-BD25-58301228ED0E"), ProgId("NOToolsSuperAddinCS4.Addin"), Tweak(true)]
-    [MultiRegister(RegisterIn.Excel, RegisterIn.Word, RegisterIn.PowerPoint, RegisterIn.Outlook, RegisterIn.Access, RegisterIn.MSProject)]  // visio is not supported because visio doesnt use the common office core
+    [COMAddin("NetOffice SuperAddin Sample (COMAddin)", "This NetOffice Addin shows how to register single adding class to multiple Microsoft Office products.", 3)]
+    [RegistryLocation(RegistrySaveLocation.CurrentUser)]
+    [Guid("CF0E2618-37D5-4efb-BD25-58301228ED0E")]
+    [ProgId("NetOfficeSample.COMAddinSuperAddin.Addin")]
+    [Tweak(true)]
+    [MultiRegister(RegisterIn.Excel, RegisterIn.Word, RegisterIn.PowerPoint, RegisterIn.Outlook, RegisterIn.Access, RegisterIn.MSProject)]  // MS Visio is not supported because Visio does not use the common office core
+    [CustomUI("RibbonUI.xml", true)]
     public class Addin : COMAddin
     {
-        public const string SAMPLE_NAME = "NetOffice SuperAddin Sample";
+        public const string ADDIN_TITLE = "NetOffice SuperAddin Sample";
 
-        #region Ribbon UI Trigger
-
-        public void OnAction(NetOffice.OfficeApi.IRibbonControl control)
+        public void OnAction(IRibbonControl control)
         {
             try
             {
                 switch (control.Id)
                 {
                     case "customButton1":
-                        Utils.Dialog.ShowMessageBox("This is the first sample button. " + Application.FriendlyTypeName, SAMPLE_NAME, DialogResult.None);
+                        Utils.Dialog.ShowMessageBox("This is the first sample button. " + Application.FriendlyTypeName, ADDIN_TITLE, DialogResult.None);
                         break;
                     case "customButton2":
-                        Utils.Dialog.ShowMessageBox("This is the second sample button. " + Application.FriendlyTypeName, SAMPLE_NAME, DialogResult.None);
+                        Utils.Dialog.ShowMessageBox("This is the second sample button. " + Application.FriendlyTypeName, ADDIN_TITLE, DialogResult.None);
                         break;
                     case "btnAbout":
-                        Utils.Dialog.ShowMessageBox("Sample add-in using NetOffice that is registered to multiple Microsoft Office applications.", SAMPLE_NAME, DialogResult.None);
+                        Utils.Dialog.ShowMessageBox("Sample add-in using NetOffice that is registered to multiple Microsoft Office applications.", ADDIN_TITLE, DialogResult.None);
                         break;
                     default:
-                        Utils.Dialog.ShowMessageBox("Unkown Control Id: " + control.Id, SAMPLE_NAME, DialogResult.None);
+                        Utils.Dialog.ShowMessageBox("Unkown Control Id: " + control.Id, ADDIN_TITLE, DialogResult.None);
                         break;
                 }
             }
@@ -45,21 +44,15 @@ namespace NetOfficeTools.SuperAddinCS4
             }
         }
 
-        #endregion
-
-        #region Error Handler
-
         protected override void OnError(ErrorMethodKind methodKind, Exception exception)
         {
-            Utils.Dialog.ShowError(exception, "Unexpected state in SuperAddinCS4 " + methodKind.ToString());
+            Utils.Dialog.ShowError(exception, $"Unexpected error occured in method {methodKind}.");
         }
 
         [RegisterErrorHandler]
         public static void RegisterErrorHandler(RegisterErrorMethodKind methodKind, Exception exception)
         {
-            MessageBox.Show("An register error occurend in " + methodKind.ToString(), "SuperAddinCS4");
+            MessageBox.Show($"Registration error in {methodKind}: {exception.Message}", ADDIN_TITLE);
         }
-
-        #endregion
     }
 }
