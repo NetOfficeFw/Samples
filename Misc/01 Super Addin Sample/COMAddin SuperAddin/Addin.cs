@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using System.Text;
@@ -15,6 +15,8 @@ namespace NetOfficeTools.SuperAddinCS4
     [MultiRegister(RegisterIn.Excel, RegisterIn.Word, RegisterIn.PowerPoint, RegisterIn.Outlook, RegisterIn.Access, RegisterIn.MSProject)]  // visio is not supported because visio doesnt use the common office core
     public class Addin : COMAddin
     {
+        public const string SAMPLE_NAME = "NetOffice SuperAddin Sample";
+
         #region Ribbon UI Trigger
 
         public void OnAction(NetOffice.OfficeApi.IRibbonControl control)
@@ -24,13 +26,16 @@ namespace NetOfficeTools.SuperAddinCS4
                 switch (control.Id)
                 {
                     case "customButton1":
-                        Utils.Dialog.ShowMessageBox("This is the first sample button. " + Application.FriendlyTypeName, "NetOfficeTools.SuperAddinCS4", DialogResult.None);
+                        Utils.Dialog.ShowMessageBox("This is the first sample button. " + Application.FriendlyTypeName, SAMPLE_NAME, DialogResult.None);
                         break;
                     case "customButton2":
-                        Utils.Dialog.ShowMessageBox("This is the second sample button. " + Application.FriendlyTypeName, "NetOfficeTools.SuperAddinCS4", DialogResult.None);
+                        Utils.Dialog.ShowMessageBox("This is the second sample button. " + Application.FriendlyTypeName, SAMPLE_NAME, DialogResult.None);
+                        break;
+                    case "btnAbout":
+                        Utils.Dialog.ShowMessageBox("Sample add-in using NetOffice that is registered to multiple Microsoft Office applications.", SAMPLE_NAME, DialogResult.None);
                         break;
                     default:
-                        Utils.Dialog.ShowMessageBox("Unkown Control Id: " + control.Id, "NetOfficeTools.SuperAddinCS4", DialogResult.None);
+                        Utils.Dialog.ShowMessageBox("Unkown Control Id: " + control.Id, SAMPLE_NAME, DialogResult.None);
                         break;
                 }
             }
