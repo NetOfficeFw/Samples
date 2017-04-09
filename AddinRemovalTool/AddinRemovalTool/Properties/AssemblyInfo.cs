@@ -1,36 +1,29 @@
-﻿using System.Reflection;
-using System.Runtime.CompilerServices;
+using System.Reflection;
 using System.Runtime.InteropServices;
 
-// Allgemeine Informationen über eine Assembly werden über die folgenden
-// Attribute gesteuert. Ändern Sie diese Attributwerte, um die Informationen zu ändern,
-// die mit einer Assembly verknüpft sind.
-[assembly: AssemblyTitle("Find and remove registered NetOffice Sample Addins")]
-[assembly: AssemblyDescription("")]
-[assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("NetOffice")]
-[assembly: AssemblyCopyright("Copyright ©  2012 Sebastian Lange")]
+// General Information about an assembly is controlled through the following 
+// set of attributes. Change these attribute values to modify the information
+// associated with an assembly.
+[assembly: AssemblyCompany("NetOffice")]
+[assembly: AssemblyProduct("NetOffice Developer Toolbox")]
+[assembly: AssemblyCopyright("Copyright © 2012-2017 Sebastian Lange, © 2015-2017 Jozef Izso")]
 [assembly: AssemblyTrademark("")]
+
 [assembly: AssemblyCulture("")]
 
-// Durch Festlegen von ComVisible auf "false" werden die Typen in dieser Assembly unsichtbar
-// für COM-Komponenten. Wenn Sie auf einen Typ in dieser Assembly von
-// COM zugreifen müssen, legen Sie das ComVisible-Attribut für diesen Typ auf "true" fest.
-[assembly: ComVisible(false)]
+#if DEBUG
+[assembly: AssemblyConfiguration("Debug")]
+#elif RELEASE
+[assembly: AssemblyConfiguration("Release")]
+#endif
 
-// Die folgende GUID bestimmt die ID der Typbibliothek, wenn dieses Projekt für COM verfügbar gemacht wird
+[assembly: ComVisible(false)]
 [assembly: Guid("1dd99d0f-419b-419d-8b93-d27ee02521b6")]
 
-// Versionsinformationen für eine Assembly bestehen aus den folgenden vier Werten:
-//
-//      Hauptversion
-//      Nebenversion
-//      Buildnummer
-//      Revision
-//
-// Sie können alle Werte angeben oder die standardmäßigen Build- und Revisionsnummern
-// übernehmen, indem Sie "*" eingeben:
-// [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("1.0.0.0")]
-[assembly: AssemblyFileVersion("1.0.0.0")]
+
+[assembly: AssemblyVersion("1.7.4.0")]
+[assembly: AssemblyFileVersion("1.7.4.0")]
+
+// This is used for the NuSpec version tag replacement
+// and is combined with nuget-specific rev and release
+[assembly: AssemblyInformationalVersion("1.7.4-dev")]
