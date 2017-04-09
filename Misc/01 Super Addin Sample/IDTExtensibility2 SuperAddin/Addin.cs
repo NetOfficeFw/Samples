@@ -22,12 +22,16 @@ namespace NetOfficeSamples.SuperAddinCS2
     /// <summary>
     /// the addin class
     /// </summary>
-    [Guid("39AA1CDE-F186-456B-ADF6-30D03352C131"), ProgId("SuperAddinCS4.Addin"), ComVisible(true)]
+    [Guid("39AA1CDE-F186-456B-ADF6-30D03352C131")]
+    [ProgId("NetOfficeSample.SuperAddinCS2.Addin")]
+    [ComVisible(true)]
     public class Addin : IDTExtensibility2, Office.IRibbonExtensibility
     {
-        private static readonly string _progId                  = "SuperAddinCS4.Addin";
-        private static readonly string _addinFriendlyName       = "NetOffice Sample Addin in C#";
-        private static readonly string _addinDescription        = "NetOffice Sample Addin for multipe Office Applications";
+        public const string ADDIN_TITLE = "NetOffice SuperAddin Sample";
+
+        private static readonly string _progId                  = "NetOfficeSample.SuperAddinCS2.Addin";
+        private static readonly string _addinFriendlyName       = "NetOffice SuperAddin Sample (IDTExtensibility2)";
+        private static readonly string _addinDescription        = "This IDTExtensibility2 addin shows how to register single addin class to multiple Microsoft Office products.";
 
         #region Fields
 
@@ -118,15 +122,31 @@ namespace NetOfficeSamples.SuperAddinCS2
         {
             try
             {
-                string message = string.Format("Thanks for click on a Ribbon.\r\nHostApp is {0}.{1} Version:{2}",
-                                              TypeDescriptor.GetComponentName(_application.UnderlyingObject), _application.UnderlyingTypeName, Invoker.Default.PropertyGet(_application, "Version"));
+                string appInfo = string.Format("\n\nHost application: {0}.{1}\nVersion: {2}",
+                    TypeDescriptor.GetComponentName(_application.UnderlyingObject),
+                    _application.UnderlyingTypeName,
+                    Invoker.Default.PropertyGet(_application, "Version")
+                    );
 
-                MessageBox.Show(message, _progId, MessageBoxButtons.OK, MessageBoxIcon.Information);
-
+                switch (control.Id)
+                {
+                    case "customButton1":
+                        MessageBox.Show("This is the first sample button. " + appInfo, ADDIN_TITLE, MessageBoxButtons.OK);
+                        break;
+                    case "customButton2":
+                        MessageBox.Show("This is the second sample button. " + appInfo, ADDIN_TITLE, MessageBoxButtons.OK);
+                        break;
+                    case "btnAbout":
+                        MessageBox.Show("Sample add-in using IDTExtensibility2 interface that is registered to multiple Microsoft Office applications.", ADDIN_TITLE, MessageBoxButtons.OK);
+                        break;
+                    default:
+                        MessageBox.Show("Unkown Control Id: " + control.Id, ADDIN_TITLE, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        break;
+                }
             }
-            catch (Exception exception)
+            catch (Exception ex)
             {
-                string message = string.Format("An error occured.{0}{0}{1}", Environment.NewLine, exception.Message);
+                string message = string.Format("Error occured: {0}", ex.Message);
                 MessageBox.Show(message, _progId, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
