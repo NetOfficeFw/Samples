@@ -7,7 +7,7 @@ using NetOffice.OfficeApi.Tools;
 
 namespace NetOfficeSamples.SuperAddinCS1
 {
-    [COMAddin("NetOffice SuperAddin Sample (COMAddin)", "This NetOffice Addin shows how to register single adding class to multiple Microsoft Office products.", 3)]
+    [COMAddin("NetOffice SuperAddin Sample (COMAddin)", "This NetOffice Addin shows how to register single addin class to multiple Microsoft Office products.", 3)]
     [RegistryLocation(RegistrySaveLocation.CurrentUser)]
     [Guid("CF0E2618-37D5-4efb-BD25-58301228ED0E")]
     [ProgId("NetOfficeSample.COMAddinSuperAddin.Addin")]
