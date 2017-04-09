@@ -20,7 +20,7 @@ namespace NetOfficeTools.SimpleAccessCS4
     {
         public Addin()
         {
-            // trigger the well known IExtensibility2 methods, this is very similar to VSTO
+            // trigger the well known IDTExtensibility2 methods, this is very similar to VSTO
             this.OnStartupComplete += new OnStartupCompleteEventHandler(Addin_OnStartupComplete);
             this.OnDisconnection += new OnDisconnectionEventHandler(Addin_OnDisconnection);
         }

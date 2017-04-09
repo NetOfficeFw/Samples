@@ -35,7 +35,7 @@ namespace NetOfficeTools.TweaksCS4
             return true;
         }
 
-        // This method was called from IExtensibility2.OnStartupComplete for all your custom tweaks if its allowed(see AllowApplyTweak)
+        // This method was called from IDTExtensibility2.OnStartupComplete for all your custom tweaks if its allowed(see AllowApplyTweak)
         protected override void ApplyCustomTweak(string name, string value)
         {
             if (name == "ShowTray" && value == "yes")
@@ -45,7 +45,7 @@ namespace NetOfficeTools.TweaksCS4
             }
         }
 
-        // This method was called from IExtensibility2.OnDisconnection for all your allowed custom aplied tweaks to remove or unload them.
+        // This method was called from IDTExtensibility2.OnDisconnection for all your allowed custom aplied tweaks to remove or unload them.
         // Please keep in your mind: the method is never called in state of unexpected termination. you have no warranties for the method.
         protected override void DisposeCustomTweak(string name, string value)
         {

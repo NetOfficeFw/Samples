@@ -41,7 +41,7 @@ namespace Excel07AddinCS4
             return true;
         }
 
-        // This method was called from IExtensibility2.OnStartupComplete for all your custom tweaks if its allowed(see AllowApplyTweak)
+        // This method was called from IDTExtensibility2.OnStartupComplete for all your custom tweaks if its allowed(see AllowApplyTweak)
         protected override void ApplyCustomTweak(string name, string value)
         {
             if (name == "ShowTray" && value == "yes")

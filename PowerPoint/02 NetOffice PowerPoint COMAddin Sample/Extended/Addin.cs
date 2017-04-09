@@ -35,7 +35,7 @@ namespace NetOfficeTools.ExtendedPPointCS4
     {
         public Addin()
         {
-            // trigger the well known IExtensibility2 methods, this is very similar to VSTO
+            // trigger the well known IDTExtensibility2 methods, this is very similar to VSTO
             this.OnStartupComplete += new OnStartupCompleteEventHandler(Addin_OnStartupComplete);
         }
 
@@ -126,7 +126,7 @@ namespace NetOfficeTools.ExtendedPPointCS4
          * At last you see some options for troubleshooting. The COMAddin base class is not a blackbox.
         */
 
-        // This error handler is used for IExtensibility2 events (your code) and the COMAddin methods GetCustomUI, CTPFactoryAvailable and CreateFactory(also overwrites).
+        // This error handler is used for IDTExtensibility2 events (your code) and the COMAddin methods GetCustomUI, CTPFactoryAvailable and CreateFactory(also overwrites).
         // the first argument shows in which method the error is occured. The second argument is the detailed exception info.
         // Rethrow the exception otherwise the exception is marked as handled.
         protected override void OnError(ErrorMethodKind methodKind, Exception exception)

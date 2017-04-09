@@ -15,13 +15,13 @@ the NetOffice `COMAddin` base class.
 
 NetOffice libraries are designed to be similar to developement with Visual Studio
 Tools for Office (VSTO). NetOffice `COMAddin` reduces infrastructure code and
-handles common tasks for you. It is built on top of native `IExtensibility2`
+handles common tasks for you. It is built on top of native `IDTExtensibility2`
 interface.
 
 
-## 03 IExtensibility2 Excel Add-in Sample
+## 03 IDTExtensibility2 Excel Add-in Sample
 
-Microsoft Excel add-in project sample built with native `IExtensibility2` COM+
+Microsoft Excel add-in project sample built with native `IDTExtensibility2` COM+
 interface.
 
 This is advanced sample for people familiar with extending Microsoft Office

@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IDTExtensibility2 - ClassicUI", "03 IExtensibility2 Outlook Sample\ClassicUI\IDTExtensibility2 - ClassicUI.csproj", "{4EF7E632-255A-48D0-8F58-78EE798405A4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IDTExtensibility2 - ClassicUI", "03 IDTExtensibility2 Word Sample\ClassicUI\IDTExtensibility2 - ClassicUI.csproj", "{4EF7E632-255A-48D0-8F58-78EE798405A4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IDTExtensibility2 - RibbonUI", "03 IExtensibility2 Outlook Sample\RibbonUI\IDTExtensibility2 - RibbonUI.csproj", "{1A259140-8F78-4553-A159-7FB17675E91C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IDTExtensibility2 - RibbonUI", "03 IDTExtensibility2 Word Sample\RibbonUI\IDTExtensibility2 - RibbonUI.csproj", "{1A259140-8F78-4553-A159-7FB17675E91C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IDTExtensibility2 - Taskpane", "03 IExtensibility2 Outlook Sample\TaskPane\IDTExtensibility2 - Taskpane.csproj", "{6BCE560D-D455-4265-A939-046C1FDEBC6A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IDTExtensibility2 - Taskpane", "03 IDTExtensibility2 Word Sample\TaskPane\IDTExtensibility2 - Taskpane.csproj", "{9ECCCB62-B4CC-4102-90EE-06CF724B329C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +23,10 @@ Global
 		{1A259140-8F78-4553-A159-7FB17675E91C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1A259140-8F78-4553-A159-7FB17675E91C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1A259140-8F78-4553-A159-7FB17675E91C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6BCE560D-D455-4265-A939-046C1FDEBC6A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6BCE560D-D455-4265-A939-046C1FDEBC6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6BCE560D-D455-4265-A939-046C1FDEBC6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6BCE560D-D455-4265-A939-046C1FDEBC6A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9ECCCB62-B4CC-4102-90EE-06CF724B329C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9ECCCB62-B4CC-4102-90EE-06CF724B329C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9ECCCB62-B4CC-4102-90EE-06CF724B329C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9ECCCB62-B4CC-4102-90EE-06CF724B329C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
