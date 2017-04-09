@@ -9,18 +9,18 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AddinRemovalToolUpdater", "
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|x86 = Debug|x86
-		Release|x86 = Release|x86
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{9BF0A9F0-F7BC-4A98-BEA4-44F29A92C9A2}.Debug|x86.ActiveCfg = Debug|x86
-		{9BF0A9F0-F7BC-4A98-BEA4-44F29A92C9A2}.Debug|x86.Build.0 = Debug|x86
-		{9BF0A9F0-F7BC-4A98-BEA4-44F29A92C9A2}.Release|x86.ActiveCfg = Release|x86
-		{9BF0A9F0-F7BC-4A98-BEA4-44F29A92C9A2}.Release|x86.Build.0 = Release|x86
-		{4A5DC26B-0B2F-45DE-B450-A957AB19F88B}.Debug|x86.ActiveCfg = Debug|x86
-		{4A5DC26B-0B2F-45DE-B450-A957AB19F88B}.Debug|x86.Build.0 = Debug|x86
-		{4A5DC26B-0B2F-45DE-B450-A957AB19F88B}.Release|x86.ActiveCfg = Release|x86
-		{4A5DC26B-0B2F-45DE-B450-A957AB19F88B}.Release|x86.Build.0 = Release|x86
+		{9BF0A9F0-F7BC-4A98-BEA4-44F29A92C9A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9BF0A9F0-F7BC-4A98-BEA4-44F29A92C9A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9BF0A9F0-F7BC-4A98-BEA4-44F29A92C9A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9BF0A9F0-F7BC-4A98-BEA4-44F29A92C9A2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A5DC26B-0B2F-45DE-B450-A957AB19F88B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A5DC26B-0B2F-45DE-B450-A957AB19F88B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A5DC26B-0B2F-45DE-B450-A957AB19F88B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A5DC26B-0B2F-45DE-B450-A957AB19F88B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
