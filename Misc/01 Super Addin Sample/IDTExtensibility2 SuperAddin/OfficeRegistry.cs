@@ -1,9 +1,9 @@
-﻿using System;
+using System;
 using Microsoft.Win32;
 using System.Collections.Generic;
 using System.Text;
 
-namespace SuperAddinCSharpCS4
+namespace NetOfficeSamples.SuperAddinCS2
 {
     /// <summary>
     /// office addin keys and create/delete methods

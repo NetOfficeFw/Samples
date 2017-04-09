@@ -8,8 +8,8 @@
     <ProjectGuid>{D10C3CB1-2C0D-4BB7-A2D1-193A1AA4562E}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>SuperAddinCS4</RootNamespace>
-    <AssemblyName>SuperAddinCS4</AssemblyName>
+    <RootNamespace>NetOfficeSamples.SuperAddinCS2</RootNamespace>
+    <AssemblyName>NetOfficeSamples.SuperAddinCS2</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

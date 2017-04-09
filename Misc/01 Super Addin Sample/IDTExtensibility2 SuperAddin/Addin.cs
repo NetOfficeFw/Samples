@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Reflection;
 using System.Windows.Forms;
 using System.Collections.Generic;
@@ -17,7 +17,7 @@ using Outlook = NetOffice.OutlookApi;
 using PowerPoint = NetOffice.PowerPointApi;
 using Access = NetOffice.AccessApi;
 
-namespace SuperAddinCSharpCS4
+namespace NetOfficeSamples.SuperAddinCS2
 {
     /// <summary>
     /// the addin class
