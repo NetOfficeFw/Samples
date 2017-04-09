@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetOffice Tools - Simple", "Simple\NetOffice Tools - Simple.csproj", "{788064E5-CF75-47EC-B970-AC58CF75F647}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetOffice Tools - Simple", "02 NetOffice Access COMAddin Sample\Simple\NetOffice Tools - Simple.csproj", "{788064E5-CF75-47EC-B970-AC58CF75F647}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetOffice Tools - Extended", "Extended\NetOffice Tools - Extended.csproj", "{D5AA7573-497C-42C5-843E-A607D134330B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetOffice Tools - Extended", "02 NetOffice Access COMAddin Sample\Extended\NetOffice Tools - Extended.csproj", "{D5AA7573-497C-42C5-843E-A607D134330B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetOffice Tools - Tweaks", "Tweaks\NetOffice Tools - Tweaks.csproj", "{91D666FC-3012-4556-99A9-A359A53FFF38}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetOffice Tools - Tweaks", "02 NetOffice Access COMAddin Sample\Tweaks\NetOffice Tools - Tweaks.csproj", "{91D666FC-3012-4556-99A9-A359A53FFF38}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
