@@ -52,7 +52,7 @@ namespace AccessExamplesCS4
 
         public string Description
         {
-            get { return HostApplication.LCID == 1033 ? "Database informations" : "Datenbankinformationen auslesen"; }
+            get { return HostApplication.LCID == 1033 ? "Display detailed information about database" : "Datenbankinformationen auslesen"; }
         }
 
         public UserControl Panel
@@ -102,7 +102,8 @@ namespace AccessExamplesCS4
         private void buttonSelectDatabase_Click(object sender, EventArgs e)
         {
             OpenFileDialog ofd = new OpenFileDialog();
-            ofd.Filter = "(*.mdb)|*.mdb|(*.accdb)|.accdb";
+            ofd.Filter = "All files|*.*|Microsoft Access Databases|*.accdb;*.mdb";
+            ofd.FilterIndex = 2;
             if (DialogResult.OK == ofd.ShowDialog(this))
             {
                 textBoxFilePath.Text = ofd.FileName;
