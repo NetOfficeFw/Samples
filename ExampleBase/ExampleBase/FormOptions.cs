@@ -32,8 +32,8 @@ namespace ExampleBase
             if (1031 == _lcid)
                 radioButtonLanguage1031.Checked = true;
 
-            if (Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) != rootDirectory)
-                radioButtonApplicationFolder.Checked = true;
+            if (Application.StartupPath != rootDirectory)
+                radioButtonDocumentsFolder.Checked = true;
         }
 
         /// <summary>
@@ -54,8 +54,7 @@ namespace ExampleBase
         {
             get
             {
-                return radioButtonCommonFolder.Checked ?
-                    Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) : Application.StartupPath;
+                return radioButtonApplicationFolder.Checked ? Application.StartupPath : Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "NetOfficeSamples");
             }
         }
 
@@ -77,7 +76,7 @@ namespace ExampleBase
         {
             get
             {
-                return Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
+                return Application.StartupPath;
             }
         }
 
@@ -92,6 +91,15 @@ namespace ExampleBase
 
         private void buttonDone_Click(object sender, EventArgs e)
         {
+            if (radioButtonDocumentsFolder.Checked)
+            {
+                string folder = this.RootDirectory;
+                if (!Directory.Exists(folder))
+                {
+                    Directory.CreateDirectory(folder);
+                }
+            }
+
             this.DialogResult = DialogResult.OK;
             this.Close();
         }
