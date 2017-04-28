@@ -87,12 +87,12 @@
             // columnHeader1
             //
             this.columnHeader1.Text = "Name";
-            this.columnHeader1.Width = 93;
+            this.columnHeader1.Width = 160;
             //
             // columnHeader2
             //
             this.columnHeader2.Text = "Description";
-            this.columnHeader2.Width = 587;
+            this.columnHeader2.Width = 912;
             //
             // imageList1
             //
