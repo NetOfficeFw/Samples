@@ -63,7 +63,7 @@ namespace AccessExamplesCS4
             oleConnection.Close();
 
             // delete old file if exists
-            string newDocumentFile = string.Format("{0}\\CompactDatabase{1}", HostApplication, utils.File.FileExtension(Access.Tools.DocumentFormat.Normal));
+            string newDocumentFile = utils.File.Combine(HostApplication.RootDirectory, "Example03_Compacted", Access.Tools.DocumentFormat.Normal);
             if (File.Exists(newDocumentFile))
                 File.Delete(newDocumentFile);
 
