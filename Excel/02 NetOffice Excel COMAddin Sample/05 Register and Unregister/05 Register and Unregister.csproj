@@ -31,16 +31,16 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="ExcelApi, Version=1.7.4.37, Culture=neutral, PublicKeyToken=d0b2dc7c792d5ca6, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\NetOffice.Excel.1.7.4-alpha-37\lib\net40\ExcelApi.dll</HintPath>
+    <Reference Include="ExcelApi, Version=1.7.4.44, Culture=neutral, PublicKeyToken=d0b2dc7c792d5ca6, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\NetOffice.Excel.1.7.4-alpha-44\lib\net40\ExcelApi.dll</HintPath>
       <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
-    <Reference Include="NetOffice, Version=1.7.4.37, Culture=neutral, PublicKeyToken=d0b2dc7c792d5ca6, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\NetOffice.Core.1.7.4-alpha-37\lib\net40\NetOffice.dll</HintPath>
+    <Reference Include="NetOffice, Version=1.7.4.44, Culture=neutral, PublicKeyToken=d0b2dc7c792d5ca6, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\NetOffice.Core.1.7.4-alpha-44\lib\net40\NetOffice.dll</HintPath>
       <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
-    <Reference Include="OfficeApi, Version=1.7.4.37, Culture=neutral, PublicKeyToken=d0b2dc7c792d5ca6, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\NetOffice.Core.1.7.4-alpha-37\lib\net40\OfficeApi.dll</HintPath>
+    <Reference Include="OfficeApi, Version=1.7.4.44, Culture=neutral, PublicKeyToken=d0b2dc7c792d5ca6, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\NetOffice.Core.1.7.4-alpha-44\lib\net40\OfficeApi.dll</HintPath>
       <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
     <Reference Include="System" />
@@ -50,8 +50,8 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
-    <Reference Include="VBIDEApi, Version=1.7.4.37, Culture=neutral, PublicKeyToken=d0b2dc7c792d5ca6, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\NetOffice.Core.1.7.4-alpha-37\lib\net40\VBIDEApi.dll</HintPath>
+    <Reference Include="VBIDEApi, Version=1.7.4.44, Culture=neutral, PublicKeyToken=d0b2dc7c792d5ca6, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\NetOffice.Core.1.7.4-alpha-44\lib\net40\VBIDEApi.dll</HintPath>
       <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
   </ItemGroup>
