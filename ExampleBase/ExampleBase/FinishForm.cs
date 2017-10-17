@@ -13,12 +13,12 @@ namespace ExampleBase
     /// <summary>
     /// Example finish dialog
     /// </summary>
-    public partial class FormFinish : Form
+    public partial class FinishForm : Form
     {
         #region Fields
 
         private string _documentPath;
-
+        
         #endregion
 
         #region Ctor
@@ -28,12 +28,11 @@ namespace ExampleBase
         /// </summary>
         /// <param name="message">finish message</param>
         /// <param name="documentPath">path to created document</param>
-        public FormFinish(string message, string documentPath)
+        public FinishForm(string message, string documentPath)
         {
             InitializeComponent();
-
             if (null == message)
-                message = "Document saved.";
+                message = "Document saved";
 
             labelMessage.Text = message;
             labelDocumentPath.Text = documentPath;
@@ -53,8 +52,7 @@ namespace ExampleBase
             }
             catch
             {
-                // its already open - aren't so?
-                // we ignore this and dont refuse the user
+                // still open
                 Console.WriteLine("Unable to delete {0}.", _documentPath);
             }
         }

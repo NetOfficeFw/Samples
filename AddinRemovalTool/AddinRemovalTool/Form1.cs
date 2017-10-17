@@ -95,7 +95,7 @@ namespace AddinRemovalTool
             {
                 AddinEntry entry = item.Tag as AddinEntry;
                 if (entry.Delete())
-                    item.Remove();
+                    item.Remove();                
             }
             buttonRefresh_Click(buttonRefresh, EventArgs.Empty);
         }

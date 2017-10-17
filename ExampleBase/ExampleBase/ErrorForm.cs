@@ -10,7 +10,7 @@ namespace ExampleBase
     /// <summary>
     /// Error while executing an example dialog
     /// </summary>
-    partial class FormError : Form
+    partial class ErrorForm : Form
     {
         #region Ctor
 
@@ -20,13 +20,13 @@ namespace ExampleBase
         /// <param name="title">dialog title</param>
         /// <param name="message">error caption</param>
         /// <param name="exception">exception as any</param>
-        public FormError(string title, string message, Exception exception)
+        public ErrorForm(string title, string message, Exception exception)
         {
             InitializeComponent();
             if (null == title)
-                title = FormOptions.LCID == 1033 ? "Error" : "Fehler";
+                title = "Error";
             if (null == message)
-                message = FormOptions.LCID == 1033 ? "An error is occured." : "Ein Fehler ist aufgetreten.";
+                message = null != exception ? exception.Message : "An error is occured.";
 
             this.Text = title;
             labelErrorMessage.Text = message;
@@ -46,7 +46,7 @@ namespace ExampleBase
         /// <param name="exception">exception as any</param>
         public static void Show(Control parentDialog, string title, string message, Exception exception)
         {
-            FormError form = new FormError(title, message, exception);
+            ErrorForm form = new ErrorForm(title, message, exception);
 
             form.ShowDialog(parentDialog);
         }
@@ -58,7 +58,7 @@ namespace ExampleBase
         /// <param name="exception">exception as any</param>
         public static void Show(Control parentDialog, Exception exception)
         {
-            FormError form = new FormError(null, null, exception);
+            ErrorForm form = new ErrorForm(null, null, exception);
 
             form.ShowDialog(parentDialog);
         }

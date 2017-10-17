@@ -39,12 +39,12 @@
             this.buttonRefresh = new System.Windows.Forms.Button();
             this.labelAddinCount = new System.Windows.Forms.Label();
             this.SuspendLayout();
-            //
+            // 
             // listOverView
-            //
-            this.listOverView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            // 
+            this.listOverView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.listOverView.CheckBoxes = true;
             this.listOverView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
@@ -56,34 +56,34 @@
             this.listOverView.Location = new System.Drawing.Point(0, 0);
             this.listOverView.Margin = new System.Windows.Forms.Padding(4);
             this.listOverView.Name = "listOverView";
-            this.listOverView.Size = new System.Drawing.Size(827, 315);
+            this.listOverView.Size = new System.Drawing.Size(830, 315);
             this.listOverView.TabIndex = 0;
             this.listOverView.UseCompatibleStateImageBehavior = false;
             this.listOverView.View = System.Windows.Forms.View.Details;
             this.listOverView.ItemChecked += new System.Windows.Forms.ItemCheckedEventHandler(this.listOverView_ItemChecked);
-            //
+            // 
             // columnHeader1
-            //
+            // 
             this.columnHeader1.Text = "Name";
-            this.columnHeader1.Width = 240;
-            //
+            this.columnHeader1.Width = 200;
+            // 
             // columnHeader4
-            //
+            // 
             this.columnHeader4.Text = "Product";
             this.columnHeader4.Width = 80;
-            //
+            // 
             // columnHeader2
-            //
+            // 
             this.columnHeader2.Text = "Description";
             this.columnHeader2.Width = 300;
-            //
+            // 
             // columnHeader3
-            //
+            // 
             this.columnHeader3.Text = "ProgID";
-            this.columnHeader3.Width = 170;
-            //
+            this.columnHeader3.Width = 210;
+            // 
             // buttonExit
-            //
+            // 
             this.buttonExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonExit.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.buttonExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -97,9 +97,9 @@
             this.buttonExit.Text = "Close";
             this.buttonExit.UseVisualStyleBackColor = true;
             this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
-            //
+            // 
             // buttonRemove
-            //
+            // 
             this.buttonRemove.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonRemove.Enabled = false;
             this.buttonRemove.FlatAppearance.BorderColor = System.Drawing.Color.White;
@@ -114,9 +114,9 @@
             this.buttonRemove.Text = "Remove";
             this.buttonRemove.UseVisualStyleBackColor = true;
             this.buttonRemove.Click += new System.EventHandler(this.buttonRemove_Click);
-            //
+            // 
             // buttonRefresh
-            //
+            // 
             this.buttonRefresh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonRefresh.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.buttonRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -130,9 +130,9 @@
             this.buttonRefresh.Text = "Refresh";
             this.buttonRefresh.UseVisualStyleBackColor = true;
             this.buttonRefresh.Click += new System.EventHandler(this.buttonRefresh_Click);
-            //
+            // 
             // labelAddinCount
-            //
+            // 
             this.labelAddinCount.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.labelAddinCount.AutoSize = true;
             this.labelAddinCount.ForeColor = System.Drawing.Color.MidnightBlue;
@@ -141,12 +141,12 @@
             this.labelAddinCount.Size = new System.Drawing.Size(281, 16);
             this.labelAddinCount.TabIndex = 5;
             this.labelAddinCount.Text = "{0} registered NetOffice Sample Addins found.";
-            //
+            // 
             // Form1
-            //
+            // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(227)))), ((int)(((byte)(243)))));
             this.ClientSize = new System.Drawing.Size(830, 386);
             this.Controls.Add(this.labelAddinCount);
             this.Controls.Add(this.buttonRefresh);
@@ -176,3 +176,4 @@
         private System.Windows.Forms.Label labelAddinCount;
     }
 }
+

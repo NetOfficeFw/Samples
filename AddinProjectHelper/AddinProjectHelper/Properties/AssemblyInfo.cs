@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // Allgemeine Informationen über eine Assembly werden über die folgenden 
 // Attribute gesteuert. Ändern Sie diese Attributwerte, um die Informationen zu ändern,
 // die mit einer Assembly verknüpft sind.
-[assembly: AssemblyTitle("ExampleBase")]
+[assembly: AssemblyTitle("AddinProjectHelper")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("ExampleBase")]
-[assembly: AssemblyCopyright("Copyright ©  2012")]
+[assembly: AssemblyProduct("https://github.com/NetOfficeFw/NetOffice")]
+[assembly: AssemblyCopyright("Copyright ©  2012 Sebastian Lange")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // Die folgende GUID bestimmt die ID der Typbibliothek, wenn dieses Projekt für COM verfügbar gemacht wird
-[assembly: Guid("5e404ba4-3310-49ff-8b95-67c7bed4eda6")]
+[assembly: Guid("1dd99d0f-419b-419d-8b93-d27ee02521b6")]
 
 // Versionsinformationen für eine Assembly bestehen aus den folgenden vier Werten:
 //

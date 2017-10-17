@@ -30,7 +30,7 @@ namespace AddinRemovalToolUpdater
 
                 if (!Directory.Exists(releaseFolderLocation))
                     throw new DirectoryNotFoundException("Release folder not found.");
-
+                
                 string[] runtimes = new string[]{"NET 2.0", "NET 3.0", "NET 3.5", "NET 4.0", "NET 4.5"};
                 string[] languages = new string[] { "C#", "VB" };
                 string[] products = new string[] { "Access", "Excel", "Outlook", "PowerPoint", "Word", "Misc"};
