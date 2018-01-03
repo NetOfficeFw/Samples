@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Drawing;
-using System.Data;
-using System.Text;
 using System.Windows.Forms;
 using System.Diagnostics;
 
@@ -30,8 +26,7 @@ namespace Excel02AddinCS4
 
         public void OnConnection(NetOffice.ExcelApi.Application application, NetOffice.OfficeApi._CustomTaskPane parentPane, object[] customArguments)
         {
-            Counter = new PerformanceCounter("Process", "% Processor Time", "Excel");
-            UsageTimer.Enabled = true;
+
         }
 
         public void OnDisconnection()
@@ -44,12 +39,23 @@ namespace Excel02AddinCS4
             }
         }
 
-        public void OnDockPositionChanged(NetOffice.OfficeApi.Enums.MsoCTPDockPosition position)
+        public void OnVisibleStateChanged(bool visible)
         {
-            
+            // Create the performance counter is expensive in performance
+            // To avoid slow down the Excel startup sequence - we create them on demand when user want show the pane
+            // (Real world code want doing that async)
+            if (visible && null == Counter)
+            {
+                Counter = new PerformanceCounter("Process", "% Processor Time", "Excel");
+                UsageTimer.Enabled = true;
+            }
+            else if (visible)
+                UsageTimer.Enabled = true;
+            else if (!visible)
+                UsageTimer.Enabled = false;
         }
 
-        public void OnVisibleStateChanged(bool visible)
+        public void OnDockPositionChanged(NetOffice.OfficeApi.Enums.MsoCTPDockPosition position)
         {
             
         }

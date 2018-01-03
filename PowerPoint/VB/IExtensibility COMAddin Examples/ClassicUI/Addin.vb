@@ -2,14 +2,13 @@
 Imports Microsoft.Win32
 Imports System.Runtime.CompilerServices
 Imports System.Runtime.InteropServices
-
 Imports NetOffice
 Imports PowerPoint = NetOffice.PowerPointApi
 Imports NetOffice.PowerPointApi.Enums
 Imports Office = NetOffice.OfficeApi
 Imports NetOffice.OfficeApi.Enums
 
-<GuidAttribute("C994BD16-0CD3-4058-8BF4-B91A3D2975F9"), ProgIdAttribute("PPointAddinVB4.SimpleAddin"), ComVisible(True)> _
+<Guid("C994BD16-0CD3-4058-8BF4-B91A3D2975F9"), ProgId("PPointAddinVB4.SimpleAddin"), ComVisible(True)>
 Public Class Addin
     Implements IDTExtensibility2
 
@@ -27,7 +26,7 @@ Public Class Addin
     Private Shared ReadOnly _contextName As String = "Sample ContextMenu VB4"
     Private Shared ReadOnly _contextMenuButtonName As String = "Sample ContextButton VB4"
 
-    Dim _powerApplication As PowerPoint.Application
+    Private _powerApplication As PowerPoint.Application
 
 #Region "IDTExtensibility2 Members"
 
@@ -92,9 +91,9 @@ Public Class Addin
     Private Sub SetupGui()
 
         ' How to: Add Commands to Shortcut Menus in Excel
-        ' http://msdn.microsoft.com/en-us/library/0batekf4.aspx
+        ' http://msdn.microsoft.com/en-us/library/0batekf4.aspx   
 
-        'create commandbar
+        'create commandbar 
         Dim commandBar As Office.CommandBar = _powerApplication.CommandBars.Add(_toolbarName, MsoBarPosition.msoBarTop, System.Type.Missing, True)
         commandBar.Visible = True
 
@@ -112,7 +111,7 @@ Public Class Addin
         Dim clickHandler As NetOffice.OfficeApi.CommandBarButton_ClickEventHandler = AddressOf Me.commandBarBtn_ClickEvent
         AddHandler commandBarBtn.ClickEvent, clickHandler
 
-        ' create menu
+        ' create menu 
         commandBar = _powerApplication.CommandBars("Menu Bar")
 
         ' add popup to menu bar
@@ -129,7 +128,7 @@ Public Class Addin
         clickHandler = AddressOf Me.commandBarBtn_ClickEvent
         AddHandler commandBarBtn.ClickEvent, clickHandler
 
-        ' create context menu
+        ' create context menu 
         commandBarPop = _powerApplication.CommandBars("Frames").Controls.Add(MsoControlType.msoControlPopup, System.Type.Missing, System.Type.Missing, System.Type.Missing, True)
         commandBarPop.Caption = _contextName
         commandBarPop.Tag = _contextName

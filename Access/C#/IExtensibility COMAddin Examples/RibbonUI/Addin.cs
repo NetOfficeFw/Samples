@@ -1,11 +1,10 @@
 ﻿using System;
 using System.Reflection;
-using System.Windows.Forms;
+using System.Windows.Forms; 
 using Microsoft.Win32;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Extensibility;
-
 using Access = NetOffice.AccessApi;
 using Office = NetOffice.OfficeApi;
 using NetOffice.AccessApi.Enums;
@@ -13,18 +12,18 @@ using NetOffice.OfficeApi.Enums;
 
 namespace COMAddinRibbonExampleCS4
 {
-    [GuidAttribute("44665894-708B-45B2-B2D8-6D2C8D2CA0A6"), ProgId("AccessAddinCS4.RibbonAddin"), ComVisible(true)]
-    public class Addin : IDTExtensibility2, Office.IRibbonExtensibility
+    [Guid("44665894-708B-45B2-B2D8-6D2C8D2CA0A6"), ProgId("AccessAddinCS4.RibbonAddin"), ComVisible(true)]
+    public class Addin : IDTExtensibility2, Office.Native.IRibbonExtensibility
     {
         private static readonly string _addinOfficeRegistryKey  = "Software\\Microsoft\\Office\\Access\\AddIns\\";
         private static readonly string _progId                  = "AccessAddinCS4.RibbonAddin";
         private static readonly string _addinFriendlyName       = "NetOffice Sample Addin in C#";
         private static readonly string _addinDescription        = "NetOffice Sample Addin with custom Ribbon UI";
 
-        Access.Application _accessApplication;
+        private Access.Application _accessApplication;
 
         #region IDTExtensibility2 Members
-
+        
         void IDTExtensibility2.OnConnection(object Application, ext_ConnectMode ConnectMode, object AddInInst, ref Array custom)
         {
             try
@@ -83,7 +82,7 @@ namespace COMAddinRibbonExampleCS4
                 MessageBox.Show("An error occured in GetCustomUI." + details, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return "";
             }
-
+            
         }
 
         #endregion
@@ -161,7 +160,7 @@ namespace COMAddinRibbonExampleCS4
             {
                 Registry.ClassesRoot.DeleteSubKey(@"CLSID\{" + type.GUID.ToString().ToUpper() + @"}\Programmable", false);
                 Registry.CurrentUser.DeleteSubKey(_addinOfficeRegistryKey + _progId, false);
-            }
+            }  
             catch (Exception throwedException)
             {
                 string details = string.Format("{1}{1}Details:{1}{1}{0}", throwedException.Message, Environment.NewLine);

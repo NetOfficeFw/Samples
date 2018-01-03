@@ -117,7 +117,7 @@ Public Class SampleControl
                     activePresentation.Dispose()
 
                 End If
-
+                
             End If
 
         Catch ex As Exception

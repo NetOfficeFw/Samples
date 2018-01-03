@@ -45,7 +45,7 @@
             this.UsageLabel.BackColor = System.Drawing.Color.Transparent;
             this.UsageLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.UsageLabel.ForeColor = System.Drawing.Color.Blue;
-            this.UsageLabel.Location = new System.Drawing.Point(371, 8);
+            this.UsageLabel.Location = new System.Drawing.Point(126, 8);
             this.UsageLabel.Name = "UsageLabel";
             this.UsageLabel.Size = new System.Drawing.Size(48, 13);
             this.UsageLabel.TabIndex = 7;
@@ -57,7 +57,7 @@
             this.UsageBar.Dock = System.Windows.Forms.DockStyle.Fill;
             this.UsageBar.Location = new System.Drawing.Point(0, 0);
             this.UsageBar.Name = "UsageBar";
-            this.UsageBar.Size = new System.Drawing.Size(807, 30);
+            this.UsageBar.Size = new System.Drawing.Size(300, 30);
             this.UsageBar.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.UsageBar.TabIndex = 8;
             // 
@@ -69,9 +69,9 @@
             this.Controls.Add(this.UsageBar);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.Blue;
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Margin = new System.Windows.Forms.Padding(0);
             this.Name = "SamplePane";
-            this.Size = new System.Drawing.Size(807, 30);
+            this.Size = new System.Drawing.Size(300, 30);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
 using ExampleBase;
-using Office = NetOffice.OfficeApi;
 using Excel = NetOffice.ExcelApi;
 using NetOffice.ExcelApi.Enums;
 
@@ -39,19 +38,19 @@ namespace ExcelExamplesCS4
 
         public string Caption
         {
-            get { return HostApplication.LCID == 1033 ? "Example06" : "Beispiel06"; }
+            get { return "Example06"; }
         }
 
         public string Description
         {
-            get { return HostApplication.LCID == 1033 ? "Dialogs in Excel" : "Dialoge in Excel"; }
+            get { return "Dialogs in Excel"; }
         }
 
         public UserControl Panel
         {
             get { return this; }
         }
-
+    
         #endregion
 
         #region Properties
@@ -66,7 +65,7 @@ namespace ExcelExamplesCS4
         #region UI Trigger
 
         private void buttonStartExample_Click(object sender, EventArgs e)
-        {
+        {           
             // start excel and turn off msg boxes
             Excel.Application excelApplication = new Excel.Application();
             excelApplication.DisplayAlerts = false;
@@ -133,7 +132,7 @@ namespace ExcelExamplesCS4
             excelApplication.Quit();
             excelApplication.Dispose();
         }
-
+        
         #endregion
 
         #region Helper

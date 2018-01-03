@@ -1,4 +1,4 @@
-﻿Example01			- inbox folder
+﻿Example01			- inbox folder 
 Example02			- create task item
 Example03			- send mail
 Example04			- send and recieve

@@ -2,34 +2,34 @@
 Imports System.Reflection
 Imports System.Runtime.InteropServices
 
-' Allgemeine Informationen über eine Assembly werden über die folgenden
+' Allgemeine Informationen über eine Assembly werden über die folgenden 
 ' Attribute gesteuert. Ändern Sie diese Attributwerte, um die Informationen zu ändern,
 ' die mit einer Assembly verknüpft sind.
 
 ' Die Werte der Assemblyattribute überprüfen
 
-<Assembly: AssemblyTitle("WordExamples")>
-<Assembly: AssemblyDescription("")>
-<Assembly: AssemblyCompany("http://netoffice.codeplex.com")>
-<Assembly: AssemblyProduct("WordExamples")>
-<Assembly: AssemblyCopyright("Copyright ©  2012 Sebastian Lange")>
-<Assembly: AssemblyTrademark("")>
+<Assembly: AssemblyTitle("WordExamples")> 
+<Assembly: AssemblyDescription("")> 
+<Assembly: AssemblyCompany("http://netoffice.codeplex.com")> 
+<Assembly: AssemblyProduct("WordExamples")> 
+<Assembly: AssemblyCopyright("Copyright ©  2012 Sebastian Lange")> 
+<Assembly: AssemblyTrademark("")> 
 
 <Assembly: ComVisible(False)>
 
 'Die folgende GUID bestimmt die ID der Typbibliothek, wenn dieses Projekt für COM verfügbar gemacht wird
-<Assembly: Guid("319bc11f-ca1a-4567-890f-83f87d3e26a7")>
+<Assembly: Guid("319bc11f-ca1a-4567-890f-83f87d3e26a7")> 
 
 ' Versionsinformationen für eine Assembly bestehen aus den folgenden vier Werten:
 '
 '      Hauptversion
-'      Nebenversion
+'      Nebenversion 
 '      Buildnummer
 '      Revision
 '
-' Sie können alle Werte angeben oder die standardmäßigen Build- und Revisionsnummern
+' Sie können alle Werte angeben oder die standardmäßigen Build- und Revisionsnummern 
 ' übernehmen, indem Sie "*" eingeben:
-' <Assembly: AssemblyVersion("1.0.*")>
+' <Assembly: AssemblyVersion("1.0.*")> 
 
-<Assembly: AssemblyVersion("1.0.0.0")>
-<Assembly: AssemblyFileVersion("1.0.0.0")>
+<Assembly: AssemblyVersion("1.0.0.0")> 
+<Assembly: AssemblyFileVersion("1.0.0.0")> 

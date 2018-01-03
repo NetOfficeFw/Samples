@@ -187,7 +187,7 @@ Public Class SampleControl
 
             MessageBox.Show(Me, ex.Message, "An error is occured", MessageBoxButtons.OK, MessageBoxIcon.Error)
 
-        End Try
+        End Try        
 
     End Sub
 
@@ -217,7 +217,7 @@ Public Class SampleControl
             MessageBox.Show(Me, ex.Message, "An error is occured", MessageBoxButtons.OK, MessageBoxIcon.Error)
 
         End Try
-
+     
     End Sub
 
 #End Region

@@ -2,14 +2,13 @@
 Imports Microsoft.Win32
 Imports System.Runtime.CompilerServices
 Imports System.Runtime.InteropServices
-
 Imports NetOffice
 Imports Access = NetOffice.AccessApi
 Imports NetOffice.AccessApi.Enums
 Imports Office = NetOffice.OfficeApi
 Imports NetOffice.OfficeApi.Enums
 
-<GuidAttribute("A48F84DF-BD64-4A8F-95B0-452989733AE2"), ProgIdAttribute("AccessAddinVB4.SimpleAddin"), ComVisible(True)> _
+<Guid("A48F84DF-BD64-4A8F-95B0-452989733AE2"), ProgId("AccessAddinVB4.SimpleAddin"), ComVisible(True)>
 Public Class Addin
     Implements IDTExtensibility2
 
@@ -25,7 +24,7 @@ Public Class Addin
     Private Shared ReadOnly _menuName As String = "Sample Menu VB4"
     Private Shared ReadOnly _menuButtonName As String = "Sample Button VB4"
 
-    Dim _accessApplication As Access.Application
+    Private _accessApplication As Access.Application
 
 #Region "IDTExtensibility2 Members"
 
@@ -92,9 +91,9 @@ Public Class Addin
     Private Sub SetupGui()
 
         ' How to: Add Commands to Shortcut Menus in Excel
-        ' http://msdn.microsoft.com/en-us/library/0batekf4.aspx
+        ' http://msdn.microsoft.com/en-us/library/0batekf4.aspx   
 
-        'create commandbar
+        'create commandbar 
         Dim commandBar As Office.CommandBar = _accessApplication.CommandBars.Add(_toolbarName, MsoBarPosition.msoBarTop, System.Type.Missing, True)
         commandBar.Visible = True
 
@@ -112,7 +111,7 @@ Public Class Addin
         Dim clickHandler As NetOffice.OfficeApi.CommandBarButton_ClickEventHandler = AddressOf Me.commandBarBtn_ClickEvent
         AddHandler commandBarBtn.ClickEvent, clickHandler
 
-        ' create menu
+        ' create menu 
         commandBar = _accessApplication.CommandBars("Menu Bar")
 
         ' add popup to menu bar

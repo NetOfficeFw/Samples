@@ -2,23 +2,22 @@
 Imports Microsoft.Win32
 Imports System.Runtime.CompilerServices
 Imports System.Runtime.InteropServices
-
 Imports NetOffice
 Imports Access = NetOffice.AccessApi
 Imports NetOffice.AccessApi.Enums
 Imports Office = NetOffice.OfficeApi
 Imports NetOffice.OfficeApi.Enums
 
-<GuidAttribute("8430EA50-AE45-40A2-8122-F528ED8E032C"), ProgIdAttribute("AccessAddinVB4.RibbonAddin"), ComVisible(True)> _
+<Guid("8430EA50-AE45-40A2-8122-F528ED8E032C"), ProgId("AccessAddinVB4.RibbonAddin"), ComVisible(True)>
 Public Class Addin
-    Implements IDTExtensibility2, Office.IRibbonExtensibility
+    Implements IDTExtensibility2, Office.Native.IRibbonExtensibility
 
     Private Shared ReadOnly _addinOfficeRegistryKey As String = "Software\\Microsoft\\Office\\Access\\AddIns\\"
     Private Shared ReadOnly _progId As String = "AccessAddinVB4.RibbonAddin"
     Private Shared ReadOnly _addinFriendlyName As String = "NetOffice Sample Addin in VB"
     Private Shared ReadOnly _addinDescription As String = "NetOffice Sample Addin with custom Ribbon UI"
 
-    Dim _accessApplication As Access.Application
+    Private _accessApplication As Access.Application
 
 #Region "IDTExtensibility2 Members"
 
@@ -66,7 +65,7 @@ Public Class Addin
 
 #Region "IRibbonExtensibility Members"
 
-    Public Function GetCustomUI(ByVal RibbonID As String) As String Implements Office.IRibbonExtensibility.GetCustomUI
+    Public Function GetCustomUI(ByVal RibbonID As String) As String Implements Office.Native.IRibbonExtensibility.GetCustomUI
 
         Try
 

@@ -2,14 +2,13 @@
 Imports Microsoft.Win32
 Imports System.Runtime.CompilerServices
 Imports System.Runtime.InteropServices
-
 Imports NetOffice
 Imports Word = NetOffice.WordApi
 Imports NetOffice.WordApi.Enums
 Imports Office = NetOffice.OfficeApi
 Imports NetOffice.OfficeApi.Enums
 
-<GuidAttribute("E5F0B1CB-7760-467F-8789-29C5276A3207"), ProgIdAttribute("WordAddinVB4.SimpleAddin"), ComVisible(True)> _
+<Guid("E5F0B1CB-7760-467F-8789-29C5276A3207"), ProgId("WordAddinVB4.SimpleAddin"), ComVisible(True)>
 Public Class Addin
     Implements IDTExtensibility2
 
@@ -27,8 +26,8 @@ Public Class Addin
     Private Shared ReadOnly _contextName As String = "Sample ContextMenu VB4"
     Private Shared ReadOnly _contextMenuButtonName As String = "Sample ContextButton VB4"
 
-    Dim _wordApplication As Word.Application = Nothing
-    Dim _normalDotTemplate As Word.Template = Nothing
+    Private _wordApplication As Word.Application = Nothing
+    Private _normalDotTemplate As Word.Template = Nothing
 
 #Region "IDTExtensibility2 Members"
 
@@ -205,11 +204,11 @@ Public Class Addin
     Private Sub SetupGui()
 
         ' How to: Add Commands to Shortcut Menus in Excel
-        ' http://msdn.microsoft.com/en-us/library/0batekf4.aspx
+        ' http://msdn.microsoft.com/en-us/library/0batekf4.aspx   
 
         _wordApplication.CustomizationContext = _normalDotTemplate
 
-        'create commandbar
+        'create commandbar 
         Dim commandBar As Office.CommandBar = _wordApplication.CommandBars.Add(_toolbarName, MsoBarPosition.msoBarTop, System.Type.Missing, True)
         commandBar.Visible = True
 
@@ -227,7 +226,7 @@ Public Class Addin
         Dim clickHandler As NetOffice.OfficeApi.CommandBarButton_ClickEventHandler = AddressOf Me.commandBarBtn_ClickEvent
         AddHandler commandBarBtn.ClickEvent, clickHandler
 
-        ' create menu
+        ' create menu 
         commandBar = _wordApplication.CommandBars("Menu Bar")
 
         ' add popup to menu bar
@@ -244,7 +243,7 @@ Public Class Addin
         clickHandler = AddressOf Me.commandBarBtn_ClickEvent
         AddHandler commandBarBtn.ClickEvent, clickHandler
 
-        ' create context menu
+        ' create context menu 
         commandBarPop = _wordApplication.CommandBars("Text").Controls.Add(MsoControlType.msoControlPopup, System.Type.Missing, System.Type.Missing, System.Type.Missing, True)
         commandBarPop.Caption = _contextName
         commandBarPop.Tag = _contextName

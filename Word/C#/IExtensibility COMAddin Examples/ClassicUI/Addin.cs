@@ -5,7 +5,6 @@ using System.Windows.Forms;
 using Microsoft.Win32;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
-
 using Word = NetOffice.WordApi;
 using Office = NetOffice.OfficeApi;
 using NetOffice.WordApi.Enums;
@@ -13,7 +12,7 @@ using NetOffice.OfficeApi.Enums;
 
 namespace COMAddinClassicExampleCS4
 {
-    [GuidAttribute("1C401FCE-7D5E-4C6D-AE88-71BF01FC159B"), ProgId("WordAddinCS4.SimpleAddin"), ComVisible(true)]
+    [Guid("1C401FCE-7D5E-4C6D-AE88-71BF01FC159B"), ProgId("WordAddinCS4.SimpleAddin"), ComVisible(true)]
     public class Addin : IDTExtensibility2
     {
         private static readonly string _addinOfficeRegistryKey  = "Software\\Microsoft\\Office\\Word\\AddIns\\";
@@ -30,8 +29,8 @@ namespace COMAddinClassicExampleCS4
         private static readonly string _contextName             = "Sample ContextMenu CS4";
         private static readonly string _contextMenuButtonName   = "Sample ContextButton CS4";
 
-        Word.Application _wordApplication;
-        Word.Template    _normalDotTemplate;
+        private Word.Application _wordApplication;
+        private Word.Template    _normalDotTemplate; 
 
         #region IDTExtensibility2 Members
 
@@ -70,7 +69,7 @@ namespace COMAddinClassicExampleCS4
             {
                 if (null != _wordApplication)
                 {
-                    // word ignores the temporary parameter in created menus(not toolbars) and save menu settings to normal.dot
+                    // word ignores the temporary parameter in created menus(not toolbars) and save menu settings to normal.dot 
                     RemoveGui();
                     _wordApplication.Dispose();
                 }
@@ -81,7 +80,7 @@ namespace COMAddinClassicExampleCS4
                 MessageBox.Show(message, _prodId, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
+  
         void IDTExtensibility2.OnAddInsUpdate(ref Array custom)
         {
         }
@@ -148,7 +147,7 @@ namespace COMAddinClassicExampleCS4
         #endregion
 
         #region Private Helper Methods
-
+        
         /// <summary>
         /// returns normal.dot template
         /// </summary>
@@ -164,7 +163,7 @@ namespace COMAddinClassicExampleCS4
                 installedTemplate.Dispose();
             }
         }
-
+        
         #endregion
 
         #region Create/Remove UI
@@ -198,15 +197,15 @@ namespace COMAddinClassicExampleCS4
         {
             /*
             // How to: Add Commands to Shortcut Menus in Word
-            // http://msdn.microsoft.com/de-de/library/dd554969.aspx
+            // http://msdn.microsoft.com/de-de/library/dd554969.aspx             
             */
 
             _wordApplication.CustomizationContext = _normalDotTemplate;
 
             /* create commandbar */
-            Office.CommandBar commandBar = _wordApplication.CommandBars.Add(_toolbarName, MsoBarPosition.msoBarTop, System.Type.Missing, true);
+            Office.CommandBar commandBar = _wordApplication.CommandBars.Add(_toolbarName, MsoBarPosition.msoBarTop, System.Type.Missing, true);            
             commandBar.Visible = true;
-
+        
             // add popup to commandbar
             Office.CommandBarPopup commandBarPop = (Office.CommandBarPopup)commandBar.Controls.Add(MsoControlType.msoControlPopup, System.Type.Missing, System.Type.Missing, System.Type.Missing, true);
             commandBarPop.Caption = _toolbarPopupName;
@@ -222,7 +221,7 @@ namespace COMAddinClassicExampleCS4
 
             /* create menu */
             commandBar = _wordApplication.CommandBars["Menu Bar"];
-
+            
             // add popup to menu bar
             commandBarPop = (Office.CommandBarPopup)commandBar.Controls.Add(MsoControlType.msoControlPopup, System.Type.Missing, System.Type.Missing, System.Type.Missing, true);
             commandBarPop.Caption = _menuName;
@@ -236,7 +235,7 @@ namespace COMAddinClassicExampleCS4
             commandBarBtn.Tag = _menuButtonName;
             commandBarBtn.ClickEvent += new NetOffice.OfficeApi.CommandBarButton_ClickEventHandler(commandBarBtn_ClickEvent);
 
-            /* create context menu */
+            /* create context menu */ 
             commandBarPop = (Office.CommandBarPopup)_wordApplication.CommandBars["Text"].Controls.Add(MsoControlType.msoControlPopup, System.Type.Missing, System.Type.Missing, System.Type.Missing, true);
             commandBarPop.Caption = _contextName;
             commandBarPop.Tag     = _contextName;

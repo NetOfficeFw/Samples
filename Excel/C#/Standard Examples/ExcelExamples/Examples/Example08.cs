@@ -47,19 +47,19 @@ namespace ExcelExamplesCS4
 
         public string Caption
         {
-            get { return HostApplication.LCID == 1033 ? "Example08" : "Beispiel08"; }
+            get { return "Example08"; }
         }
 
         public string Description
         {
-            get { return HostApplication.LCID == 1033 ? "Using Events" : "Verwenden von Ereignissen"; }
+            get { return "Using Events"; }
         }
 
         public UserControl Panel
         {
             get { return this; }
         }
-
+ 
         #endregion
 
         #region Properties
@@ -83,7 +83,7 @@ namespace ExcelExamplesCS4
         #region UI Trigger
 
         private void buttonStartExample_Click(object sender, EventArgs e)
-        {
+        {            
             // start excel and turn off msg boxes
             Excel.Application excelApplication = new Excel.Application();
             excelApplication.DisplayAlerts = false;
@@ -106,21 +106,21 @@ namespace ExcelExamplesCS4
             excelApplication.Quit();
             excelApplication.Dispose();
         }
-
+        
         #endregion
 
         #region Excel Trigger
 
-        private void _excelApplication_SheetDeactivateEvent(COMObject Sh)
+        private void _excelApplication_SheetDeactivateEvent(ICOMObject sh)
         {
             textBoxEvents.BeginInvoke(_updateDelegate, new object[] { "Event SheetDeactivate called." });
-            Sh.Dispose();
+            sh.Dispose();
         }
 
-        private void _excelApplication_SheetActivateEvent(COMObject Sh)
+        private void _excelApplication_SheetActivateEvent(ICOMObject sh)
         {
             textBoxEvents.BeginInvoke(_updateDelegate, new object[] { "Event SheetActivate called." });
-            Sh.Dispose();
+            sh.Dispose();
         }
 
         private void excelApplication_NewWorkbook(Excel.Workbook Wb)

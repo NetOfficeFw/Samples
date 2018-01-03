@@ -9,7 +9,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("http://netoffice.codeplex.com")]
+[assembly: AssemblyProduct("https://github.com/NetOfficeFw")]
 [assembly: AssemblyCopyright("Copyright ©  2013 Sebastian Lange")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

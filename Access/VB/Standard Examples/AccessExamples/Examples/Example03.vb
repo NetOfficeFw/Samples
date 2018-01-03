@@ -1,42 +1,39 @@
 ﻿Imports System.IO
 Imports System.Data.OleDb
-
 Imports Access = NetOffice.AccessApi
 Imports NetOffice.AccessApi.Enums
 Imports NetOffice.AccessApi.Constants
 Imports DAO = NetOffice.DAOApi
 Imports NetOffice.DAOApi.Enums
 Imports NetOffice.DAOApi.Constants
-Imports NetOffice.AccessApi.Tools.Utils
+Imports NetOffice.AccessApi.Tools.Contribution
 
 Public Class Example03
     Implements IExample
 
     Dim _hostApplication As ExampleBase.IHost
 
-#Region "IExample Member"
-
     Public Sub RunExample() Implements ExampleBase.IExample.RunExample
 
-        ' start access
+        ' start access 
         Dim accessApplication As New Access.Application()
 
         ' create a utils instance, not need for but helpful to keep the lines of code low
         Dim utils As CommonUtils = New CommonUtils(accessApplication)
 
-        ' create database file name
-        Dim documentFile As String = utils.File.Combine(_hostApplication.RootDirectory, "Example03", Access.Tools.DocumentFormat.Normal)
+        ' create database file name 
+        Dim documentFile As String = utils.File.Combine(_hostApplication.RootDirectory, "Example03", DocumentFormat.Normal)
 
         ' delete old database if exists
         If (System.IO.File.Exists(documentFile)) Then
             System.IO.File.Delete(documentFile)
         End If
 
-        ' create database
+        ' create database 
         Dim newDatabase As DAO.Database = accessApplication.DBEngine.Workspaces(0).CreateDatabase(documentFile, LanguageConstants.dbLangGeneral)
         accessApplication.DBEngine.Workspaces(0).Close()
 
-        ' setup database connection              'Provider=Microsoft.Jet.OLEDB.4.0;Data Source= < access2007
+        ' setup database connection              'Provider=Microsoft.Jet.OLEDB.4.0;Data Source= < access2007  
         Dim oleConnection As New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Persist Security Info=False;Data Source=" + documentFile)
         oleConnection.Open()
 
@@ -55,12 +52,12 @@ Public Class Example03
         oleConnection.Close()
 
         ' delete old if exists
-        Dim newDocumentFile As String = String.Format("{0}\\CompactDatabase{1}", _hostApplication.RootDirectory, utils.File.FileExtension(Access.Tools.DocumentFormat.Normal))
+        Dim newDocumentFile As String = String.Format("{0}\\CompactDatabase{1}", _hostApplication.RootDirectory, utils.File.FileExtension(DocumentFormat.Normal))
         If (File.Exists(newDocumentFile)) Then
             File.Delete(newDocumentFile)
         End If
 
-        ' now we do CompactDatabase
+        ' now we do CompactDatabase            
         accessApplication.DBEngine.CompactDatabase(documentFile, newDocumentFile)
 
         ' close access and dispose reference
@@ -71,13 +68,13 @@ Public Class Example03
 
     Public ReadOnly Property Caption As String Implements ExampleBase.IExample.Caption
         Get
-            Return IIf(_hostApplication.LCID = 1033, "Example03", "Beispiel03")
+            Return "Example03"
         End Get
     End Property
 
     Public ReadOnly Property Description As String Implements ExampleBase.IExample.Description
         Get
-            Return IIf(_hostApplication.LCID = 1033, "Use Compactdatabase", "Verwendung von CompactDatabase")
+            Return "Use Compactdatabase"
         End Get
     End Property
 
@@ -92,7 +89,5 @@ Public Class Example03
             Return Nothing
         End Get
     End Property
-
-#End Region
 
 End Class

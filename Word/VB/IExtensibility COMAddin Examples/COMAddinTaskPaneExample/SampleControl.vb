@@ -180,7 +180,7 @@ Public Class SampleControl
             MessageBox.Show(message, "An error occured", MessageBoxButtons.OK, MessageBoxIcon.Error)
 
         End Try
-
+      
     End Sub
 
     Private Sub listViewSearchResults_ItemSelectionChanged(ByVal sender As System.Object, ByVal e As System.Windows.Forms.ListViewItemSelectionChangedEventArgs) Handles listViewSearchResults.ItemSelectionChanged

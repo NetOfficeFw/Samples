@@ -3,7 +3,7 @@ using System.Windows.Forms;
 using System.Globalization;
 using ExampleBase;
 using Excel = NetOffice.ExcelApi;
-using NetOffice.ExcelApi.Tools.Utils;
+using NetOffice.ExcelApi.Tools.Contribution;
 
 namespace ExcelExamplesCS4
 {
@@ -12,8 +12,6 @@ namespace ExcelExamplesCS4
     /// </summary>
     internal class Example03 : IExample
     {
-        #region IExample
-
         public void RunExample()
         {
             // start excel and turn Application msg boxes
@@ -109,15 +107,15 @@ namespace ExcelExamplesCS4
             workSheet.Columns[3].AutoFit();
             workSheet.Columns[4].AutoFit();
 
-            // save the book
-            string workbookFile = utils.File.Combine(HostApplication.RootDirectory, "Example03", Excel.Tools.DocumentFormat.Normal);
+            // save the book 
+            string workbookFile = utils.File.Combine(HostApplication.RootDirectory, "Example03", DocumentFormat.Normal);
             workBook.SaveAs(workbookFile);
 
             // close excel and dispose reference
             excelApplication.Quit();
             excelApplication.Dispose();
 
-            // show dialog for the user(you!)
+            // show end dialog
             HostApplication.ShowFinishDialog(null, workbookFile);
         }
 
@@ -128,12 +126,12 @@ namespace ExcelExamplesCS4
 
         public string Caption
         {
-            get { return HostApplication.LCID == 1033 ? "Example03" : "Beispiel03"; }
+            get { return "Example03"; }
         }
 
         public string Description
         {
-            get { return HostApplication.LCID == 1033 ? "Using Numberformats" : "Zellen formatieren mit NumberFormat"; }
+            get { return "Using Numberformats"; }
         }
 
         public UserControl Panel
@@ -141,15 +139,6 @@ namespace ExcelExamplesCS4
             get { return null; }
         }
 
-        #endregion
-
-        #region Properties
-
-        /// <summary>
-        /// Current Example Host
-        /// </summary>
         internal IHost HostApplication { get; private set; }
-
-        #endregion
     }
 }

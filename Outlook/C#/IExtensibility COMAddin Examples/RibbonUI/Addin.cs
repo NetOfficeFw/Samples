@@ -1,11 +1,10 @@
 ﻿using System;
 using System.Reflection;
-using System.Windows.Forms;
+using System.Windows.Forms; 
 using Microsoft.Win32;
 using Extensibility;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
-
 using Outlook = NetOffice.OutlookApi;
 using Office = NetOffice.OfficeApi;
 using NetOffice.OutlookApi.Enums;
@@ -13,18 +12,18 @@ using NetOffice.OfficeApi.Enums;
 
 namespace COMAddinRibbonExample
 {
-    [GuidAttribute("85E0BBAF-11E7-4F70-957D-5682602A0933"), ProgId("OutlookAddinCS4.RibbonAddin"), ComVisible(true)]
-    public class Addin : IDTExtensibility2, Office.IRibbonExtensibility
+    [Guid("85E0BBAF-11E7-4F70-957D-5682602A0933"), ProgId("OutlookAddinCS4.RibbonAddin"), ComVisible(true)]
+    public class Addin : IDTExtensibility2, Office.Native.IRibbonExtensibility
     {
         private static readonly string _addinOfficeRegistryKey  = "Software\\Microsoft\\Office\\Outlook\\AddIns\\";
         private static readonly string _prodId                  = "OutlookAddinCS4.RibbonAddin";
         private static readonly string _addinFriendlyName       = "NetOffice Sample Addin in C#";
         private static readonly string _addinDescription        = "NetOffice Sample Addin with custom Ribbon UI";
 
-        Outlook.Application _outlookApplication;
+        private Outlook.Application _outlookApplication;
 
         #region IDTExtensibility2 Members
-
+         
         void IDTExtensibility2.OnConnection(object Application, ext_ConnectMode ConnectMode, object AddInInst, ref Array custom)
         {
             try
@@ -65,7 +64,7 @@ namespace COMAddinRibbonExample
         }
 
         #endregion
-
+         
         #region IRibbonExtensibility Members
 
         public string GetCustomUI(string RibbonID)

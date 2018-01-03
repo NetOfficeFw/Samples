@@ -122,7 +122,7 @@ namespace COMAddinTaskPaneExampleCS4
                     Customer selectedCustomer = listViewSearchResults.SelectedItems[0].Tag as Customer;
 
                     // create MailItem
-                    Outlook.MailItem mailItem = Addin.Application.CreateItem(OlItemType.olMailItem) as Outlook.MailItem;
+                    Outlook.MailItem mailItem = Addin.Application.CreateItem(OlItemType.olMailItem) as Outlook.MailItem;                    
                     mailItem.BodyFormat = OlBodyFormat.olFormatRichText;
                     mailItem.To = selectedCustomer.Mail;
                     mailItem.Body = "Hello " + selectedCustomer.Name;

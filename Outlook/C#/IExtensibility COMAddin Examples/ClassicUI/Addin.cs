@@ -5,7 +5,6 @@ using Microsoft.Win32;
 using Extensibility;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
-
 using Outlook = NetOffice.OutlookApi;
 using NetOffice.OutlookApi.Enums;
 using Office = NetOffice.OfficeApi;
@@ -20,7 +19,7 @@ namespace COMAddinClassicExampleCS4
         private static readonly string _prodId                  = "OutlookAddinCS4.SimpleAddin";
         private static readonly string _addinFriendlyName       = "NetOffice Sample Addin in C#";
         private static readonly string _addinDescription        = "NetOffice Sample Addin with custom classic UI";
-
+        
         // gui elements
         private static readonly string _toolbarName             = "Sample Toolbar CS4";
         private static readonly string _toolbarButtonName       = "Sample ToolbarButton CS4";
@@ -28,10 +27,10 @@ namespace COMAddinClassicExampleCS4
         private static readonly string _menuName                = "Sample Menu CS4";
         private static readonly string _menuButtonName          = "Sample Button CS4";
 
-        Outlook.Application _outlookApplication;
+        private Outlook.Application _outlookApplication;
 
         #region IDTExtensibility2 Members
-
+         
         void IDTExtensibility2.OnConnection(object Application, ext_ConnectMode ConnectMode, object AddInInst, ref Array custom)
         {
             try
@@ -112,7 +111,7 @@ namespace COMAddinClassicExampleCS4
                 rk.SetValue("FriendlyName", _addinFriendlyName);
                 rk.SetValue("Description", _addinDescription);
                 rk.Close();
-
+                  
             }
             catch (Exception ex)
             {
@@ -147,7 +146,7 @@ namespace COMAddinClassicExampleCS4
         {
             /*
             // How to: Add Commands to Shortcut Menus in Outlook
-            // http://office.microsoft.com/en-us/outlook-help/HV080807142.aspx
+            // http://office.microsoft.com/en-us/outlook-help/HV080807142.aspx         
             */
 
             /* create commandbar */

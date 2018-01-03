@@ -2,12 +2,12 @@
 {
     partial class Example07
     {
-        /// <summary>
+        /// <summary> 
         /// Erforderliche Designervariable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
+        /// <summary> 
         /// Verwendete Ressourcen bereinigen.
         /// </summary>
         /// <param name="disposing">True, wenn verwaltete Ressourcen gelöscht werden sollen; andernfalls False.</param>
@@ -22,8 +22,8 @@
 
         #region Vom Komponenten-Designer generierter Code
 
-        /// <summary>
-        /// Erforderliche Methode für die Designerunterstützung.
+        /// <summary> 
+        /// Erforderliche Methode für die Designerunterstützung. 
         /// Der Inhalt der Methode darf nicht mit dem Code-Editor geändert werden.
         /// </summary>
         private void InitializeComponent()
@@ -37,9 +37,9 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            //
+            // 
             // buttonQuitExample
-            //
+            // 
             this.buttonQuitExample.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonQuitExample.Enabled = false;
@@ -53,9 +53,9 @@
             this.buttonQuitExample.Text = "Quit Word";
             this.buttonQuitExample.UseVisualStyleBackColor = true;
             this.buttonQuitExample.Click += new System.EventHandler(this.buttonQuitExample_Click);
-            //
+            // 
             // labelEventLogHeader
-            //
+            // 
             this.labelEventLogHeader.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.labelEventLogHeader.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
@@ -64,9 +64,9 @@
             this.labelEventLogHeader.Size = new System.Drawing.Size(679, 22);
             this.labelEventLogHeader.TabIndex = 25;
             this.labelEventLogHeader.Text = "EventLog";
-            //
+            // 
             // textBoxEvents
-            //
+            // 
             this.textBoxEvents.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
                         | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
@@ -78,9 +78,9 @@
             this.textBoxEvents.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.textBoxEvents.Size = new System.Drawing.Size(679, 80);
             this.textBoxEvents.TabIndex = 24;
-            //
+            // 
             // textBoxDescription
-            //
+            // 
             this.textBoxDescription.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxDescription.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -91,9 +91,9 @@
             this.textBoxDescription.Size = new System.Drawing.Size(680, 67);
             this.textBoxDescription.TabIndex = 23;
             this.textBoxDescription.Text = resources.GetString("textBoxDescription.Text");
-            //
+            // 
             // buttonStartExample
-            //
+            // 
             this.buttonStartExample.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonStartExample.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -106,9 +106,9 @@
             this.buttonStartExample.Text = "Start Word";
             this.buttonStartExample.UseVisualStyleBackColor = true;
             this.buttonStartExample.Click += new System.EventHandler(this.buttonStartExample_Click);
-            //
+            // 
             // button1
-            //
+            // 
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -122,9 +122,9 @@
             this.button1.Text = "Start Word";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.buttonStartExample_Click);
-            //
+            // 
             // button2
-            //
+            // 
             this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.button2.Enabled = false;
@@ -139,9 +139,9 @@
             this.button2.Text = "Quit Word";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.buttonQuitExample_Click);
-            //
+            // 
             // Example07
-            //
+            // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSteelBlue;

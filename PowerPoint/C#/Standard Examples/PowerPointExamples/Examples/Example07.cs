@@ -1,13 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Reflection;
-using System.Drawing;
-using System.Data;
-using System.Text;
 using System.Windows.Forms;
 using ExampleBase;
-
 using NetOffice;
 using PowerPoint = NetOffice.PowerPointApi;
 using NetOffice.PowerPointApi.Enums;
@@ -54,14 +48,14 @@ namespace PowerPointExamplesCS4
 
         public string Caption
         {
-            get { return HostApplication.LCID == 1033 ? "Example07" : "Beispiel07"; }
+            get { return  "Example07"; }
         }
 
         public string Description
         {
-            get { return HostApplication.LCID == 1033 ? "Customize classic UI without ribbons and recieve click events" : "Erweitern der klassischen Oberfläche und beziehen von Click Events"; }
+            get { return "Customize classic UI without ribbons and recieve click events"; }
         }
-
+     
         public UserControl Panel
         {
             get { return this; }
@@ -87,7 +81,7 @@ namespace PowerPointExamplesCS4
         #region UI Trigger
 
         private void buttonStartExample_Click(object sender, EventArgs e)
-        {
+        {        
             // start powerpoint
             _powerApplication = new PowerPoint.Application();
 
@@ -111,7 +105,7 @@ namespace PowerPointExamplesCS4
              For example, a COMAddin running as InProcServer and can access the Picture Property
             */
             #endregion
-
+            
             #region CommandBarButton
 
             // add a button to the popup
@@ -170,7 +164,7 @@ namespace PowerPointExamplesCS4
             // make visible & set buttons
             _powerApplication.Visible = MsoTriState.msoTrue;
             buttonStartExample.Enabled = false;
-            buttonQuitExample.Enabled = true;
+            buttonQuitExample.Enabled = true;             
         }
 
         private void buttonQuitExample_Click(object sender, EventArgs e)
@@ -179,7 +173,7 @@ namespace PowerPointExamplesCS4
             _powerApplication.Dispose();
 
             buttonStartExample.Enabled = true;
-            buttonQuitExample.Enabled = false;
+            buttonQuitExample.Enabled = false; 
         }
 
         #endregion

@@ -14,7 +14,7 @@ Option Explicit On
 Imports System
 
 Namespace My.Resources
-
+    
     'Diese Klasse wurde von der StronglyTypedResourceBuilder automatisch generiert
     '-Klasse über ein Tool wie ResGen oder Visual Studio automatisch generiert.
     'Um einen Member hinzuzufügen oder zu entfernen, bearbeiten Sie die .ResX-Datei und führen dann ResGen
@@ -27,11 +27,11 @@ Namespace My.Resources
      Global.System.Runtime.CompilerServices.CompilerGeneratedAttribute(),  _
      Global.Microsoft.VisualBasic.HideModuleNameAttribute()>  _
     Friend Module Resources
-
+        
         Private resourceMan As Global.System.Resources.ResourceManager
-
+        
         Private resourceCulture As Global.System.Globalization.CultureInfo
-
+        
         '''<summary>
         '''  Gibt die zwischengespeicherte ResourceManager-Instanz zurück, die von dieser Klasse verwendet wird.
         '''</summary>
@@ -45,7 +45,7 @@ Namespace My.Resources
                 Return resourceMan
             End Get
         End Property
-
+        
         '''<summary>
         '''  Überschreibt die CurrentUICulture-Eigenschaft des aktuellen Threads für alle
         '''  Ressourcenzuordnungen, die diese stark typisierte Ressourcenklasse verwenden.

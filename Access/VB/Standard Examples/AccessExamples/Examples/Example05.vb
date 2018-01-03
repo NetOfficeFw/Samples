@@ -29,18 +29,18 @@ Public Class Example05
 
         ' its an example with an own visual control
         ' checkout ShowDatabaseInfo
-
+         
     End Sub
 
     Public ReadOnly Property Caption As String Implements ExampleBase.IExample.Caption
         Get
-            Return IIf(_hostApplication.LCID = 1033, "Example05", "Beispiel05")
+            Return "Example05"
         End Get
     End Property
 
     Public ReadOnly Property Description As String Implements ExampleBase.IExample.Description
         Get
-            Return IIf(_hostApplication.LCID = 1033, "Customize UI", "Erweitern der klassischen Oberfläche")
+            Return "Customize UI"
         End Get
     End Property
 
@@ -65,7 +65,7 @@ Public Class Example05
         Dim commandBar As Office.CommandBar = Nothing
         Dim commandBarBtn As Office.CommandBarButton = Nothing
 
-        ' start access
+        ' start access 
         _accessApplication = New Access.Application()
 
         ' add a commandbar popup

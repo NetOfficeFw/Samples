@@ -1,12 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
 using System.Windows.Forms;
 using ExampleBase;
-
 using NetOffice;
 using Word = NetOffice.WordApi;
 using NetOffice.WordApi.Enums;
@@ -14,6 +8,9 @@ using NetOffice.OfficeApi.Enums;
 
 namespace WordExamplesCS4
 {
+    /// <summary>
+    /// Example 6 - Using events
+    /// </summary>
     internal partial class Example06 : UserControl, IExample
     {
         #region Fields
@@ -48,12 +45,12 @@ namespace WordExamplesCS4
 
         public string Caption
         {
-            get { return HostApplication.LCID == 1033 ? "Example06" : "Beispiel06"; }
+            get { return  "Example06"; }
         }
 
         public string Description
         {
-            get { return HostApplication.LCID == 1033 ? "Using Events" : "Verwenden von Ereignissen"; }
+            get { return "Using Events"; }
         }
 
         public UserControl Panel
@@ -70,7 +67,7 @@ namespace WordExamplesCS4
         #endregion
 
         #region Methods
-
+        
         private void UpdateTextbox(string message)
         {
             textBoxEvents.AppendText(message + "\r\n");
@@ -84,8 +81,8 @@ namespace WordExamplesCS4
         {
             // start word and turn off msg boxes
             Word.Application wordApplication = new Word.Application();
-            wordApplication.Visible = true;
-
+            wordApplication.Visible = true;            
+            
             // we register some events. note: the event trigger was called from word, means an other Thread
             wordApplication.NewDocumentEvent += new NetOffice.WordApi.Application_NewDocumentEventHandler(wordApplication_NewDocumentEvent);
             wordApplication.DocumentBeforeCloseEvent += new NetOffice.WordApi.Application_DocumentBeforeCloseEventHandler(wordApplication_DocumentBeforeCloseEvent);

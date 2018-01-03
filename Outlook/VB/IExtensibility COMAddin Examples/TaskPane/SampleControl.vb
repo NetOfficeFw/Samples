@@ -78,7 +78,7 @@ Public Class SampleControl
         End If
 
     End Sub
-
+     
     ''' <summary>
     ''' reads text from ressource
     ''' </summary>

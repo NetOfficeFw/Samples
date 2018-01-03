@@ -2,12 +2,12 @@
 {
     partial class SampleControl
     {
-        /// <summary>
+        /// <summary> 
         /// Erforderliche Designervariable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
+        /// <summary> 
         /// Verwendete Ressourcen bereinigen.
         /// </summary>
         /// <param name="disposing">True, wenn verwaltete Ressourcen gelöscht werden sollen; andernfalls False.</param>
@@ -22,8 +22,8 @@
 
         #region Vom Komponenten-Designer generierter Code
 
-        /// <summary>
-        /// Erforderliche Methode für die Designerunterstützung.
+        /// <summary> 
+        /// Erforderliche Methode für die Designerunterstützung. 
         /// Der Inhalt der Methode darf nicht mit dem Code-Editor geändert werden.
         /// </summary>
         private void InitializeComponent()
@@ -51,17 +51,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
-            //
+            // 
             // label1
-            //
+            // 
             this.label1.Location = new System.Drawing.Point(42, 97);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(142, 15);
             this.label1.TabIndex = 8;
             this.label1.Text = "Name:";
-            //
+            // 
             // pictureBox4
-            //
+            // 
             this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
             this.pictureBox4.Location = new System.Drawing.Point(22, 96);
@@ -69,9 +69,9 @@
             this.pictureBox4.Size = new System.Drawing.Size(16, 16);
             this.pictureBox4.TabIndex = 78;
             this.pictureBox4.TabStop = false;
-            //
+            // 
             // textBoxSearch
-            //
+            // 
             this.textBoxSearch.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxSearch.Location = new System.Drawing.Point(22, 113);
@@ -79,9 +79,9 @@
             this.textBoxSearch.Size = new System.Drawing.Size(251, 20);
             this.textBoxSearch.TabIndex = 79;
             this.textBoxSearch.TextChanged += new System.EventHandler(this.textBoxSearch_TextChanged);
-            //
+            // 
             // listViewSearchResults
-            //
+            // 
             this.listViewSearchResults.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
                         | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
@@ -103,30 +103,30 @@
             this.listViewSearchResults.View = System.Windows.Forms.View.Details;
             this.listViewSearchResults.ItemSelectionChanged += new System.Windows.Forms.ListViewItemSelectionChangedEventHandler(this.listViewSearchResults_ItemSelectionChanged);
             this.listViewSearchResults.DoubleClick += new System.EventHandler(this.listViewSearchResults_DoubleClick);
-            //
+            // 
             // columnHeader3
-            //
+            // 
             this.columnHeader3.Text = "";
             this.columnHeader3.Width = 20;
-            //
+            // 
             // columnHeader1
-            //
+            // 
             this.columnHeader1.Text = "ID";
             this.columnHeader1.Width = 25;
-            //
+            // 
             // columnHeader2
-            //
+            // 
             this.columnHeader2.Text = "Name";
             this.columnHeader2.Width = 161;
-            //
+            // 
             // imageList1
-            //
+            // 
             this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
             this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
             this.imageList1.Images.SetKeyName(0, "user.png");
-            //
+            // 
             // pictureBox1
-            //
+            // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(22, 149);
@@ -134,17 +134,17 @@
             this.pictureBox1.Size = new System.Drawing.Size(16, 16);
             this.pictureBox1.TabIndex = 82;
             this.pictureBox1.TabStop = false;
-            //
+            // 
             // label2
-            //
+            // 
             this.label2.Location = new System.Drawing.Point(42, 150);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(81, 15);
             this.label2.TabIndex = 81;
             this.label2.Text = "Customers:";
-            //
+            // 
             // pictureBox2
-            //
+            // 
             this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
@@ -153,18 +153,18 @@
             this.pictureBox2.Size = new System.Drawing.Size(16, 16);
             this.pictureBox2.TabIndex = 84;
             this.pictureBox2.TabStop = false;
-            //
+            // 
             // label3
-            //
+            // 
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label3.Location = new System.Drawing.Point(42, 404);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(142, 15);
             this.label3.TabIndex = 83;
             this.label3.Text = "Details:";
-            //
+            // 
             // propertyGridDetails
-            //
+            // 
             this.propertyGridDetails.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.propertyGridDetails.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
@@ -175,9 +175,9 @@
             this.propertyGridDetails.Size = new System.Drawing.Size(251, 163);
             this.propertyGridDetails.TabIndex = 85;
             this.propertyGridDetails.ToolbarVisible = false;
-            //
+            // 
             // label4
-            //
+            // 
             this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -187,9 +187,9 @@
             this.label4.TabIndex = 88;
             this.label4.Text = "insert a name and click in the result list to see details. double click to copy a" +
                 " result item in your current selected cell.";
-            //
+            // 
             // label5
-            //
+            // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(42, 17);
@@ -197,9 +197,9 @@
             this.label5.Size = new System.Drawing.Size(140, 13);
             this.label5.TabIndex = 89;
             this.label5.Text = "Customer Sample Panel";
-            //
+            // 
             // pictureBox3
-            //
+            // 
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
             this.pictureBox3.Location = new System.Drawing.Point(23, 17);
@@ -207,9 +207,9 @@
             this.pictureBox3.Size = new System.Drawing.Size(16, 16);
             this.pictureBox3.TabIndex = 90;
             this.pictureBox3.TabStop = false;
-            //
+            // 
             // SampleControl
-            //
+            // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.pictureBox3);

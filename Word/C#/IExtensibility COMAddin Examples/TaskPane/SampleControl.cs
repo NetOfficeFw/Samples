@@ -142,7 +142,7 @@ namespace COMAddinTaskPaneExampleCS4
             catch (Exception exception)
             {
                 MessageBox.Show(exception.Message, "An error is occured", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            } 
         }
 
         private void listViewSearchResults_ItemSelectionChanged(object sender, ListViewItemSelectionChangedEventArgs e)
@@ -154,7 +154,7 @@ namespace COMAddinTaskPaneExampleCS4
             catch (Exception exception)
             {
                 MessageBox.Show(exception.Message, "An error is occured", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            } 
         }
 
         #endregion

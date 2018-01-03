@@ -1,14 +1,13 @@
 ﻿Imports Microsoft.Win32
 Imports System.Runtime.CompilerServices
 Imports System.Runtime.InteropServices
-
 Imports NetOffice
 Imports Excel = NetOffice.ExcelApi
 Imports NetOffice.ExcelApi.Enums
 Imports Office = NetOffice.OfficeApi
 Imports NetOffice.OfficeApi.Enums
 
-<GuidAttribute("12C5CABD-5058-4AD6-8C5B-E3ABDEC91943"), ProgIdAttribute("ExcelAddinVB4.SimpleAddin"), ComVisible(True)> _
+<Guid("12C5CABD-5058-4AD6-8C5B-E3ABDEC91943"), ProgId("ExcelAddinVB4.SimpleAddin"), ComVisible(True)>
 Public Class Addin
     Implements IDTExtensibility2
 
@@ -26,7 +25,7 @@ Public Class Addin
     Private Shared ReadOnly _contextName As String = "Sample ContextMenu VB4"
     Private Shared ReadOnly _contextMenuButtonName As String = "Sample ContextButton VB4"
 
-    Dim _excelApplication As Excel.Application
+    Private _excelApplication As Excel.Application
 
 #Region "IDTExtensibility2 Members"
 
@@ -152,9 +151,9 @@ Public Class Addin
     Private Sub CreateTemporaryUserInterface()
 
         ' How to: Add Commands to Shortcut Menus in Excel
-        ' http://msdn.microsoft.com/en-us/library/0batekf4.aspx
+        ' http://msdn.microsoft.com/en-us/library/0batekf4.aspx   
 
-        'create commandbar
+        'create commandbar 
         Dim commandBar As Office.CommandBar = _excelApplication.CommandBars.Add(_toolbarName, MsoBarPosition.msoBarTop, System.Type.Missing, True)
         commandBar.Visible = True
 
@@ -172,7 +171,7 @@ Public Class Addin
         Dim clickHandler As NetOffice.OfficeApi.CommandBarButton_ClickEventHandler = AddressOf Me.commandBarBtn_ClickEvent
         AddHandler commandBarBtn.ClickEvent, clickHandler
 
-        ' create menu
+        ' create menu 
         commandBar = _excelApplication.CommandBars("Worksheet Menu Bar")
 
         ' add popup to menu bar
@@ -189,7 +188,7 @@ Public Class Addin
         clickHandler = AddressOf Me.commandBarBtn_ClickEvent
         AddHandler commandBarBtn.ClickEvent, clickHandler
 
-        ' create context menu
+        ' create context menu 
         commandBarPop = _excelApplication.CommandBars("Cell").Controls.Add(MsoControlType.msoControlPopup, System.Type.Missing, System.Type.Missing, System.Type.Missing, True)
         commandBarPop.Caption = _contextName
         commandBarPop.Tag = _contextName

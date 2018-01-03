@@ -5,7 +5,6 @@ using Microsoft.Win32;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Extensibility;
-
 using PowerPoint = NetOffice.PowerPointApi;
 using Office = NetOffice.OfficeApi;
 using NetOffice.PowerPointApi.Enums;
@@ -13,7 +12,7 @@ using NetOffice.OfficeApi.Enums;
 
 namespace COMAddinClassicExampleCS4
 {
-    [GuidAttribute("629BC55C-7C01-4065-932A-4BB88F7B8C59"), ProgId("PPointAddinCS4.SimpleAddin"), ComVisible(true)]
+    [Guid("629BC55C-7C01-4065-932A-4BB88F7B8C59"), ProgId("PPointAddinCS4.SimpleAddin"), ComVisible(true)]
     public class Addin : IDTExtensibility2
     {
         private static readonly string _addinOfficeRegistryKey  = "Software\\Microsoft\\Office\\PowerPoint\\AddIns\\";
@@ -30,10 +29,10 @@ namespace COMAddinClassicExampleCS4
         private static readonly string _contextName             = "Sample ContextMenu CS4";
         private static readonly string _contextMenuButtonName   = "Sample ContextButton CS4";
 
-        PowerPoint.Application _powerApplication;
+        private PowerPoint.Application _powerApplication;
 
         #region IDTExtensibility2 Members
-
+         
         void IDTExtensibility2.OnConnection(object Application, ext_ConnectMode ConnectMode, object AddInInst, ref Array custom)
         {
             try
@@ -179,7 +178,7 @@ namespace COMAddinClassicExampleCS4
             commandBarBtn.Tag = _menuButtonName;
             commandBarBtn.ClickEvent += new NetOffice.OfficeApi.CommandBarButton_ClickEventHandler(commandBarBtn_ClickEvent);
 
-            /* create context menu */
+            /* create context menu */ 
             commandBarPop = (Office.CommandBarPopup)_powerApplication.CommandBars["Frames"].Controls.Add(MsoControlType.msoControlPopup, System.Type.Missing, System.Type.Missing, System.Type.Missing, true);
             commandBarPop.Caption = _contextName;
             commandBarPop.Tag = _contextName;

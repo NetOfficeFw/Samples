@@ -1,12 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Drawing;
 using System.Windows.Forms;
-using System.Reflection;
-using System.Text;
-using System.Data;
 using System.Data.OleDb;
-using System.Globalization;
 using ExampleBase;
 using NetOffice;
 using Access = NetOffice.AccessApi;
@@ -14,7 +8,7 @@ using NetOffice.AccessApi.Enums;
 using DAO = NetOffice.DAOApi;
 using NetOffice.DAOApi.Enums;
 using NetOffice.DAOApi.Constants;
-using NetOffice.AccessApi.Tools.Utils;
+using NetOffice.AccessApi.Tools.Contribution;
 
 namespace AccessExamplesCS4
 {
@@ -23,24 +17,22 @@ namespace AccessExamplesCS4
     /// </summary>
     internal class Example02 : IExample
     {
-        #region IExample
-
         public void RunExample()
         {
-            // start access
+            // start access 
             Access.Application accessApplication = new Access.Application();
 
             // create a utils instance, not need for but helpful to keep the lines of code low
             CommonUtils utils = new CommonUtils(accessApplication);
 
-            // create database file name
-            string documentFile = utils.File.Combine(HostApplication.RootDirectory, "Example02", Access.Tools.DocumentFormat.Normal);
+            // create database file name 
+            string documentFile = utils.File.Combine(HostApplication.RootDirectory, "Example02", DocumentFormat.Normal);
 
             // delete old database if exists
             if (System.IO.File.Exists(documentFile))
                 System.IO.File.Delete(documentFile);
 
-            // create database
+            // create database 
             DAO.Database newDatabase = accessApplication.DBEngine.Workspaces[0].CreateDatabase(documentFile, LanguageConstants.dbLangGeneral);
             accessApplication.DBEngine.Workspaces[0].Close();
 
@@ -76,12 +68,12 @@ namespace AccessExamplesCS4
 
         public string Caption
         {
-            get { return HostApplication.LCID == 1033 ? "Example02" : "Beispiel02"; }
+            get { return "Example02"; }
         }
 
         public string Description
         {
-            get { return HostApplication.LCID == 1033 ? "Create a table" : "Eine neue Tabelle erstellen"; }
+            get { return "Create a table"; }
         }
 
         public UserControl Panel
@@ -89,12 +81,6 @@ namespace AccessExamplesCS4
             get { return null; }
         }
 
-        #endregion
-
-        #region Properties
-
         internal IHost HostApplication { get; private set; }
-
-        #endregion
     }
 }

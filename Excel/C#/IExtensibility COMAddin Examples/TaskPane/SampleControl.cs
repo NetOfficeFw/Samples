@@ -30,7 +30,7 @@ namespace COMAddinTaskPaneExampleCS4
         private void LoadSampleCustomerData()
         {
             _customers = new List<Customer>();
-
+            
             string embeddedCustomerXmlContent = ReadString("SampleData.CustomerData.xml");
             XmlDocument document = new XmlDocument();
             document.LoadXml(embeddedCustomerXmlContent);
@@ -44,7 +44,7 @@ namespace COMAddinTaskPaneExampleCS4
                 string country = customerNode.Attributes["Country"].Value;
                 string phone = customerNode.Attributes["Phone"].Value;
 
-                _customers.Add(new Customer(id, name, company, city, postalCode, country, phone));
+                _customers.Add(new Customer(id, name, company, city, postalCode, country, phone));                
             }
         }
 
@@ -158,7 +158,7 @@ namespace COMAddinTaskPaneExampleCS4
 
             return customerPropertiesArray;
         }
-
+       
         #endregion
 
         #region UI Trigger
@@ -192,8 +192,8 @@ namespace COMAddinTaskPaneExampleCS4
             }
             catch (Exception exception)
             {
-                MessageBox.Show(this, exception.Message, "An error occured", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+                MessageBox.Show(this, exception.Message, "An error occured", MessageBoxButtons.OK, MessageBoxIcon.Error);    
+            }            
         }
 
         private void listViewSearchResults_ItemSelectionChanged(object sender, ListViewItemSelectionChangedEventArgs e)
@@ -205,7 +205,7 @@ namespace COMAddinTaskPaneExampleCS4
             catch (Exception exception)
             {
                 MessageBox.Show(this, exception.Message, "An error occured", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            }      
         }
 
         private void textBoxSearch_TextChanged(object sender, EventArgs e)
@@ -218,7 +218,7 @@ namespace COMAddinTaskPaneExampleCS4
             catch (Exception exception)
             {
                 MessageBox.Show(this, exception.Message, "An error occured", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            }    
 
         }
 
