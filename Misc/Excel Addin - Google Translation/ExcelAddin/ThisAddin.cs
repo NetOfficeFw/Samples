@@ -8,7 +8,7 @@ using NetOffice.ExcelApi.Tools;
 namespace Sample.ExcelAddin
 {
     /// <summary>
-    /// The main addin for MS-Excel. The Addin use the base class COMAddin from NetOffice.ExcelApi.Tools.
+    /// The main addin for MS-Excel
     /// </summary>
     [COMAddin("Google Translation Addin", "This Addin provides Google Translation functionality", 3), Guid("fa65093e-8fd1-4e24-825a-11c00f1bcadf"), ProgId("NOSample.GoogleTranslation"), Tweak(true)]
     [CustomPane(typeof(TranslationPane), "NetOffice - Google Translation Sample", true, PaneDockPosition.msoCTPDockPositionBottom, PaneDockPositionRestrict.msoCTPDockPositionRestrictNoVertical, 150, 150)]

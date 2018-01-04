@@ -5,3 +5,4 @@ Example04			- create blend animation
 Example05			- create ole chart object
 Example06			- using events
 Example07			- customize classic UI
+

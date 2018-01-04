@@ -3,11 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetOffice Tools - Simple", "02 NetOffice PowerPoint COMAddin Sample\Simple\NetOffice Tools - Simple.csproj", "{7ABE9056-698A-438A-B5B6-F85AB6557703}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetOffice Tools - 01 Simple", "02 NetOffice PowerPoint COMAddin Sample\01 Simple\01 Simple.csproj", "{7ABE9056-698A-438A-B5B6-F85AB6557703}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetOffice Tools - Extended", "02 NetOffice PowerPoint COMAddin Sample\Extended\NetOffice Tools - Extended.csproj", "{587B6CAB-1836-4D01-9583-8A707E60B664}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tweaks", "02 NetOffice PowerPoint COMAddin Sample\Tweaks\Tweaks.csproj", "{8A07FAFD-AAB2-496D-A9D6-CB235C608406}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetOffice Tools - 02 Ribbons And Panes", "02 NetOffice PowerPoint COMAddin Sample\02 Ribbons And Panes\02 Ribbons And Panes.csproj", "{587B6CAB-1836-4D01-9583-8A707E60B664}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +21,6 @@ Global
 		{587B6CAB-1836-4D01-9583-8A707E60B664}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{587B6CAB-1836-4D01-9583-8A707E60B664}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{587B6CAB-1836-4D01-9583-8A707E60B664}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8A07FAFD-AAB2-496D-A9D6-CB235C608406}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8A07FAFD-AAB2-496D-A9D6-CB235C608406}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8A07FAFD-AAB2-496D-A9D6-CB235C608406}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8A07FAFD-AAB2-496D-A9D6-CB235C608406}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -6,11 +6,8 @@ using NetOffice.WordApi.Tools;
 
 namespace Sample.Addin
 {
-    /// <summary>
-    /// The main addin for MS-Word. The Addin use the base class COMAddin from NetOffice.WordApi.Tools.
-    /// </summary>
-    [Guid("56F843AD-ECB8-45D6-9E33-C0928BD2FB03"), ProgId("NOSample.Wikipedia")]
-    [COMAddin("Word Wikipedia Addin", "This Addin provides Wikipedia functionality", 3), Tweak(true)]
+    [COMAddin("Word Wikipedia Addin", "This Addin provides Wikipedia functionality", LoadBehavior.LoadAtStartup)]
+    [ProgId("NOSample.Wikipedia"), Guid("56F843AD-ECB8-45D6-9E33-C0928BD2FB03")]
     [CustomPane(typeof(WikipediaPane), "Wikipedia - NetOffice Sample", true, PaneDockPosition.msoCTPDockPositionRight, PaneDockPositionRestrict.msoCTPDockPositionRestrictNoHorizontal, 520, 520)]
     public class ThisAddin : COMAddin
     {

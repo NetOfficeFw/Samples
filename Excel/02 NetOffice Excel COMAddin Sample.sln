@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02 Ribbons and Panes", "02 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03 Troubleshooting and Diagnostics", "02 NetOffice Excel COMAddin Sample\03 Troubleshooting and Diagnostics\03 Troubleshooting and Diagnostics.csproj", "{407204E3-769B-416E-92D8-F82B65EB4CB2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05 Register and Unregister", "02 NetOffice Excel COMAddin Sample\05 Register and Unregister\05 Register and Unregister.csproj", "{F7879329-DDE9-49E5-A6A5-FE5619BB9B11}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04 Register and Unregister", "02 NetOffice Excel COMAddin Sample\04 Register and Unregister\04 Register and Unregister.csproj", "{F7879329-DDE9-49E5-A6A5-FE5619BB9B11}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06 Tools and Helpers", "02 NetOffice Excel COMAddin Sample\06 Tools and Helpers\06 Tools and Helpers.csproj", "{0CE7D3DE-D892-40E1-84FE-5CD569513588}"
 EndProject

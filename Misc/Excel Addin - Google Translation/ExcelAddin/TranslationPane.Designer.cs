@@ -46,9 +46,9 @@
             this.pictureBoxError = new System.Windows.Forms.PictureBox();
             this.buttonTranslate = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.buttonDoLocalConnect = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.linkLabelNetOfficePage = new System.Windows.Forms.LinkLabel();
-            this.buttonDoLocalConnect = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.panelError.SuspendLayout();
@@ -87,7 +87,7 @@
             this.labelTargetLanguage.ForeColor = System.Drawing.Color.MidnightBlue;
             this.labelTargetLanguage.Location = new System.Drawing.Point(26, 74);
             this.labelTargetLanguage.Name = "labelTargetLanguage";
-            this.labelTargetLanguage.Size = new System.Drawing.Size(25, 16);
+            this.labelTargetLanguage.Size = new System.Drawing.Size(24, 16);
             this.labelTargetLanguage.TabIndex = 4;
             this.labelTargetLanguage.Text = "To";
             //
@@ -123,7 +123,7 @@
             this.labelRequestedText.ForeColor = System.Drawing.Color.MidnightBlue;
             this.labelRequestedText.Location = new System.Drawing.Point(16, 9);
             this.labelRequestedText.Name = "labelRequestedText";
-            this.labelRequestedText.Size = new System.Drawing.Size(38, 16);
+            this.labelRequestedText.Size = new System.Drawing.Size(37, 16);
             this.labelRequestedText.TabIndex = 6;
             this.labelRequestedText.Text = "Text";
             //
@@ -135,7 +135,7 @@
             this.labelTranslation.ForeColor = System.Drawing.Color.MidnightBlue;
             this.labelTranslation.Location = new System.Drawing.Point(368, 9);
             this.labelTranslation.Name = "labelTranslation";
-            this.labelTranslation.Size = new System.Drawing.Size(81, 16);
+            this.labelTranslation.Size = new System.Drawing.Size(80, 16);
             this.labelTranslation.TabIndex = 8;
             this.labelTranslation.Text = "Translation";
             //
@@ -161,7 +161,7 @@
             this.checkBoxAutoTranslate.ForeColor = System.Drawing.Color.MidnightBlue;
             this.checkBoxAutoTranslate.Location = new System.Drawing.Point(12, 29);
             this.checkBoxAutoTranslate.Name = "checkBoxAutoTranslate";
-            this.checkBoxAutoTranslate.Size = new System.Drawing.Size(191, 20);
+            this.checkBoxAutoTranslate.Size = new System.Drawing.Size(190, 20);
             this.checkBoxAutoTranslate.TabIndex = 9;
             this.checkBoxAutoTranslate.Text = "Auto Translate Selection";
             this.checkBoxAutoTranslate.UseVisualStyleBackColor = true;
@@ -273,6 +273,22 @@
             this.groupBox3.TabIndex = 12;
             this.groupBox3.TabStop = false;
             //
+            // buttonDoLocalConnect
+            // 
+            this.buttonDoLocalConnect.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.buttonDoLocalConnect.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonDoLocalConnect.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonDoLocalConnect.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.buttonDoLocalConnect.Image = ((System.Drawing.Image)(resources.GetObject("buttonDoLocalConnect.Image")));
+            this.buttonDoLocalConnect.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonDoLocalConnect.Location = new System.Drawing.Point(12, 96);
+            this.buttonDoLocalConnect.Name = "buttonDoLocalConnect";
+            this.buttonDoLocalConnect.Size = new System.Drawing.Size(187, 27);
+            this.buttonDoLocalConnect.TabIndex = 12;
+            this.buttonDoLocalConnect.Text = "Connect again";
+            this.buttonDoLocalConnect.UseVisualStyleBackColor = true;
+            this.buttonDoLocalConnect.Click += new System.EventHandler(this.buttonDoLocalConnect_Click);
+            // 
             // pictureBox1
             //
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -296,27 +312,11 @@
             this.linkLabelNetOfficePage.Text = "netoffice.codeplex.com";
             this.linkLabelNetOfficePage.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelNetOfficePage_LinkClicked);
             //
-            // buttonDoLocalConnect
-            //
-            this.buttonDoLocalConnect.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.buttonDoLocalConnect.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.buttonDoLocalConnect.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonDoLocalConnect.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.buttonDoLocalConnect.Image = ((System.Drawing.Image)(resources.GetObject("buttonDoLocalConnect.Image")));
-            this.buttonDoLocalConnect.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonDoLocalConnect.Location = new System.Drawing.Point(12, 96);
-            this.buttonDoLocalConnect.Name = "buttonDoLocalConnect";
-            this.buttonDoLocalConnect.Size = new System.Drawing.Size(187, 27);
-            this.buttonDoLocalConnect.TabIndex = 12;
-            this.buttonDoLocalConnect.Text = "Connect again";
-            this.buttonDoLocalConnect.UseVisualStyleBackColor = true;
-            this.buttonDoLocalConnect.Click += new System.EventHandler(this.buttonDoLocalConnect_Click);
-            //
             // TranslationPane
             //
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(227)))), ((int)(((byte)(243)))));
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);

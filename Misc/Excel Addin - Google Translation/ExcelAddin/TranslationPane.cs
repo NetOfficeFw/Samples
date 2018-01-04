@@ -106,7 +106,7 @@ namespace Sample.ExcelAddin
         /// This method was called from the host instance after selection changed.
         /// </summary>
         /// <param name="selectedRange">active selection</param>
-        private void Application_SheetSelectionChangeEvent(NetOffice.COMObject sh, Excel.Range selectedRange)
+        private void Application_SheetSelectionChangeEvent(NetOffice.ICOMObject sh, Excel.Range selectedRange)
         {
             try
             {

@@ -37,6 +37,7 @@
             this.buttonErrorDetails = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.pongPanel = new Sample.Addin.Pong();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.linkLabelNetOffice = new System.Windows.Forms.LinkLabel();
@@ -50,7 +51,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.textBoxTweetContent = new System.Windows.Forms.RichTextBox();
-            this.pongPanel = new Sample.Addin.Pong();
             this.panelDisabled.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -88,7 +88,7 @@
             this.panelTweetPanels.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
                         | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelTweetPanels.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.panelTweetPanels.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(227)))), ((int)(((byte)(243)))));
             this.panelTweetPanels.Location = new System.Drawing.Point(3, 3);
             this.panelTweetPanels.Name = "panelTweetPanels";
             this.panelTweetPanels.Size = new System.Drawing.Size(252, 97);
@@ -168,6 +168,17 @@
             this.panel5.Size = new System.Drawing.Size(273, 305);
             this.panel5.TabIndex = 17;
             //
+            // pongPanel
+            // 
+            this.pongPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(227)))), ((int)(((byte)(243)))));
+            this.pongPanel.Cursor = System.Windows.Forms.Cursors.No;
+            this.pongPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pongPanel.Location = new System.Drawing.Point(0, 0);
+            this.pongPanel.Name = "pongPanel";
+            this.pongPanel.Size = new System.Drawing.Size(273, 305);
+            this.pongPanel.TabIndex = 0;
+            this.pongPanel.Text = "pong1";
+            // 
             // panel4
             //
             this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
@@ -323,21 +334,10 @@
             this.textBoxTweetContent.Text = "";
             this.textBoxTweetContent.TextChanged += new System.EventHandler(this.textBoxTweetContent_TextChanged);
             //
-            // pongPanel
-            //
-            this.pongPanel.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.pongPanel.Cursor = System.Windows.Forms.Cursors.No;
-            this.pongPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pongPanel.Location = new System.Drawing.Point(0, 0);
-            this.pongPanel.Name = "pongPanel";
-            this.pongPanel.Size = new System.Drawing.Size(273, 305);
-            this.pongPanel.TabIndex = 0;
-            this.pongPanel.Text = "pong1";
-            //
             // TweetGrid
             //
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(227)))), ((int)(((byte)(243)))));
             this.Controls.Add(this.panelDisabled);
             this.Controls.Add(this.splitContainer1);
             this.Name = "TweetGrid";
