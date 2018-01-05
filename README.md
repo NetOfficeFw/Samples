@@ -16,5 +16,5 @@ Legacy samples written in VisualBasic can be found in branch [import/legacy_repo
 
 NetOffice source code is licensed under [MIT License](LICENSE.txt).
 
-Copyright (c) 2011-2017 Sebastian Lange  
-Copyright (c) 2015-2017 Jozef Izso
+Copyright © 2011-2017 Sebastian Lange  
+Copyright © 2015-2017 Jozef Izso
