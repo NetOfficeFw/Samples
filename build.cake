@@ -8,6 +8,8 @@ var solutions = new ConvertableFilePath[] {
   File("ExampleBase/ExampleBase.sln"),
 };
 
+var wordSamples = GetFiles("./Word/*.sln");
+
 Task("Build")
   .DoesForEach(solutions, (solutionFile) =>
   {
@@ -20,8 +22,21 @@ Task("Build")
       .SetVerbosity(GetMSBuildVerbosity(verbosity)));
   });
 
+Task("Build:Word")
+  .DoesForEach(wordSamples, (solutionFile) =>
+  {
+    Information("Building solution file {0}", solutionFile.GetFilename());
+    NuGetRestore(solutionFile);
+
+    MSBuild(solutionFile, settings => settings
+      .SetConfiguration(configuration)
+      .WithTarget("Rebuild")
+      .SetVerbosity(GetMSBuildVerbosity(verbosity)));
+  });
+
 Task("Default")
-  .IsDependentOn("Build");
+  .IsDependentOn("Build")
+  .IsDependentOn("Build:Word");
 
 RunTarget(target);
 

@@ -20,7 +20,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <RegisterForComInterop>true</RegisterForComInterop>
+    <RegisterForComInterop>false</RegisterForComInterop>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -32,14 +32,12 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="NetOffice, Version=1.7.4.1, Culture=neutral, PublicKeyToken=297f57b43ae7c1de, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <EmbedInteropTypes>False</EmbedInteropTypes>
-      <HintPath>..\..\..\..\..\Assemblies\Any CPU\NetOffice.dll</HintPath>
+      <HintPath>..\..\..\packages\NetOffice.Core.1.7.4.1-pre1\lib\net40\NetOffice.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="OfficeApi, Version=1.7.4.1, Culture=neutral, PublicKeyToken=a39beb0835c43c8e, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <EmbedInteropTypes>False</EmbedInteropTypes>
-      <HintPath>..\..\..\..\..\Assemblies\Any CPU\OfficeApi.dll</HintPath>
+      <HintPath>..\..\..\packages\NetOffice.Core.1.7.4.1-pre1\lib\net40\OfficeApi.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -49,20 +47,21 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
     <Reference Include="VBIDEApi, Version=1.7.4.1, Culture=neutral, PublicKeyToken=931cec8882205047, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <EmbedInteropTypes>False</EmbedInteropTypes>
-      <HintPath>..\..\..\..\..\Assemblies\Any CPU\VBIDEApi.dll</HintPath>
+      <HintPath>..\..\..\packages\NetOffice.Core.1.7.4.1-pre1\lib\net40\VBIDEApi.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="WordApi, Version=1.7.4.1, Culture=neutral, PublicKeyToken=f66d74591aaf8089, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <EmbedInteropTypes>False</EmbedInteropTypes>
-      <HintPath>..\..\..\..\..\Assemblies\Any CPU\WordApi.dll</HintPath>
+      <HintPath>..\..\..\packages\NetOffice.Word.1.7.4.1-pre1\lib\net40\WordApi.dll</HintPath>
+      <Private>True</Private>
     </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Addin.cs" />
     <Compile Include="CustomDocumentInspector.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
