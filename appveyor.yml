@@ -17,9 +17,8 @@ configuration:
   - Debug
   - Release
 
-build:
-  project: AddinRemovalTool\AddinRemovalTool.sln
-  verbosity: normal
+build_script:
+  - ps: .\build.ps1 -Verbosity Normal
 
 assembly_info:
   patch: true
@@ -32,3 +31,4 @@ test: off
 
 cache:
   - packages -> **\packages.config
+  - tools -> tools\packages.config

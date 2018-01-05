@@ -1,5 +1,8 @@
 # Created by https://www.gitignore.io/api/visualstudio,visualstudiocode,sublimetext,windows
 
+### Cake ###
+tools/
+
 ### VisualStudioCode ###
 .vscode/*
 !.vscode/settings.json
