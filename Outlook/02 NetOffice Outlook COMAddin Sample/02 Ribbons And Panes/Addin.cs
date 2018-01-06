@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Runtime.InteropServices;
 using System.Collections.Generic;
 using System.Text;
@@ -6,6 +6,7 @@ using System.Windows.Forms;
 using NetOffice.Tools;
 using NetOffice.OfficeApi.Enums;
 using NetOffice.OutlookApi.Tools;
+using Outlook02AddinCS4;
 using Outlook = NetOffice.OutlookApi;
 using Office = NetOffice.OfficeApi;
 
