@@ -10,6 +10,7 @@ var solutions = new ConvertableFilePath[] {
 
 var wordSamples = GetFiles("./Word/*.sln");
 var outlookSamples = GetFiles("./Outlook/*.sln");
+var powerPointSamples = GetFiles("./PowerPoint/*.sln");
 
 Task("Build")
   .DoesForEach(solutions, (solutionFile) =>
@@ -46,11 +47,24 @@ Task("Build:Outlook")
       .WithTarget("Rebuild")
       .SetVerbosity(GetMSBuildVerbosity(verbosity)));
   });
+  
+Task("Build:PowerPoint")
+  .DoesForEach(powerPointSamples, (solutionFile) =>
+  {
+    Information("Building solution file {0}", solutionFile.GetFilename());
+    NuGetRestore(solutionFile);
+
+    MSBuild(solutionFile, settings => settings
+      .SetConfiguration(configuration)
+      .WithTarget("Rebuild")
+      .SetVerbosity(GetMSBuildVerbosity(verbosity)));
+  });
 
 Task("Default")
   .IsDependentOn("Build")
   .IsDependentOn("Build:Word")
-  .IsDependentOn("Build:Outlook");
+  .IsDependentOn("Build:Outlook")
+  .IsDependentOn("Build:PowerPoint");
 
 RunTarget(target);
 
