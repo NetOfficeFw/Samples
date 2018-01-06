@@ -1,14 +1,13 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using NetOffice;
 using NetOffice.Tools;
 using NetOffice.OfficeApi.Enums;
 using NetOffice.ExcelApi.Tools;
+using NetOffice.OfficeApi.Tools.Contribution;
 using Excel = NetOffice.ExcelApi;
 using Office = NetOffice.OfficeApi;
-
-using NetOffice.OfficeApi.Tools.Utils;
 
 namespace Excel03AddinCS4
 {

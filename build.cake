@@ -8,6 +8,7 @@ var solutions = new ConvertableFilePath[] {
   File("ExampleBase/ExampleBase.sln"),
 };
 
+var excelSamples = GetFiles("./Excel/*.sln");
 var wordSamples = GetFiles("./Word/*.sln");
 var outlookSamples = GetFiles("./Outlook/*.sln");
 var powerPointSamples = GetFiles("./PowerPoint/*.sln");
@@ -16,6 +17,18 @@ Task("Build")
   .DoesForEach(solutions, (solutionFile) =>
   {
     Information("Building solution file {0}", solutionFile.Path.GetFilename());
+    NuGetRestore(solutionFile);
+
+    MSBuild(solutionFile, settings => settings
+      .SetConfiguration(configuration)
+      .WithTarget("Rebuild")
+      .SetVerbosity(GetMSBuildVerbosity(verbosity)));
+  });
+
+Task("Build:Excel")
+  .DoesForEach(excelSamples, (solutionFile) =>
+  {
+    Information("Building solution file {0}", solutionFile.GetFilename());
     NuGetRestore(solutionFile);
 
     MSBuild(solutionFile, settings => settings
@@ -62,6 +75,7 @@ Task("Build:PowerPoint")
 
 Task("Default")
   .IsDependentOn("Build")
+  .IsDependentOn("Build:Excel")
   .IsDependentOn("Build:Word")
   .IsDependentOn("Build:Outlook")
   .IsDependentOn("Build:PowerPoint");

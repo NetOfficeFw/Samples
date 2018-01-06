@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Runtime.InteropServices;
 using NetOffice;
 using NetOffice.Tools;
@@ -20,6 +20,7 @@ namespace Excel06AddinCS4
         {
             try
             {
+                // requires NetOffice 1.7.4.2+
                 using (CdeclHandle libray = CdeclHandle.LoadLibrary(typeof(Addin), "Excel06AddinCS4.Shim.dll"))
                 {
                     SayHello hello = libray.GetDelegateForFunctionPointer("SayHelloToTheWorld", typeof(SayHello)) as SayHello;

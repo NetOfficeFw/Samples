@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
@@ -7,9 +7,10 @@ using System.Drawing;
 using NetOffice.Tools;
 using NetOffice.OfficeApi.Enums;
 using NetOffice.ExcelApi.Tools;
+using NetOffice.ExcelApi.Tools.Contribution;
+using NetOffice.OfficeApi.Tools.Contribution;
 using Excel = NetOffice.ExcelApi;
 using Office = NetOffice.OfficeApi;
-using NetOffice.OfficeApi.Tools.Utils;
 
 namespace Excel06AddinCS4
 {
@@ -69,7 +70,7 @@ namespace Excel06AddinCS4
             // setup a tray icon to signalize we are loaded
             // and show NetOffice diagnostics default dialog on double click
             Utils.Tray.Setup(true, "Excel06AddinCS4", "Addin.ico");
-            Utils.Tray.ShowBalloonTip(3000, "Sample", "Hello from Excel06AddinCS4", NetOffice.OfficeApi.Tools.Utils.TrayToolTipIcon.Info);
+            Utils.Tray.ShowBalloonTip(3000, "Sample", "Hello from Excel06AddinCS4", TrayToolTipIcon.Info);
             Utils.Tray.DoubleClick += delegate { Utils.Dialog.ShowDiagnostics(); };
             // add some standard menu items to the tray
             TrayMenuItem item1 = Utils.Tray.Menu.Items.Add<TrayMenuItem>("Item 1");
