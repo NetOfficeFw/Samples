@@ -33,19 +33,19 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="AccessApi, Version=1.7.3.0, Culture=neutral, PublicKeyToken=3bfc48da42c3238a, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\NetOffice.Access.1.7.3.0\lib\net40\AccessApi.dll</HintPath>
+      <HintPath>..\..\..\packages\NetOfficeFw.Access.1.7.3.0\lib\net40\AccessApi.dll</HintPath>
       <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
     <Reference Include="ADODBApi, Version=1.7.3.0, Culture=neutral, PublicKeyToken=a426381b6dbd993f, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\NetOffice.Access.1.7.3.0\lib\net40\ADODBApi.dll</HintPath>
+      <HintPath>..\..\..\packages\NetOfficeFw.Access.1.7.3.0\lib\net40\ADODBApi.dll</HintPath>
       <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
     <Reference Include="DAOApi, Version=1.7.3.0, Culture=neutral, PublicKeyToken=19cb4234a61cee95, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\NetOffice.Access.1.7.3.0\lib\net40\DAOApi.dll</HintPath>
+      <HintPath>..\..\..\packages\NetOfficeFw.Access.1.7.3.0\lib\net40\DAOApi.dll</HintPath>
       <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
     <Reference Include="ExcelApi, Version=1.7.3.0, Culture=neutral, PublicKeyToken=9084b9221296229e, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\NetOffice.Excel.1.7.3.0\lib\net40\ExcelApi.dll</HintPath>
+      <HintPath>..\..\..\packages\NetOfficeFw.Excel.1.7.3.0\lib\net40\ExcelApi.dll</HintPath>
       <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
     <Reference Include="extensibility, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
@@ -54,39 +54,39 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="MSComctlLibApi, Version=1.7.3.0, Culture=neutral, PublicKeyToken=b97b7d9cfa816715, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\NetOffice.Access.1.7.3.0\lib\net40\MSComctlLibApi.dll</HintPath>
+      <HintPath>..\..\..\packages\NetOfficeFw.Access.1.7.3.0\lib\net40\MSComctlLibApi.dll</HintPath>
       <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
     <Reference Include="MSDATASRCApi, Version=1.7.3.0, Culture=neutral, PublicKeyToken=afe692b65e0db609, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\NetOffice.Access.1.7.3.0\lib\net40\MSDATASRCApi.dll</HintPath>
+      <HintPath>..\..\..\packages\NetOfficeFw.Access.1.7.3.0\lib\net40\MSDATASRCApi.dll</HintPath>
       <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
     <Reference Include="MSHTMLApi, Version=1.7.3.0, Culture=neutral, PublicKeyToken=9fe3ce00842d84e9, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\NetOffice.MSProject.1.7.3.0\lib\net40\MSHTMLApi.dll</HintPath>
+      <HintPath>..\..\..\packages\NetOfficeFw.MSProject.1.7.3.0\lib\net40\MSHTMLApi.dll</HintPath>
       <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
     <Reference Include="MSProjectApi, Version=1.7.3.0, Culture=neutral, PublicKeyToken=b3f793e50f46b653, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\NetOffice.MSProject.1.7.3.0\lib\net40\MSProjectApi.dll</HintPath>
+      <HintPath>..\..\..\packages\NetOfficeFw.MSProject.1.7.3.0\lib\net40\MSProjectApi.dll</HintPath>
       <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
     <Reference Include="NetOffice, Version=1.7.3.0, Culture=neutral, PublicKeyToken=297f57b43ae7c1de, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\NetOffice.Core.1.7.3.0\lib\net40\NetOffice.dll</HintPath>
+      <HintPath>..\..\..\packages\NetOfficeFw.Core.1.7.3.0\lib\net40\NetOffice.dll</HintPath>
       <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
     <Reference Include="OfficeApi, Version=1.7.3.0, Culture=neutral, PublicKeyToken=a39beb0835c43c8e, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\NetOffice.Core.1.7.3.0\lib\net40\OfficeApi.dll</HintPath>
+      <HintPath>..\..\..\packages\NetOfficeFw.Core.1.7.3.0\lib\net40\OfficeApi.dll</HintPath>
       <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
     <Reference Include="OutlookApi, Version=1.7.3.0, Culture=neutral, PublicKeyToken=b118031aaa1097f3, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\NetOffice.Outlook.1.7.3.0\lib\net40\OutlookApi.dll</HintPath>
+      <HintPath>..\..\..\packages\NetOfficeFw.Outlook.1.7.3.0\lib\net40\OutlookApi.dll</HintPath>
       <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
     <Reference Include="OWC10Api, Version=1.7.3.0, Culture=neutral, PublicKeyToken=a2b945645f1c78b9, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\NetOffice.Access.1.7.3.0\lib\net40\OWC10Api.dll</HintPath>
+      <HintPath>..\..\..\packages\NetOfficeFw.Access.1.7.3.0\lib\net40\OWC10Api.dll</HintPath>
       <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
     <Reference Include="PowerPointApi, Version=1.7.3.0, Culture=neutral, PublicKeyToken=f3aefb8851e52dd2, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\NetOffice.PowerPoint.1.7.3.0\lib\net40\PowerPointApi.dll</HintPath>
+      <HintPath>..\..\..\packages\NetOfficeFw.PowerPoint.1.7.3.0\lib\net40\PowerPointApi.dll</HintPath>
       <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
     <Reference Include="System" />
@@ -95,11 +95,11 @@
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="VBIDEApi, Version=1.7.3.0, Culture=neutral, PublicKeyToken=931cec8882205047, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\NetOffice.Core.1.7.3.0\lib\net40\VBIDEApi.dll</HintPath>
+      <HintPath>..\..\..\packages\NetOfficeFw.Core.1.7.3.0\lib\net40\VBIDEApi.dll</HintPath>
       <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
     <Reference Include="WordApi, Version=1.7.3.0, Culture=neutral, PublicKeyToken=f66d74591aaf8089, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\NetOffice.Word.1.7.3.0\lib\net40\WordApi.dll</HintPath>
+      <HintPath>..\..\..\packages\NetOfficeFw.Word.1.7.3.0\lib\net40\WordApi.dll</HintPath>
       <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
   </ItemGroup>

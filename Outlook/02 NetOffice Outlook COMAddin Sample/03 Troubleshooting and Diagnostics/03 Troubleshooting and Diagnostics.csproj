@@ -31,17 +31,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="NetOffice, Version=1.7.4.1, Culture=neutral, PublicKeyToken=297f57b43ae7c1de, processorArchitecture=MSIL">
+    <Reference Include="NetOffice, Version=1.7.3.0, Culture=neutral, PublicKeyToken=297f57b43ae7c1de, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <EmbedInteropTypes>False</EmbedInteropTypes>
       <HintPath>..\..\..\..\..\Assemblies\Any CPU\NetOffice.dll</HintPath>
     </Reference>
-    <Reference Include="OfficeApi, Version=1.7.4.1, Culture=neutral, PublicKeyToken=a39beb0835c43c8e, processorArchitecture=MSIL">
+    <Reference Include="OfficeApi, Version=1.7.3.0, Culture=neutral, PublicKeyToken=a39beb0835c43c8e, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <EmbedInteropTypes>False</EmbedInteropTypes>
       <HintPath>..\..\..\..\..\Assemblies\Any CPU\OfficeApi.dll</HintPath>
     </Reference>
-    <Reference Include="OutlookApi, Version=1.7.4.1, Culture=neutral, PublicKeyToken=b118031aaa1097f3, processorArchitecture=MSIL">
+    <Reference Include="OutlookApi, Version=1.7.3.0, Culture=neutral, PublicKeyToken=b118031aaa1097f3, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <EmbedInteropTypes>False</EmbedInteropTypes>
       <HintPath>..\..\..\..\..\Assemblies\Any CPU\OutlookApi.dll</HintPath>
