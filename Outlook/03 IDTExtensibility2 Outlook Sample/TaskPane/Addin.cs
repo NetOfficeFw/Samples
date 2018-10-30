@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Reflection;
@@ -15,7 +15,7 @@ using NetOffice.OfficeApi.Enums;
 namespace COMAddinTaskPaneExampleCS4
 {
     [Guid("9516CD2B-9421-4F26-9181-1A646DDC8C35"), ProgId("OutlookAddinCS4.TaskPaneAddin"), ComVisible(true)]
-    public class Addin : IDTExtensibility2 , Office.Native.ICustomTaskPaneConsumer
+    public class Addin : IDTExtensibility2 , Office.ICustomTaskPaneConsumer
     {
         private static readonly string _addinOfficeRegistryKey  = "Software\\Microsoft\\Office\\Outlook\\AddIns\\";
         private static readonly string _prodId                  = "OutlookAddinCS4.TaskPaneAddin";

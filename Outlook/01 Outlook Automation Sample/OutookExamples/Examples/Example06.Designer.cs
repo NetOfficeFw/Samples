@@ -2,12 +2,12 @@
 {
     partial class Example06
     {
-        /// <summary>
+        /// <summary> 
         /// Erforderliche Designervariable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
+        /// <summary> 
         /// Verwendete Ressourcen bereinigen.
         /// </summary>
         /// <param name="disposing">True, wenn verwaltete Ressourcen gelöscht werden sollen; andernfalls False.</param>
@@ -22,8 +22,8 @@
 
         #region Vom Komponenten-Designer generierter Code
 
-        /// <summary>
-        /// Erforderliche Methode für die Designerunterstützung.
+        /// <summary> 
+        /// Erforderliche Methode für die Designerunterstützung. 
         /// Der Inhalt der Methode darf nicht mit dem Code-Editor geändert werden.
         /// </summary>
         private void InitializeComponent()
@@ -34,9 +34,9 @@
             this.textBoxDescription = new System.Windows.Forms.TextBox();
             this.buttonStartExample = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            //
+            // 
             // labelEventLogHeader
-            //
+            // 
             this.labelEventLogHeader.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.labelEventLogHeader.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
@@ -45,9 +45,9 @@
             this.labelEventLogHeader.Size = new System.Drawing.Size(664, 22);
             this.labelEventLogHeader.TabIndex = 25;
             this.labelEventLogHeader.Text = "EventLog";
-            //
+            // 
             // textBoxEvents
-            //
+            // 
             this.textBoxEvents.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
                         | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
@@ -59,9 +59,9 @@
             this.textBoxEvents.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.textBoxEvents.Size = new System.Drawing.Size(664, 146);
             this.textBoxEvents.TabIndex = 24;
-            //
+            // 
             // textBoxDescription
-            //
+            // 
             this.textBoxDescription.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxDescription.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -72,9 +72,9 @@
             this.textBoxDescription.Size = new System.Drawing.Size(665, 24);
             this.textBoxDescription.TabIndex = 23;
             this.textBoxDescription.Text = "This example contains code to catch events in Outlook.";
-            //
+            // 
             // buttonStartExample
-            //
+            // 
             this.buttonStartExample.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonStartExample.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -88,9 +88,9 @@
             this.buttonStartExample.Text = "Start example";
             this.buttonStartExample.UseVisualStyleBackColor = true;
             this.buttonStartExample.Click += new System.EventHandler(this.buttonStartExample_Click);
-            //
+            // 
             // Example06
-            //
+            // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSteelBlue;

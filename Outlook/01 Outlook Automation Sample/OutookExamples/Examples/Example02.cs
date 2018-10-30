@@ -1,5 +1,10 @@
-﻿using System;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Text;
 using ExampleBase;
+
 using NetOffice;
 using Outlook = NetOffice.OutlookApi;
 using NetOffice.OutlookApi.Enums;
@@ -11,23 +16,24 @@ namespace OutlookExamplesCS4
     /// </summary>
     internal class Example02 :IExample
     {
+        #region IExample Member
+
         public void RunExample()
         {
-            // start outlook by trying to access running application first
-            Outlook.Application outlookApplication = new Outlook.Application(true);
+            // start outlook
+            Outlook.Application outlookApplication = new Outlook.Application();
 
             // create a new TaskItem.
             Outlook.TaskItem newTask = outlookApplication.CreateItem(OlItemType.olTaskItem) as Outlook.TaskItem;
 
             // Configure the task at hand and save it.
-            newTask.Subject = "Don't forget to check for NoScript updates";
-            newTask.Body = "check updates here: https://addons.mozilla.org/de/firefox/addon/noscript";
+            newTask.Subject = "Don't forget to check for NetOffice.DeveloperToolbox updates";
+            newTask.Body = "check updates here: http://netoffice.codeplex.com/releases";
             newTask.DueDate = DateTime.Now;
             newTask.Importance = OlImportance.olImportanceHigh;
             newTask.Save();
 
             // close outlook and dispose
-            if (!outlookApplication.FromProxyService)
             outlookApplication.Quit();
             outlookApplication.Dispose();
 
@@ -36,7 +42,7 @@ namespace OutlookExamplesCS4
 
         public string Caption
         {
-            get { return  "Example02"; }
+            get { return "Example02"; }
         }
 
         public string Description
@@ -48,12 +54,18 @@ namespace OutlookExamplesCS4
         {
             HostApplication = hostApplication;
         }
-
+        
         public System.Windows.Forms.UserControl Panel
         {
             get { return null; }
         }
 
+        #endregion
+
+        #region Properties
+
         internal IHost HostApplication { get; private set; }
+
+        #endregion
     }
 }
