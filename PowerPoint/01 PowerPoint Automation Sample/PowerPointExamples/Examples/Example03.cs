@@ -7,7 +7,7 @@ using NetOffice.PowerPointApi.Enums;
 using NetOffice.OfficeApi.Enums;
 using VB = NetOffice.VBIDEApi;
 using NetOffice.VBIDEApi.Enums;
-using NetOffice.PowerPointApi.Tools.Contribution;
+using NetOffice.PowerPointApi.Tools;
 
 namespace PowerPointExamplesCS4
 {

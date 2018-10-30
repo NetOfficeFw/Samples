@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Reflection;
 using System.Windows.Forms;
 using Microsoft.Win32;
@@ -13,7 +13,7 @@ using NetOffice.OfficeApi.Enums;
 namespace COMAddinRibbonExampleCS4
 {
     [Guid("B1EF4706-D318-4BE9-93FA-7C57D3A3C6F0"), ProgId("PPointAddinCS4.RibbonAddin"), ComVisible(true)]
-    public class Addin : IDTExtensibility2, Office.Native.IRibbonExtensibility
+    public class Addin : IDTExtensibility2, Office.IRibbonExtensibility
     {
         private static readonly string _addinOfficeRegistryKey  = "Software\\Microsoft\\Office\\PowerPoint\\AddIns\\";
         private static readonly string _progId                  = "PPointAddinCS4.RibbonAddin";
