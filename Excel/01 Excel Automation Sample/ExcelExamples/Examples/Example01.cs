@@ -1,10 +1,10 @@
-﻿using System;
+using System;
 using System.Drawing;
 using System.Windows.Forms;
 using ExampleBase;
-using Excel = NetOffice.ExcelApi;
 using NetOffice.ExcelApi.Enums;
-using NetOffice.ExcelApi.Tools.Contribution;
+using NetOffice.ExcelApi.Tools;
+using Excel = NetOffice.ExcelApi;
 
 namespace ExcelExamplesCS4
 {

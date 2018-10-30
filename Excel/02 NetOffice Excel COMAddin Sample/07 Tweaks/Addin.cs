@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
 using System.Text;
@@ -17,8 +17,9 @@ namespace Excel07AddinCS4
       Remove the DontRegisterAddin attribute to load the addin directly.
     */
 
-    [Tweak, ProgId("Excel07AddinCS4.Connect"), Guid("DF2DA04E-CD24-4F48-B7F2-A7C3C56E877A"), Codebase]
-    [DontRegisterAddin]
+    [COMAddin("NetOfficeCS45 Sample Excel Addin", "This Addin shows you the COMAddin tweak option from the NetOffice Tools", 3)]
+    [ProgId("Excel07AddinCS4.Connect"), Guid("DF2DA04E-CD24-4F48-B7F2-A7C3C56E877A")]
+    [Tweak(true)]  // <== the tweak attribute
     public class Addin : COMAddin
     {
         // We set some default- and custom tweaks in the register method.
