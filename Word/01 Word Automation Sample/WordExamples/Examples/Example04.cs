@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.IO;
 using System.Windows.Forms;
 using System.Reflection;
@@ -6,7 +6,7 @@ using ExampleBase;
 using NetOffice;
 using Word = NetOffice.WordApi;
 using NetOffice.WordApi.Enums;
-using NetOffice.WordApi.Tools.Contribution;
+using NetOffice.WordApi.Tools;
 
 namespace WordExamplesCS4
 {

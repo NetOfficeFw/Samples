@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Runtime.InteropServices;
 using NetOffice;
 using NetOffice.Tools;
@@ -8,8 +8,8 @@ using NetOffice.WordApi.Tools;
 */
 namespace Word01AddinCS4
 {
-    [COMAddin("Word01 Sample Addin CS4", "Miminum Addin Example", LoadBehavior.LoadAtStartup)]
-    [ProgId("Word01AddinCS4.Connect"), Guid("D4282C02-B127-4FCA-835D-2CD86B0CB00A"), Codebase, Timestamp]
+    [COMAddin("Word01 Sample Addin CS4", "Miminum Addin Example", 3)]
+    [ProgId("Word01AddinCS4.Connect"), Guid("D4282C02-B127-4FCA-835D-2CD86B0CB00A")]
     public class Addin : COMAddin
     {
         public Addin()
