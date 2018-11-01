@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Windows.Forms;
 using ExampleBase;
 using Excel = NetOffice.ExcelApi;
@@ -91,8 +91,8 @@ namespace ExcelExamplesCS4
                     break;
 
                 case "xlDialogEditColor":
-
-                    returnValue = excelApplication.Dialogs[XlBuiltInDialog.xlDialogEditColor].Show();
+                    int colorIndex = 1;
+                    returnValue = excelApplication.Dialogs[XlBuiltInDialog.xlDialogEditColor].Show(colorIndex);
                     break;
 
                 case "xlDialogGallery3dBar":
