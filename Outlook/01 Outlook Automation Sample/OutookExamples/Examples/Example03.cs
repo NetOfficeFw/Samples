@@ -1,6 +1,12 @@
-﻿using System;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Drawing;
+using System.Data;
+using System.Text;
 using System.Windows.Forms;
 using ExampleBase;
+
 using NetOffice;
 using Outlook = NetOffice.OutlookApi;
 using NetOffice.OutlookApi.Enums;
@@ -48,7 +54,7 @@ namespace OutlookExamplesCS4
         {
             get { return this; }
         }
-
+        
         #endregion
 
         #region Properties
@@ -61,8 +67,8 @@ namespace OutlookExamplesCS4
 
         private void buttonStartExample_Click(object sender, EventArgs e)
         {
-            // start outlook by trying to access running application first
-            Outlook.Application outlookApplication = new Outlook.Application(true);
+            // start outlook
+            Outlook.Application outlookApplication = new Outlook.Application();
 
             // create a new MailItem.
             Outlook.MailItem mailItem = outlookApplication.CreateItem(OlItemType.olMailItem) as Outlook.MailItem;
@@ -74,7 +80,6 @@ namespace OutlookExamplesCS4
             mailItem.Send();
 
             // close outlook and dispose
-            if (!outlookApplication.FromProxyService)
             outlookApplication.Quit();
             outlookApplication.Dispose();
 

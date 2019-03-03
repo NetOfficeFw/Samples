@@ -1,5 +1,10 @@
-﻿using System;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Text;
 using ExampleBase;
+
 using NetOffice;
 using Outlook = NetOffice.OutlookApi;
 using NetOffice.OutlookApi.Enums;
@@ -11,10 +16,12 @@ namespace OutlookExamplesCS4
     /// </summary>
     internal class Example04 : IExample
     {
+        #region IExample
+
         public void RunExample()
         {
-            // start outlook by trying to access running application first
-            Outlook.Application outlookApplication = new Outlook.Application(true);
+            // start outlook
+            Outlook.Application outlookApplication = new Outlook.Application();
 
             // SendAndReceive is supported from Outlook 2007 or higher
             // we check at runtime the feature is available
@@ -29,7 +36,6 @@ namespace OutlookExamplesCS4
             }
 
             // close outlook and dispose
-            if (!outlookApplication.FromProxyService)
             outlookApplication.Quit();
             outlookApplication.Dispose();
 
@@ -56,6 +62,12 @@ namespace OutlookExamplesCS4
             get { return null; }
         }
 
+        #endregion
+
+        #region Properties
+
         internal IHost HostApplication { get; private set; }
+
+        #endregion
     }
 }

@@ -8,8 +8,8 @@ using NetOffice.PowerPointApi.Tools;
 */
 namespace PowerPoint01AddinCS4
 {
-    [COMAddin("PowerPoint01 Sample Addin CS4", "Miminum Addin Example", LoadBehavior.LoadAtStartup)]
-    [ProgId("PowerPoint01AddinCS4.Connect"), Guid("C6AE4095-4F49-4A8F-9923-0F144C10E837"), Codebase, Timestamp]
+    [COMAddin("PowerPoint01 Sample Addin CS4", "Miminum Addin Example", 3)]
+    [ProgId("PowerPoint01AddinCS4.Connect"), Guid("C6AE4095-4F49-4A8F-9923-0F144C10E837")]
     public class Addin : COMAddin
     {
         public Addin()

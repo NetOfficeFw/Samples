@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using NetOffice;
@@ -13,12 +13,15 @@ using NetOffice.PowerPointApi.Tools;
 */
 namespace PowerPoint02AddinCS4
 {
-    [COMAddin("PowerPoint02 Sample Addin CS4", "Ribbons & Panes Addin Example", LoadBehavior.LoadAtStartup)]
-    [ProgId("PowerPoint02AddinCS4.Connect"), Guid("A8589603-587D-4887-9DE6-19F03C53304A"), Codebase, Timestamp]
+    [COMAddin("PowerPoint02 Sample Addin CS4", "Ribbons & Panes Addin Example", 3)]
+    [ProgId("PowerPoint02AddinCS4.Connect"), Guid("A8589603-587D-4887-9DE6-19F03C53304A")]
     [CustomUI("RibbonUI.xml", true)]
-    [CustomPane(typeof(SamplePane), "PowerPoint CPU Usage", false, PaneDockPosition.msoCTPDockPositionTop, PaneDockPositionRestrict.msoCTPDockPositionRestrictNoVertical, 60, 60)]   
+    [CustomPane(typeof(SamplePane), "PowerPoint CPU Usage", true, PaneDockPosition.msoCTPDockPositionTop, PaneDockPositionRestrict.msoCTPDockPositionRestrictNoVertical, 60, 60)]   
     public class Addin : COMAddin
     {
+        // ouer ribbon instance to manipulate ui at runtime 
+        internal Office.IRibbonUI RibbonUI { get; private set; }
+
         // Taskpane visibility has been changed. We upate the checkbutton in the ribbon ui for show/hide taskpane
         protected override void TaskPaneVisibleStateChanged(Office._CustomTaskPane customTaskPaneInst)
         {
@@ -45,7 +48,7 @@ namespace PowerPoint02AddinCS4
         // Defined in RibbonUI.xml to catch the user click for the about button
         public void OnClickAboutButton(Office.IRibbonControl control)
         {
-            Utils.Dialog.ShowDiagnostics();
+            Utils.Dialog.ShowAbout("NetOffice Add-in Sample", "https://netoffice.io", "");
         }
     }
 }

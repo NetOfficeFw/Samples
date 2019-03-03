@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Runtime.InteropServices;
 using NetOffice;
 using NetOffice.Tools;
@@ -17,11 +17,10 @@ namespace Excel02AddinCS4
 
     [CustomUI("RibbonUI.xml", true)]
     [CustomPane(typeof(SamplePane), "Excel CPU Usage", true, PaneDockPosition.msoCTPDockPositionTop, PaneDockPositionRestrict.msoCTPDockPositionRestrictNoChange, 60, 60)]
-    [ProgId("Excel02AddinCS4.Connect"), Guid("BA38FD48-47BD-43de-8177-0D067A01B566"), Codebase]
-    [DontRegisterAddin]
+    [ProgId("Excel02AddinCS4.Connect"), Guid("BA38FD48-47BD-43de-8177-0D067A01B566")]
     public class Addin : COMAddin
     {
-        // Ribbon instance to manipulate ui at runtime 
+        // Ribbon instance to manipulate ui at runtime
         internal Office.IRibbonUI RibbonUI { get; private set; }
 
         // Taskpane visibility has been changed. We upate the checkbutton in the ribbon ui for show/hide taskpane

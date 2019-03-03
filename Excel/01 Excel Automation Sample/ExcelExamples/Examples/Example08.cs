@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Windows.Forms;
 using ExampleBase;
 using NetOffice;
@@ -111,13 +111,13 @@ namespace ExcelExamplesCS4
 
         #region Excel Trigger
 
-        private void _excelApplication_SheetDeactivateEvent(ICOMObject sh)
+        private void _excelApplication_SheetDeactivateEvent(COMObject sh)
         {
             textBoxEvents.BeginInvoke(_updateDelegate, new object[] { "Event SheetDeactivate called." });
             sh.Dispose();
         }
 
-        private void _excelApplication_SheetActivateEvent(ICOMObject sh)
+        private void _excelApplication_SheetActivateEvent(COMObject sh)
         {
             textBoxEvents.BeginInvoke(_updateDelegate, new object[] { "Event SheetActivate called." });
             sh.Dispose();
