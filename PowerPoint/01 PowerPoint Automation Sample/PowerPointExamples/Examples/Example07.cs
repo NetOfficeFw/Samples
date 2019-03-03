@@ -1,8 +1,7 @@
-﻿using System;
+using System;
 using System.Reflection;
 using System.Windows.Forms;
 using ExampleBase;
-using NetOffice;
 using PowerPoint = NetOffice.PowerPointApi;
 using NetOffice.PowerPointApi.Enums;
 using Office = NetOffice.OfficeApi;
