@@ -7,6 +7,7 @@ using NetOffice;
 using Word = NetOffice.WordApi;
 using NetOffice.WordApi.Enums;
 using NetOffice.WordApi.Tools;
+using NetOffice.WordApi.Tools.Contribution;
 
 namespace WordExamplesCS4
 {
