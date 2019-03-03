@@ -1,15 +1,13 @@
-﻿using System;
+using System;
 using System.Windows.Forms;
 using System.IO;
 using System.Data.OleDb;
 using ExampleBase;
-using NetOffice;
 using Access = NetOffice.AccessApi;
 using NetOffice.AccessApi.Enums;
 using DAO = NetOffice.DAOApi;
-using NetOffice.DAOApi.Enums;
 using NetOffice.DAOApi.Constants;
-using NetOffice.AccessApi.Tools;
+using NetOffice.AccessApi.Tools.Contribution;
 
 namespace AccessExamplesCS4
 {
@@ -55,7 +53,7 @@ namespace AccessExamplesCS4
             oleConnection.Close();
 
             // delete old file if exists
-            string newDocumentFile = utils.File.Combine(HostApplication.RootDirectory, "Example03_Compacted", Access.Tools.DocumentFormat.Normal);
+            string newDocumentFile = utils.File.Combine(HostApplication.RootDirectory, "Example03_Compacted", DocumentFormat.Normal);
             if (File.Exists(newDocumentFile))
                 File.Delete(newDocumentFile);
 
