@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using NetOffice;
 using Outlook = NetOffice.OutlookApi;
 using NetOffice.OutlookApi.Tools;
@@ -18,8 +18,8 @@ namespace Outlook06AddinCS4
             MSForms.UserForm form = formRegion.Form as MSForms.UserForm;
             _textBox1 = form.Controls["TextBox1"].To<Outlook.OlkTextBox>();
             _commandButton1 = form.Controls["CommandButton1"].To<Outlook.OlkCommandButton>();
-            
-            if(null != _commandButton1)     
+
+            if(null != _commandButton1)
                 _commandButton1.ClickEvent += CommandButton1_ClickEvent;
         }
 

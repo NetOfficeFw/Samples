@@ -1,11 +1,19 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.421
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetOffice Tools - 01 Simple", "02 NetOffice Outlook COMAddin Sample\01 Simple\01 Simple.csproj", "{A74A19CE-B592-4484-A432-1D7CEB458920}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01 Simple", "02 NetOffice Outlook COMAddin Sample\01 Simple\01 Simple.csproj", "{A74A19CE-B592-4484-A432-1D7CEB458920}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetOffice Tools - 02 Ribbons And Panes", "02 NetOffice Outlook COMAddin Sample\02 Ribbons And Panes\02 Ribbons And Panes.csproj", "{A61EB8BC-556D-48F7-8A64-35D8B447D311}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02 Ribbons And Panes", "02 NetOffice Outlook COMAddin Sample\02 Ribbons And Panes\02 Ribbons And Panes.csproj", "{A61EB8BC-556D-48F7-8A64-35D8B447D311}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03 Troubleshooting and Diagnostics", "02 NetOffice Outlook COMAddin Sample\03 Troubleshooting and Diagnostics\03 Troubleshooting and Diagnostics.csproj", "{407204E3-769B-416E-92D8-F82B65EB4CB2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04 Register and Unregister", "02 NetOffice Outlook COMAddin Sample\04 Register and Unregister\04 Register and Unregister.csproj", "{F7879329-DDE9-49E5-A6A5-FE5619BB9B11}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05 Custom Property Page", "02 NetOffice Outlook COMAddin Sample\05 Custom Property Page\05 Custom Property Page.csproj", "{8EBE9076-3429-4A80-8B35-14B3CA5565DF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06 FormRegions", "02 NetOffice Outlook COMAddin Sample\06 FormRegions\06 FormRegions.csproj", "{14E4E752-777A-4A98-900B-0FC88CE02CB7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,8 +29,27 @@ Global
 		{A61EB8BC-556D-48F7-8A64-35D8B447D311}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A61EB8BC-556D-48F7-8A64-35D8B447D311}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A61EB8BC-556D-48F7-8A64-35D8B447D311}.Release|Any CPU.Build.0 = Release|Any CPU
+		{407204E3-769B-416E-92D8-F82B65EB4CB2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{407204E3-769B-416E-92D8-F82B65EB4CB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{407204E3-769B-416E-92D8-F82B65EB4CB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{407204E3-769B-416E-92D8-F82B65EB4CB2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F7879329-DDE9-49E5-A6A5-FE5619BB9B11}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7879329-DDE9-49E5-A6A5-FE5619BB9B11}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7879329-DDE9-49E5-A6A5-FE5619BB9B11}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7879329-DDE9-49E5-A6A5-FE5619BB9B11}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8EBE9076-3429-4A80-8B35-14B3CA5565DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8EBE9076-3429-4A80-8B35-14B3CA5565DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8EBE9076-3429-4A80-8B35-14B3CA5565DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8EBE9076-3429-4A80-8B35-14B3CA5565DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14E4E752-777A-4A98-900B-0FC88CE02CB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14E4E752-777A-4A98-900B-0FC88CE02CB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14E4E752-777A-4A98-900B-0FC88CE02CB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14E4E752-777A-4A98-900B-0FC88CE02CB7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D9F23678-741C-4AE6-A731-8589D0174779}
 	EndGlobalSection
 EndGlobal

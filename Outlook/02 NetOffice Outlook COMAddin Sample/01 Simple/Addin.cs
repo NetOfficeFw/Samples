@@ -20,7 +20,7 @@ namespace Outlook01AddinCS4
 
         private void Addin_OnStartupComplete(ref Array custom)
         {
-            Console.WriteLine("Outlook Version is {0}", Application.Version);            
+            Console.WriteLine("Outlook Version is {0}", Application.Version);
         }
 
         private void Addin_OnDisconnection(ext_DisconnectMode removeMode, ref Array custom)

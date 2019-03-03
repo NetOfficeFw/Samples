@@ -41,9 +41,6 @@ namespace NetOfficeTools.ExtendedOutlookCS4
             this.OnStartupComplete += new OnStartupCompleteEventHandler(Addin_OnStartupComplete);
         }
 
-        // ouer ribbon instance to manipulate ui at runtime
-        private Office.IRibbonUI RibbonUI { get; set; }
-
         // attached in ctor to say hello in console
         private void Addin_OnStartupComplete(ref Array custom)
         {
@@ -57,12 +54,6 @@ namespace NetOfficeTools.ExtendedOutlookCS4
         {
             if (null != RibbonUI)
                 RibbonUI.InvalidateControl("paneVisibleToogleButton");
-        }
-
-        // defined in RibbonUI.xml to get a instance for ouer ribbon ui.
-        public void OnLoadRibonUI(Office.IRibbonUI ribbonUI)
-        {
-            RibbonUI = ribbonUI;
         }
 
         // defined in RibbonUI.xml to make sure the checkbutton state is up-to-date and synchronized with taskpane visibility.
