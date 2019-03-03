@@ -5,6 +5,7 @@ using NetOffice.Tools;
 using NetOffice.OfficeApi;
 using NetOffice.OfficeApi.Tools;
 using NetOffice;
+using NetOffice.OfficeApi.Tools.Contribution;
 
 namespace NetOfficeSamples.SuperAddinCS1
 {
@@ -24,21 +25,21 @@ namespace NetOfficeSamples.SuperAddinCS1
             try
             {
                 string version = Invoker.Default.PropertyGet(Application, "Version") as string;
-                string appInfo = $"\n\nHost application: {Application.FriendlyTypeName}\nVersion: {version}";
+                string appInfo = $"\n\nHost application: {Application.InstanceFriendlyName}\nVersion: {version}";
 
                 switch (control.Id)
                 {
                     case "customButton1":
-                        Utils.Dialog.ShowMessageBox("This is the first sample button. " + appInfo, ADDIN_TITLE, DialogResult.None);
+                        Utils.Dialog.ShowMessageBox("This is the first sample button. " + appInfo, ADDIN_TITLE, DialogUtils.Result.None);
                         break;
                     case "customButton2":
-                        Utils.Dialog.ShowMessageBox("This is the second sample button. " + appInfo, ADDIN_TITLE, DialogResult.None);
+                        Utils.Dialog.ShowMessageBox("This is the second sample button. " + appInfo, ADDIN_TITLE, DialogUtils.Result.None);
                         break;
                     case "btnAbout":
-                        Utils.Dialog.ShowMessageBox("Sample add-in built with NetOffice COMAddin class that is registered to multiple Microsoft Office applications.", ADDIN_TITLE, DialogResult.None);
+                        Utils.Dialog.ShowMessageBox("Sample add-in built with NetOffice COMAddin class that is registered to multiple Microsoft Office applications.", ADDIN_TITLE, DialogUtils.Result.None);
                         break;
                     default:
-                        Utils.Dialog.ShowMessageBox("Unkown Control Id: " + control.Id, ADDIN_TITLE, DialogResult.None);
+                        Utils.Dialog.ShowMessageBox("Unkown Control Id: " + control.Id, ADDIN_TITLE, DialogUtils.Result.None);
                         break;
                 }
             }

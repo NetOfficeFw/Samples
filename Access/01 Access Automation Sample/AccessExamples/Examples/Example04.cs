@@ -1,12 +1,8 @@
-﻿using System;
+using System;
 using System.Windows.Forms;
 using ExampleBase;
-using NetOffice;
 using Access = NetOffice.AccessApi;
-using NetOffice.AccessApi.Enums;
 using DAO = NetOffice.DAOApi;
-using NetOffice.DAOApi.Enums;
-using NetOffice.DAOApi.Constants;
 
 namespace AccessExamplesCS4
 {

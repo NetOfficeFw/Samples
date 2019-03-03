@@ -111,13 +111,13 @@ namespace ExcelExamplesCS4
 
         #region Excel Trigger
 
-        private void _excelApplication_SheetDeactivateEvent(COMObject sh)
+        private void _excelApplication_SheetDeactivateEvent(ICOMObject sh)
         {
             textBoxEvents.BeginInvoke(_updateDelegate, new object[] { "Event SheetDeactivate called." });
             sh.Dispose();
         }
 
-        private void _excelApplication_SheetActivateEvent(COMObject sh)
+        private void _excelApplication_SheetActivateEvent(ICOMObject sh)
         {
             textBoxEvents.BeginInvoke(_updateDelegate, new object[] { "Event SheetActivate called." });
             sh.Dispose();

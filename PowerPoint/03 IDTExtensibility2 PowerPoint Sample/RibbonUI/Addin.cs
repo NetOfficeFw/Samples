@@ -9,11 +9,12 @@ using PowerPoint = NetOffice.PowerPointApi;
 using Office = NetOffice.OfficeApi;
 using NetOffice.PowerPointApi.Enums;
 using NetOffice.OfficeApi.Enums;
+using NetOffice.OfficeApi.Native;
 
 namespace COMAddinRibbonExampleCS4
 {
     [Guid("B1EF4706-D318-4BE9-93FA-7C57D3A3C6F0"), ProgId("PPointAddinCS4.RibbonAddin"), ComVisible(true)]
-    public class Addin : IDTExtensibility2, Office.IRibbonExtensibility
+    public class Addin : IDTExtensibility2, IRibbonExtensibility
     {
         private static readonly string _addinOfficeRegistryKey  = "Software\\Microsoft\\Office\\PowerPoint\\AddIns\\";
         private static readonly string _progId                  = "PPointAddinCS4.RibbonAddin";

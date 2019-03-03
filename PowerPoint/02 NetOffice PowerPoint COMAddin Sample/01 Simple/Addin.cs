@@ -1,8 +1,8 @@
-﻿using System;
+using System;
 using System.Runtime.InteropServices;
-using NetOffice;
 using NetOffice.Tools;
 using NetOffice.PowerPointApi.Tools;
+
 /*
     Minimum Addin Example
 */
@@ -20,7 +20,7 @@ namespace PowerPoint01AddinCS4
 
         private void Addin_OnStartupComplete(ref Array custom)
         {
-            Console.WriteLine("PowerPoint Version is {0}", Application.Version);            
+            Console.WriteLine("PowerPoint Version is {0}", Application.Version);
         }
 
         private void Addin_OnDisconnection(ext_DisconnectMode removeMode, ref Array custom)

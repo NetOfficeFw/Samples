@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Runtime.InteropServices;
 using System.Collections.Generic;
 using System.Text;
@@ -8,6 +8,7 @@ using Access = NetOffice.AccessApi;
 using Office = NetOffice.OfficeApi;
 using NetOffice.OfficeApi.Enums;
 using NetOffice.AccessApi.Tools;
+using NetOffice.Availity;
 using NetOffice.Tools;
 
 /*
@@ -41,16 +42,13 @@ namespace NetOfficeTools.ExtendedAccessCS4
             this.OnStartupComplete += new OnStartupCompleteEventHandler(Addin_OnStartupComplete);
         }
 
-        // ouer ribbon instance to manipulate ui at runtime
-        internal Office.IRibbonUI RibbonUI { get; private set; }
-
         // attached in ctor to say hello in console
         private void Addin_OnStartupComplete(ref Array custom)
         {
             // You see the host application is accessible as property from the class instance.
             // The application property was disposed automaticly while shutdown.
             // We check at runtime (with a NetOffice special service) the property is available because Access 2000 and below doesn't have the Version property.
-            if (this.Application.EntityIsAvailable("Version", NetOffice.SupportEntityType.Property))
+            if (this.Application.EntityIsAvailable("Version", SupportedEntityType.Property))
                 Console.WriteLine("Host Application Version is:{0}.", this.Application.Version);
             else
                 Console.WriteLine("Host Application Version 2000(9) or below.");
@@ -61,12 +59,6 @@ namespace NetOfficeTools.ExtendedAccessCS4
         {
            if(null != RibbonUI)
                RibbonUI.InvalidateControl("paneVisibleToogleButton");
-        }
-
-        // defined in RibbonUI.xml to get a instance for ouer ribbon ui.
-        public void OnLoadRibonUI(Office.IRibbonUI ribbonUI)
-        {
-            RibbonUI = ribbonUI;
         }
 
         // defined in RibbonUI.xml to make sure the checkbutton state is up-to-date and synchronized with taskpane visibility.

@@ -20,20 +20,11 @@ namespace Excel02AddinCS4
     [ProgId("Excel02AddinCS4.Connect"), Guid("BA38FD48-47BD-43de-8177-0D067A01B566")]
     public class Addin : COMAddin
     {
-        // Ribbon instance to manipulate ui at runtime
-        internal Office.IRibbonUI RibbonUI { get; private set; }
-
         // Taskpane visibility has been changed. We upate the checkbutton in the ribbon ui for show/hide taskpane
         protected override void TaskPaneVisibleStateChanged(Office._CustomTaskPane customTaskPaneInst)
         {
             if (null != RibbonUI)
                 RibbonUI.InvalidateControl("PaneVisibleToogleButton");
-        }
-
-        // Defined in RibbonUI.xml to get an IRibbonUI instance
-        public void OnLoadRibonUI(Office.IRibbonUI ribbonUI)
-        {
-            RibbonUI = ribbonUI;
         }
 
         // Defined in RibbonUI.xml to make sure the checkbutton state is up-to-date and synchronized with taskpane visibility.

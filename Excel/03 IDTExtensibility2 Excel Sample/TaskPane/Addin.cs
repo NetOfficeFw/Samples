@@ -4,16 +4,15 @@ using System.Windows.Forms;
 using Microsoft.Win32;
 using System.Runtime.InteropServices;
 using Extensibility;
-using NetOffice;
 using Office = NetOffice.OfficeApi;
 using NetOffice.OfficeApi.Enums;
+using NetOffice.OfficeApi.Native;
 using Excel = NetOffice.ExcelApi;
-using NetOffice.ExcelApi.Enums;
 
 namespace COMAddinTaskPaneExampleCS4
 {
     [Guid("8596A742-EB30-443D-96E0-AADA305B589B"), ProgId("ExcelAddinCS4.TaskPaneAddin"), ComVisible(true)]
-    public class Addin : IDTExtensibility2, Office.ICustomTaskPaneConsumer
+    public class Addin : IDTExtensibility2, ICustomTaskPaneConsumer
     {
         private static readonly string _addinOfficeRegistryKey  = "Software\\Microsoft\\Office\\Excel\\AddIns\\";
         private static readonly string _progId                  = "ExcelAddinCS4.TaskPaneAddin";

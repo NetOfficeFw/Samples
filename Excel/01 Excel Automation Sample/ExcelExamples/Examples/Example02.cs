@@ -3,7 +3,7 @@ using System.Windows.Forms;
 using ExampleBase;
 using Excel = NetOffice.ExcelApi;
 using NetOffice.ExcelApi.Enums;
-using NetOffice.ExcelApi.Tools;
+using NetOffice.ExcelApi.Tools.Contribution;
 
 namespace ExcelExamplesCS4
 {

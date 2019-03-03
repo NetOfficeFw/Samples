@@ -19,9 +19,6 @@ namespace Word02AddinCS4
     [CustomPane(typeof(SamplePane), "Word CPU Usage", false, PaneDockPosition.msoCTPDockPositionTop, PaneDockPositionRestrict.msoCTPDockPositionRestrictNoVertical, 60, 60)]
     public class Addin : COMAddin
     {
-        // ouer ribbon instance to manipulate ui at runtime
-        internal Office.IRibbonUI RibbonUI { get; private set; }
-
         // Taskpane visibility has been changed. We upate the checkbutton in the ribbon ui for show/hide taskpane
         protected override void TaskPaneVisibleStateChanged(Office._CustomTaskPane customTaskPaneInst)
         {
@@ -33,7 +30,7 @@ namespace Word02AddinCS4
         public bool OnGetPressedPanelToggle(Office.IRibbonControl control)
         {
             if (TaskPanes.Count > 0)
-            return TaskPanes[0].Visible;
+                return TaskPanes[0].Visible;
             else
                 return false;
         }
@@ -42,7 +39,7 @@ namespace Word02AddinCS4
         public void OnCheckPanelToggle(Office.IRibbonControl control, bool pressed)
         {
             if (TaskPanes.Count > 0)
-            TaskPanes[0].Visible = pressed;
+                TaskPanes[0].Visible = pressed;
         }
 
         // Defined in RibbonUI.xml to catch the user click for the about button

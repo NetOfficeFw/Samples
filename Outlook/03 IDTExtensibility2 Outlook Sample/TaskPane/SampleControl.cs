@@ -1,14 +1,8 @@
-﻿using System;
-using System.Collections;
+using System;
 using System.Collections.Generic;
 using System.Xml;
 using System.Reflection;
 using System.Windows.Forms;
-using Microsoft.Win32;
-using System.Runtime.InteropServices;
-using Extensibility;
-
-using NetOffice;
 using Office = NetOffice.OfficeApi;
 using Outlook = NetOffice.OutlookApi;
 using NetOffice.OutlookApi.Enums;

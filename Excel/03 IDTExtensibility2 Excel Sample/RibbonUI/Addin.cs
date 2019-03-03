@@ -4,16 +4,14 @@ using System.Windows.Forms;
 using Microsoft.Win32;
 using System.Runtime.InteropServices;
 using Extensibility;
-using NetOffice;
 using Office = NetOffice.OfficeApi;
-using NetOffice.OfficeApi.Enums;
 using Excel = NetOffice.ExcelApi;
-using NetOffice.ExcelApi.Enums;
+using NetOffice.OfficeApi.Native;
 
 namespace COMAddinRibbonExampleCS4
 {
     [Guid("32883BAD-012A-4B48-A972-3F918C2D54CD"), ProgId("ExcelAddinCS4.RibbonAddin"), ComVisible(true)]
-    public class Addin : IDTExtensibility2, Office.IRibbonExtensibility
+    public class Addin : IDTExtensibility2, IRibbonExtensibility
     {
         private static readonly string _addinOfficeRegistryKey  = "Software\\Microsoft\\Office\\Excel\\AddIns\\";
         private static readonly string _progId                  = "ExcelAddinCS4.RibbonAddin";

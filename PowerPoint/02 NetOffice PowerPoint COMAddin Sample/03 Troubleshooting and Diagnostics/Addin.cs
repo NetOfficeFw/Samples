@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
+using System;
 using System.Runtime.InteropServices;
 using NetOffice;
 using NetOffice.Tools;
 using Office = NetOffice.OfficeApi;
-using NetOffice.OfficeApi.Enums;
 using PowerPoint = NetOffice.PowerPointApi;
-using NetOffice.PowerPointApi.Enums;
 using NetOffice.PowerPointApi.Tools;
 using NetOffice.OfficeApi.Tools.Contribution;
 /*
@@ -95,7 +92,7 @@ namespace PowerPoint03AddinCS4
         }
 
         private void PerformanceTrace_Alert(PerformanceTrace sender, PerformanceTrace.PerformanceAlertEventArgs args)
-        {            
+        {
             Factory.Console.WriteLine("PerformanceTrace Alert: {0}", args);
         }
     }

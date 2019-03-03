@@ -10,6 +10,7 @@ using System.Text;
 using Extensibility;
 
 using NetOffice;
+using NetOffice.OfficeApi.Native;
 using Office = NetOffice.OfficeApi;
 using Excel = NetOffice.ExcelApi;
 using Word = NetOffice.WordApi;
@@ -25,7 +26,7 @@ namespace NetOfficeSamples.SuperAddinCS2
     [Guid("39AA1CDE-F186-456B-ADF6-30D03352C131")]
     [ProgId("NetOfficeSample.SuperAddinCS2.Addin")]
     [ComVisible(true)]
-    public class Addin : IDTExtensibility2, Office.IRibbonExtensibility
+    public class Addin : IDTExtensibility2, IRibbonExtensibility
     {
         public const string ADDIN_TITLE = "NetOffice SuperAddin Sample";
 
@@ -35,7 +36,7 @@ namespace NetOfficeSamples.SuperAddinCS2
 
         #region Fields
 
-        private COMObject _application;
+        private ICOMObject _application;
         private string _hostApplicationName;
 
         #endregion
@@ -46,7 +47,7 @@ namespace NetOfficeSamples.SuperAddinCS2
         {
             try
             {
-                _application = Core.Default.CreateObjectFromComProxy(null, Application);
+                _application = Core.Default.CreateObjectFromComProxy(null, Application, false);
 
                 /*
                 * _application is stored as COMObject the common base type for all reference types in NetOffice
