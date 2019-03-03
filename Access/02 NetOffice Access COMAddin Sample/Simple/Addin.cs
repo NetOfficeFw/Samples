@@ -1,9 +1,11 @@
-﻿using System;
+using System;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using NetOffice.Tools;
 using NetOffice.AccessApi.Tools;
 using NetOffice.AccessApi;
+using NetOffice.Availity;
+using NetOffice.OfficeApi.Tools.Contribution;
 
 /*
   * This project shows you the COMAddin base class from the NetOffice tools.
@@ -28,10 +30,10 @@ namespace NetOfficeTools.SimpleAccessCS4
         private void Addin_OnStartupComplete(ref Array custom)
         {
             // show the host application version. we check at runtime the property is available because Access 2000 doesnt have the Version property
-            if (this.Application.EntityIsAvailable("Version", NetOffice.SupportEntityType.Property))
+            if (this.Application.EntityIsAvailable("Version", SupportedEntityType.Property))
             {
                 string hostVersion = String.Format("Host Application Version is:{0}", this.Application.Version);
-                Utils.Dialog.ShowMessageBox(hostVersion, MessageBoxIcon.Information, DialogResult.OK);
+                Utils.Dialog.ShowMessageBox(hostVersion, DialogUtils.MessageIcon.Information, DialogUtils.Result.OK);
             }
         }
 
