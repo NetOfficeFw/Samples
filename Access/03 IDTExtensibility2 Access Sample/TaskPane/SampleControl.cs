@@ -1,16 +1,10 @@
-﻿using System;
-using System.Collections;
+using System;
 using System.Collections.Generic;
 using System.Xml;
 using System.Reflection;
 using System.Windows.Forms;
-using Microsoft.Win32;
-using System.Runtime.InteropServices;
-
-using NetOffice;
 using Office = NetOffice.OfficeApi;
 using Excel = NetOffice.AccessApi;
-using NetOffice.AccessApi.Enums;
 
 namespace COMAddinTaskPaneExampleCS4
 {
