@@ -1,13 +1,11 @@
-﻿using System;
+using System;
 using Extensibility;
 using System.Reflection;
 using System.Windows.Forms;
 using Microsoft.Win32;
-using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Word = NetOffice.WordApi;
 using Office = NetOffice.OfficeApi;
-using NetOffice.WordApi.Enums;
 using NetOffice.OfficeApi.Enums;
 
 namespace COMAddinClassicExampleCS4

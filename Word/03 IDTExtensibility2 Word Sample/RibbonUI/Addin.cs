@@ -3,17 +3,15 @@ using Extensibility;
 using System.Reflection;
 using System.Windows.Forms;
 using Microsoft.Win32;
-using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Word = NetOffice.WordApi;
 using Office = NetOffice.OfficeApi;
-using NetOffice.WordApi.Enums;
-using NetOffice.OfficeApi.Enums;
+using NetOffice.OfficeApi.Native;
 
 namespace COMAddinRibbonExampleCS4
 {
     [Guid("65E09829-E3FE-4E27-89D9-AA3D7408B736"), ProgId("WordAddinCS4.RibbonAddin"), ComVisible(true)]
-    public class Addin : IDTExtensibility2, Office.IRibbonExtensibility
+    public class Addin : IDTExtensibility2, IRibbonExtensibility
     {
         private static readonly string _addinOfficeRegistryKey  = "Software\\Microsoft\\Office\\Word\\AddIns\\";
         private static readonly string _prodId                  = "WordAddinCS4.RibbonAddin";
