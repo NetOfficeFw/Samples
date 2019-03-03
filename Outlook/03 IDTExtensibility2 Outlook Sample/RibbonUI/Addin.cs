@@ -3,17 +3,15 @@ using System.Reflection;
 using System.Windows.Forms;
 using Microsoft.Win32;
 using Extensibility;
-using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Outlook = NetOffice.OutlookApi;
 using Office = NetOffice.OfficeApi;
-using NetOffice.OutlookApi.Enums;
-using NetOffice.OfficeApi.Enums;
+using NetOffice.OfficeApi.Native;
 
 namespace COMAddinRibbonExample
 {
     [Guid("85E0BBAF-11E7-4F70-957D-5682602A0933"), ProgId("OutlookAddinCS4.RibbonAddin"), ComVisible(true)]
-    public class Addin : IDTExtensibility2, Office.IRibbonExtensibility
+    public class Addin : IDTExtensibility2, IRibbonExtensibility
     {
         private static readonly string _addinOfficeRegistryKey  = "Software\\Microsoft\\Office\\Outlook\\AddIns\\";
         private static readonly string _prodId                  = "OutlookAddinCS4.RibbonAddin";
