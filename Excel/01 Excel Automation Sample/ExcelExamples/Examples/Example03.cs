@@ -1,9 +1,9 @@
-﻿using System;
+using System;
 using System.Windows.Forms;
 using System.Globalization;
 using ExampleBase;
 using Excel = NetOffice.ExcelApi;
-using NetOffice.ExcelApi.Tools;
+using NetOffice.ExcelApi.Tools.Contribution;
 
 namespace ExcelExamplesCS4
 {
