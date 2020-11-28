@@ -67,12 +67,12 @@
     <Reference Include="ExampleBase">
       <HintPath>..\..\..\ExampleBase.dll</HintPath>
     </Reference>
-    <Reference Include="NetOffice, Version=1.7.4.5, Culture=neutral, PublicKeyToken=297f57b43ae7c1de, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\NetOfficeFw.Core.1.7.4.5\lib\net40\NetOffice.dll</HintPath>
+    <Reference Include="NetOffice, Version=1.7.8.0, Culture=neutral, PublicKeyToken=297f57b43ae7c1de, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\NetOfficeFw.Core.1.7.8\lib\net40\NetOffice.dll</HintPath>
       <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
-    <Reference Include="OfficeApi, Version=1.7.4.5, Culture=neutral, PublicKeyToken=a39beb0835c43c8e, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\NetOfficeFw.Core.1.7.4.5\lib\net40\OfficeApi.dll</HintPath>
+    <Reference Include="OfficeApi, Version=1.7.8.0, Culture=neutral, PublicKeyToken=a39beb0835c43c8e, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\NetOfficeFw.Core.1.7.8\lib\net40\OfficeApi.dll</HintPath>
       <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
     <Reference Include="System" />
@@ -80,12 +80,12 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
-    <Reference Include="VBIDEApi, Version=1.7.4.5, Culture=neutral, PublicKeyToken=931cec8882205047, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\NetOfficeFw.Core.1.7.4.5\lib\net40\VBIDEApi.dll</HintPath>
+    <Reference Include="VBIDEApi, Version=1.7.8.0, Culture=neutral, PublicKeyToken=931cec8882205047, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\NetOfficeFw.Core.1.7.8\lib\net40\VBIDEApi.dll</HintPath>
       <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
-    <Reference Include="WordApi, Version=1.7.4.5, Culture=neutral, PublicKeyToken=f66d74591aaf8089, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\NetOfficeFw.Word.1.7.4.5\lib\net40\WordApi.dll</HintPath>
+    <Reference Include="WordApi, Version=1.7.8.0, Culture=neutral, PublicKeyToken=f66d74591aaf8089, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\NetOfficeFw.Word.1.7.8\lib\net40\WordApi.dll</HintPath>
       <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
   </ItemGroup>
