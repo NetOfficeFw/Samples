@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.30717.126
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetCore3Addin", "NetCore3Addin\NetCore3Addin.csproj", "{1B34DD2B-152E-4036-A7F5-8513237E7E23}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Net5Addin", "Net5Addin\Net5Addin.csproj", "{C82199E3-5059-42C4-8A9B-A86658FBA636}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -15,6 +17,10 @@ Global
 		{1B34DD2B-152E-4036-A7F5-8513237E7E23}.Debug|x86.Build.0 = Debug|x86
 		{1B34DD2B-152E-4036-A7F5-8513237E7E23}.Release|x86.ActiveCfg = Release|x86
 		{1B34DD2B-152E-4036-A7F5-8513237E7E23}.Release|x86.Build.0 = Release|x86
+		{C82199E3-5059-42C4-8A9B-A86658FBA636}.Debug|x86.ActiveCfg = Debug|x86
+		{C82199E3-5059-42C4-8A9B-A86658FBA636}.Debug|x86.Build.0 = Debug|x86
+		{C82199E3-5059-42C4-8A9B-A86658FBA636}.Release|x86.ActiveCfg = Release|x86
+		{C82199E3-5059-42C4-8A9B-A86658FBA636}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
