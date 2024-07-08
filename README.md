@@ -10,7 +10,7 @@ extending Microsoft Office using add-in model.
 
 ### Legacy VisualBasic Samples
 
-Legacy samples written in VisualBasic can be found in branch [import/legacy_repository](tree/import/legacy_repository).
+Legacy samples written in VisualBasic can be found in branch [import/legacy_repository](https://github.com/NetOfficeFw/Samples/tree/import/legacy_repository).
 
 ## License
 
